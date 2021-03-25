@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2:200,300,400,500,600,700&subset=cyrillic');
+
+body {
+    font-family: 'Exo 2', sans-serif !important;
+    font-weight: 300;
+    color: #222;
+    background-color: #f7f7f7;
+}
+.auth_succes{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.auth_succes img{
+    max-width: 300px;
+    margin: 30px 0;
+}
+.dropdown-menu{
+    min-width: 166px;
+}
+.sale-personal-section-index-block-name{
+    color:#444;
+}
+.nav-tabs{
+    height: 42px;
+}
+.bx_soc_comments_div.bx_important.bx_yellow .bx_bt_button{
+    background: #8ecd3d;
+    color: #fff;
+    border-color: #dff0d8;
+}
+
+.bx_soc_comments_div.bx_important.bx_yellow .bx_bt_button:hover{
+    background: #20293c;
+    color: #fff;
+    border-color: #20293c;
+}
+.product-item-detail-main{
+    display: flex;
+    flex-direction: row;
+}
+.product-item-detail-tabs-container-fixed{
+    display: none;
+}
+.product-item-detail-slider-controls-image{
+    outline-style: auto;
+}
+.bx-yellow .product-item-selected-scu, .bx-yellow .product-item-detail-slider-controls-image:hover, .bx-yellow .product-item-detail-slider-controls-image.active{
+    /*border: 1px solid #20293c;*/
+    outline-color: #20293c;
+    outline-style: auto;
+}
+
+.product-item-detail-slider-container{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    width: 100%;
+}
+.product-item-detail-slider-controls-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.product-item-detail-slider-controls-image{
+    margin-bottom: 10px;
+}
+.product-item-detail-slider-image{
+    left: 10px;
+}
+.bx-catalog-tab-section-container input[type="button"],input[type="button"]{
+    background: #8ecd3d;
+    color: #fff;
+    border: none;
+    padding: 5px 10px !important;
+}
+#cart .dropdown-menu{
+    padding: 8px;
+}
+.alert{
+    background: #4caf50;
+    padding: 8px 14px 8px 75px;
+    box-shadow: 1px 1px 5px rgb(0 0 0 / 20%);
+    border-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    min-height: 60px;
+    align-items: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    border: none;
+    z-index: 9999;
+    color: rgba(255, 255, 255, 0.59);
+}
+.table{
+    margin-bottom: 0;
+}
+#basket-root .basket-items-list-header .btn{
+    padding: 9px 30px;
+}
+button, html input[type=button], input[type=reset], input[type=submit]{
+    border-radius: 10px;
+    text-decoration: none;
+}
+.btn-group .btn{
+    color:#777;
+}
+.btn {
+    padding: 12px 30px;
+    font-size: 14px;
+    border-radius: 10px;
+    background: #fff;
+    border: 1px solid#ddd;
+    color: #777;
+    font-weight: 500;
+    -webkit-transition: 0.3s all;
+    -moz-transition: 0.3s all;
+    -ms-transition: 0.3s all;
+    -o-transition: 0.3s all;
+    transition: 0.3s all;
+}
+.main-btn {
+    background: #8ecd3d;
+    color: #fff;
+    border-color: #dff0d8;
+}
+.product-list .product-thumb .quiqview-btns .icon-btn{
+    padding: 7px 8px;
+}
+.quiqview-btns label{
+    margin-bottom: 0;
+}
+.product-item-info-container{
+    display: none;
+}
+.detail-action{
+    display: flex;
+}
+.btn-icon a.icon-btn{
+    font-size:19px;
+    color: #777;
+}
+.btn-icon:hover a.icon-btn{
+    color:#fff;
+}
+.card-info .nav-tabs>li>a {
+    font-size: 14px;
+    padding: 10px 15px;
+}
+
+.box-info-product .form-group {
+    float: none;
+}
+.box-info-product{
+    display: flex;
+    justify-content: space-between;
+}
+.box-info-product .detail-action {
+    margin-top: 15px;
+    float: none;
+}
+.box-review{
+    display: flex;
+}
+.box-review .rating {
+    display: block;
+}
+
+.product-item-detail-info-container{
+    font-family: 'Exo 2', sans-serif !important;
+}
+.product-item-detail-properties{
+    font-size: 15px;
+}
+.main-table .img-thumbnail{
+
+    max-height: 325px;
+}
+.account-box{
+    min-height: 120px;
+}
+@media (max-width: 480px) {
+    .product-item-detail-slider-container{
+        flex-direction: column-reverse;
+        justify-content: space-around;
+    }
+    .product-item-detail-slider-controls-block{
+        flex-direction: row;
+    }
+
+}

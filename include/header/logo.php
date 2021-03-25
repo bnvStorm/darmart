@@ -1,0 +1,1 @@
+<img src="<?=SITE_TEMPLATE_PATH?>/img/logo-rating.svg" class="logo-rating" alt="«1С-Рейтинг»">

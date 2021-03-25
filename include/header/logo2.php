@@ -1,0 +1,1 @@
+<img src="<?=SITE_TEMPLATE_PATH?>/img/logo-bihost.svg" class="logo-bihost" alt="bihost">
