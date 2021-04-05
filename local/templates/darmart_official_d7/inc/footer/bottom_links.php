@@ -11,7 +11,7 @@
         <h5>Служба поддержки</h5>
         <ul class="list-unstyled">
             <li><a href="/support/contact-us.php">Связаться с нами</a></li>
-            <li><a href="/personal/add-return.php">Возврат товара</a></li>
+            <li><a href="/personal/add-return/">Возврат товара</a></li>
             <li><a href="/support/sitemap.php">Карта сайта</a></li>
         </ul>
     </div>

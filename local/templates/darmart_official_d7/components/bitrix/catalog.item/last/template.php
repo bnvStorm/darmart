@@ -151,6 +151,7 @@ if (isset($arResult['ITEM'])) {
             ?>
                 <div class="quiqview-continer">
                     <div class="quiqview-btns">
+<!--                        <button class="icon-btn" type="button" data-toggle="tooltip" title="" onclick="wishlist.add('250');" data-original-title="В закладки"><span class="pe-7s-like"></span></button>-->
                         <label id="<?= $itemIds['COMPARE_LINK'] ?>">
                             <input type="checkbox" data-entity="compare-checkbox" style="display: none;">
                             <a class="icon-btn" href=""><span class="pe-7s-repeat"></span></a>
