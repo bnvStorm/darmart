@@ -50,6 +50,13 @@ $aMenuLinks = Array(
 		""
 	),
 	Array(
+		"Возврат товара",
+		"/personal/add-return/",
+		Array(),
+		Array(),
+		""
+	),
+	Array(
 		"Выйти",
 		"/personal/?logout=yes&".bitrix_sessid_get(),
 		Array(),
