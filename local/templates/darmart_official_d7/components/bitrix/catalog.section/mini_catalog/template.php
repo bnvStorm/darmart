@@ -209,11 +209,11 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
                 <div class="form-group input-group">
                     <label class="input-group-addon" for="input-limit">Показывать:</label>
                     <select id="input-limit" class="form-control" onchange="location = this.value;">
-                        <option value="<?=$APPLICATION->GetCurPageParam("count=1", Array("sort", "count") )?>" <?if ($_GET["count"] == "1"):?>selected="selected"<?endif?>>1</option>
-                        <option value="<?=$APPLICATION->GetCurPageParam("count=2", Array("sort", "count") )?>" <?if ($_GET["count"] == "2"):?>selected="selected"<?endif?>>2</option>
-                        <option value="<?=$APPLICATION->GetCurPageParam("count=3", Array("sort", "count") )?>" <?if ($_GET["count"] == "3"):?>selected="selected"<?endif?>>3</option>
-                        <option value="<?=$APPLICATION->GetCurPageParam("count=4", Array("sort", "count") )?>" <?if ($_GET["count"] == "4"):?>selected="selected"<?endif?>>4</option>
-                        <option value="<?=$APPLICATION->GetCurPageParam("count=5", Array("sort", "count") )?>" <?if ($_GET["count"] == "5"):?>selected="selected"<?endif?>>5</option>
+                        <option value="<?=$APPLICATION->GetCurPageParam("count=15", Array("sort", "count") )?>" <?if ($_GET["count"] == "15"):?>selected="selected"<?endif?>>15</option>
+                        <option value="<?=$APPLICATION->GetCurPageParam("count=25", Array("sort", "count") )?>" <?if ($_GET["count"] == "25"):?>selected="selected"<?endif?>>25</option>
+                        <option value="<?=$APPLICATION->GetCurPageParam("count=50", Array("sort", "count") )?>" <?if ($_GET["count"] == "50"):?>selected="selected"<?endif?>>50</option>
+                        <option value="<?=$APPLICATION->GetCurPageParam("count=75", Array("sort", "count") )?>" <?if ($_GET["count"] == "75"):?>selected="selected"<?endif?>>75</option>
+                        <option value="<?=$APPLICATION->GetCurPageParam("count=100", Array("sort", "count") )?>" <?if ($_GET["count"] == "100"):?>selected="selected"<?endif?>>100</option>
                     </select>
                 </div>
             </div>

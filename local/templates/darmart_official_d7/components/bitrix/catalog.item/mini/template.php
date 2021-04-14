@@ -151,10 +151,28 @@ if (isset($arResult['ITEM'])) {
             ?>
                 <div class="quiqview-continer">
                     <div class="quiqview-btns">
-                        <label id="<?= $itemIds['COMPARE_LINK'] ?>">
+                        <button class="icon-btn add-fav-btn"
+                                type="button"
+                                data-product-id="<?= $item['ID'] ?>"
+                                data-toggle="tooltip"
+                                data-original-title="В закладки">
+                            <span class="pe-7s-like"></span>
+                        </button>
+                        <button id="<?= $itemIds['COMPARE_LINK'] ?>"
+                                class="icon-btn"
+                                type="button"
+                                data-toggle="tooltip"
+                                data-original-title="В сравнение">
+                            <span class="pe-7s-repeat"></span>
+                        </button>
+
+                        <?/*
+                        <label id="<?= $itemIds['COMPARE_LINK'] ?>" style="display:block;">
                             <input type="checkbox" data-entity="compare-checkbox" style="display: none;">
                             <a class="icon-btn" href=""><span class="pe-7s-repeat"></span></a>
                         </label>
+                        */?>
+
                     </div>
                 </div>
                 <?

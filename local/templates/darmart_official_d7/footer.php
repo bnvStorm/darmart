@@ -8,13 +8,18 @@ Loc::loadMessages(__FILE__);
 
 ?>
 <?php
-$url= $APPLICATION->GetCurPage();
-$catalogurl   = '/catalog/';
-if ((strpos($url, $catalogurl) !== false) or ($APPLICATION->GetCurPage() == SITE_DIR)):?>
-
-<? else:  ?>
-</div>
+$url = $APPLICATION->GetCurPage();
+$catalogurl = '/catalog/';
+$perurl = '/personal/';
+if ((SITE_DIR !== $url) && ((strpos($url, $catalogurl)) === false) && ((strpos($url, $perurl)) === false)): ?>
+    </div>
     <?php endif; ?>
+
+        </div>
+    </div>
+</div>
+
+<!--quick fix -->
 </div>
 </div>
 </div>

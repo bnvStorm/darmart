@@ -1,3 +1,31 @@
+$(document).ready(function(){
+	$('.add-fav-btn').on('click', function(e){
+		e.stopPropagation();
+		let btn = this;
+		let productId = btn.dataset.productId;
+		console.log(btn);
+		$.ajax(
+			'/ajax/favorites.php',
+			{
+				data: {
+					product_id: productId,
+					action: 'add'
+				},
+				success: function(data) {
+					let message = typeof(data.message) !== 'undefined' ? data.message : data.error_text;
+					let alert = `
+					<div class="alert alert-success"><i class="fa fa-check-circle"></i>
+					${message}
+					<button type="button" class="close" data-dismiss="alert"><span class="pe-7s-close"></span></button></div>
+					`;
+
+					$('.card').prepend(alert);
+				}
+			}
+		);
+	});
+});
+
 (function (window){
 	'use strict';
 
@@ -536,7 +564,7 @@
 				}
 			}
 
-			
+
 
 			if (this.errorCode === 0)
 			{

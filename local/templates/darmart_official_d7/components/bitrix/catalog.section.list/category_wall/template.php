@@ -44,27 +44,37 @@ $strSectionEdit = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_EDIT");
 $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELETE");
 $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_CONFIRM'));
 
+if (0 < $arResult["SECTIONS_COUNT"]):?>
+<div class="category-card">
+    <h3 class="section-title">Стена категорий</h3>
+    <div class="row">
 
-if (0 < $arResult["SECTIONS_COUNT"]) { ?>
+        <?php foreach ($arResult['SECTIONS'] as &$arSection):
 
+            $imagePath = SITE_TEMPLATE_PATH . '/img/no_photo.png';
 
-    <? foreach ($arResult['SECTIONS'] as &$arSection) {
-        ?>
-        <div class="col-md-4 col-sm-4">
-            <div class="category-wall-box">
-                <a href="<? echo $arSection['SECTION_PAGE_URL']; ?>" class="image">
-                    <img src="<? echo $arSection['PICTURE']['SRC']; ?>" alt="<? echo $arSection['NAME']; ?>" title="<? echo $arSection['NAME']; ?>">
-                </a>
-                <div class="category-list">
-                    <a class="title"
-                       href="<? echo $arSection['SECTION_PAGE_URL']; ?>"><? echo $arSection['NAME']; ?></a>
-                    <a class="show-more" href="<? echo $arSection['SECTION_PAGE_URL']; ?>">Смотреть все</a>
+            if($arSection['PICTURE']){
+                $imagePath = $arSection['PICTURE']['SRC'];
+            }
+
+            ?>
+            <div class="col-md-4 col-sm-4">
+                <div class="category-wall-box">
+                    <a href="<? echo $arSection['SECTION_PAGE_URL']; ?>" class="image">
+                        <img src="<?= $imagePath ?>" alt="<? echo $arSection['NAME']; ?>" title="<? echo $arSection['NAME']; ?>">
+                    </a>
+                    <div class="category-list">
+                        <a class="title"
+                           href="<? echo $arSection['SECTION_PAGE_URL']; ?>"><? echo $arSection['NAME']; ?></a>
+                        <a class="show-more" href="<? echo $arSection['SECTION_PAGE_URL']; ?>">Смотреть все</a>
+                    </div>
+
                 </div>
-
             </div>
-        </div>
-        <?
-    }
-}
-?>
+
+        <?php endforeach; ?>
+
+    </div>
+</div>
+<?php endif; ?>
 

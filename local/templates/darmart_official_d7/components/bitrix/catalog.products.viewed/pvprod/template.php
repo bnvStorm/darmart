@@ -114,86 +114,89 @@ $obName = 'ob'.preg_replace('/[^a-zA-Z0-9_]/', 'x', $this->GetEditAreaId($this->
 $containerName = 'catalog-products-viewed-container';
 ?>
 
-<!--<div class="catalog-products-viewed bx---><?//=$arParams['TEMPLATE_THEME']?><!--" data-entity="--><?//=$containerName?><!--">-->
-	<?
-	if (!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS']))
-	{
-		$areaIds = array();
+	<?php if (!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS'])):?>
 
-		foreach ($arResult['ITEMS'] as $item)
-		{
-			$uniqueId = $item['ID'].'_'.md5($this->randString().$component->getAction());
-			$areaIds[$item['ID']] = $this->GetEditAreaId($uniqueId);
-			$this->AddEditAction($uniqueId, $item['EDIT_LINK'], $elementEdit);
-			$this->AddDeleteAction($uniqueId, $item['DELETE_LINK'], $elementDelete, $elementDeleteParams);
-		}
-		?>
-		<!-- items-container -->
-		<?
-		foreach ($arResult['ITEM_ROWS'] as $rowData)
-		{
-			$rowItems = array_splice($arResult['ITEMS'], 0, $rowData['COUNT']);
-			?>
-<!--			<div class="row --><?//=$rowData['CLASS']?><!--" data-entity="items-row">-->
-<!--                <div class="col-xs-12 product-item-small-card">-->
-<!--							<div class="row">-->
-								<?
-								foreach ($rowItems as $item)
-								{
-									?>
-									<div class="owl-item active" style="width: 247px; margin-right: 30px;">
-										<div class="product-layout">
-<!--											<div class="col-md-12">-->
-												<?
-												$APPLICATION->IncludeComponent(
-													'bitrix:catalog.item',
-													'last',
-													array(
-														'RESULT' => array(
-															'ITEM' => $item,
-															'AREA_ID' => $areaIds[$item['ID']],
-															'TYPE' => $rowData['TYPE'],
-															'BIG_LABEL' => 'N',
-															'BIG_DISCOUNT_PERCENT' => 'N',
-															'BIG_BUTTONS' => 'Y',
-															'SCALABLE' => 'N'
-														),
-														'PARAMS' => $generalParams
-															+ array('SKU_PROPS' => $arResult['SKU_PROPS'][$item['IBLOCK_ID']])
-													),
-													$component,
-													array('HIDE_ICONS' => 'Y')
-												);
-												?>
-<!--											</div>-->
-										</div>
-									</div>
-									<?
-								}
-								?>
-<!--							</div>-->
-<!--						</div>-->
-<!--			</div>-->
-			<?
-		}
-		unset($generalParams, $rowItems);
-		?>
-		<!-- items-container -->
-		<?
-	}
-	else
-	{
-		// load css for bigData/deferred load
-		$APPLICATION->IncludeComponent(
-			'bitrix:catalog.item',
-			'',
-			array(),
-			$component,
-			array('HIDE_ICONS' => 'Y')
-		);
-	}
-	?>
-<!--</div>-->
+    <div class="card">
+        <h3 class="section-title"><?= Loc::getMessage('PAGE_TITLE') ?></h3>
+        <div id="latest-carousel" class="owl-carousel custom-nav owl-loaded owl-drag">
+            <div class="owl-stage-outer">
+                <div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1385px;">
+                    <?php
+                    $areaIds = [];
+
+                    foreach ($arResult['ITEMS'] as $item)
+                    {
+                        $uniqueId = $item['ID'].'_'.md5($this->randString().$component->getAction());
+                        $areaIds[$item['ID']] = $this->GetEditAreaId($uniqueId);
+                        $this->AddEditAction($uniqueId, $item['EDIT_LINK'], $elementEdit);
+                        $this->AddDeleteAction($uniqueId, $item['DELETE_LINK'], $elementDelete, $elementDeleteParams);
+                    }
+                    ?>
+                    <?php
+                    foreach ($arResult['ITEM_ROWS'] as $rowData):
+                        $rowItems = array_splice($arResult['ITEMS'], 0, $rowData['COUNT']);
+                    ?>
+                        <?php foreach ($rowItems as $item): ?>
+                            <div class="owl-item active" style="width: 247px; margin-right: 30px;">
+                                <div class="product-layout">
+                                    <?
+                                    $APPLICATION->IncludeComponent(
+                                        'bitrix:catalog.item',
+                                        'last',
+                                        array(
+                                            'RESULT' => array(
+                                                'ITEM' => $item,
+                                                'AREA_ID' => $areaIds[$item['ID']],
+                                                'TYPE' => $rowData['TYPE'],
+                                                'BIG_LABEL' => 'N',
+                                                'BIG_DISCOUNT_PERCENT' => 'N',
+                                                'BIG_BUTTONS' => 'Y',
+                                                'SCALABLE' => 'N'
+                                            ),
+                                            'PARAMS' => $generalParams
+                                                + array('SKU_PROPS' => $arResult['SKU_PROPS'][$item['IBLOCK_ID']])
+                                        ),
+                                        $component,
+                                        array('HIDE_ICONS' => 'Y')
+                                    );
+                                    ?>
+                                </div>
+                            </div>
+                        <?php endforeach; ?>
+                    <?php
+                    endforeach;
+                    unset($generalParams, $rowItems);
+                    ?>
+                </div>
+            </div>
+            <div class="owl-dots disabled"></div>
+        </div>
+    </div>
+
+    <script>
+        $('#latest-carousel').owlCarousel({
+            loop: false,
+            nav: true,
+            navText: ["<span class='pe-7s-angle-left'></span", "<span class='pe-7s-angle-right'></span"],
+            dots: false,
+            margin: 30,
+            responsive: {
+                0: {
+                    items: 1,
+                },
+                600: {
+                    items: 2,
+                },
+                992: {
+                    items: 3,
+                },
+                1200: {
+                    items: 4,
+                }
+            }
+        })
+    </script>
+	<?php endif; ?>
 
 <script>
 	BX.message({

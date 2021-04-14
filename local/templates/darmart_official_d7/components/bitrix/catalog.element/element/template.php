@@ -34,6 +34,20 @@ $templateData = array(
         'JS_OFFERS' => $arResult['JS_OFFERS']
     )
 );
+
+
+global $USER;
+
+if($USER->IsAuthorized()){
+    $favorite = \Rating1C\Darmart\App::getInstance()->favorite();
+    $productsInFavoriteIds = $favorite->getProductsIds($USER->GetID());
+
+    //Check if offer in wishlist
+    foreach($arResult['JS_OFFERS'] as $key => $offer)
+        $arResult['JS_OFFERS'][$key]['IS_FAVORITE'] = in_array($offer['ID'], $productsInFavoriteIds);
+
+}
+
 unset($currencyList, $templateLibrary);
 
 $mainId = $this->GetEditAreaId($arResult['ID']);
@@ -463,9 +477,9 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                             }
                                             ?>
                                             <div class="box-info-product">
-                                                <?
-                                                foreach ($arParams['PRODUCT_PAY_BLOCK_ORDER'] as $blockName) {
-                                                    switch ($blockName) {
+                                                <?php
+                                                foreach ($arParams['PRODUCT_PAY_BLOCK_ORDER'] as $blockName):
+                                                    switch ($blockName):
                                                         case 'priceRanges':
                                                             if ($arParams['USE_PRICE_COUNT']) {
                                                                 $showRanges = !$haveOffers && count($actualItem['ITEM_QUANTITY_RANGES']) > 1;
@@ -480,11 +494,11 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                                                         <div class="product-item-detail-info-container-title text-center">
                                                                             <?= $arParams['MESS_PRICE_RANGES_TITLE'] ?>
                                                                             <span data-entity="price-ranges-ratio-header">
-												(<?= (Loc::getMessage(
+												                            (<?= (Loc::getMessage(
                                                                                     'CT_BCE_CATALOG_RATIO_PRICE',
                                                                                     array('#RATIO#' => ($useRatio ? $measureRatio : '1') . ' ' . $actualItem['ITEM_MEASURE']['TITLE'])
                                                                                 )) ?>)
-											</span>
+											                                </span>
                                                                         </div>
                                                                         <?
                                                                     }
@@ -566,18 +580,18 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                                                             <span class="product-item-detail-info-container-title"><?= $arParams['MESS_SHOW_MAX_QUANTITY'] ?>:</span>
                                                                             <span class="product-item-quantity"
                                                                                   data-entity="quantity-limit-value">
-													<?
-                                                    if ($arParams['SHOW_MAX_QUANTITY'] === 'M') {
-                                                        if ((float)$actualItem['PRODUCT']['QUANTITY'] / $measureRatio >= $arParams['RELATIVE_QUANTITY_FACTOR']) {
-                                                            echo $arParams['MESS_RELATIVE_QUANTITY_MANY'];
-                                                        } else {
-                                                            echo $arParams['MESS_RELATIVE_QUANTITY_FEW'];
-                                                        }
-                                                    } else {
-                                                        echo $actualItem['PRODUCT']['QUANTITY'] . ' ' . $actualItem['ITEM_MEASURE']['TITLE'];
-                                                    }
-                                                    ?>
-												</span>
+                                                                                <?
+                                                                                if ($arParams['SHOW_MAX_QUANTITY'] === 'M') {
+                                                                                    if ((float)$actualItem['PRODUCT']['QUANTITY'] / $measureRatio >= $arParams['RELATIVE_QUANTITY_FACTOR']) {
+                                                                                        echo $arParams['MESS_RELATIVE_QUANTITY_MANY'];
+                                                                                    } else {
+                                                                                        echo $arParams['MESS_RELATIVE_QUANTITY_FEW'];
+                                                                                    }
+                                                                                } else {
+                                                                                    echo $actualItem['PRODUCT']['QUANTITY'] . ' ' . $actualItem['ITEM_MEASURE']['TITLE'];
+                                                                                }
+                                                                                ?>
+                                                                            </span>
                                                                         </div>
                                                                         <?
                                                                     }
@@ -587,18 +601,12 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                                             ?>
 
 
-                                                        <?
-                                                        case 'buttons':
-                                                            ?>
-                                                            <? if ($arParams['USE_PRODUCT_QUANTITY']) { ?>
+                                                        <?php case 'buttons': ?>
+                                                            <?php if ($arParams['USE_PRODUCT_QUANTITY']): ?>
                                                             <div class="form-group">
-                                                                <?
-                                                                if (Loc::getMessage('CATALOG_QUANTITY')) {
-                                                                    ?>
+                                                                <?php if (Loc::getMessage('CATALOG_QUANTITY')): ?>
                                                                     <div class="product-item-detail-info-container-title text-center"><?= Loc::getMessage('CATALOG_QUANTITY') ?></div>
-                                                                    <?
-                                                                }
-                                                                ?>
+                                                                <?php endif; ?>
                                                                 <div class="product-item-amount-field-container">
                                                                 <span class="product-item-amount-field-btn-minus no-select"
                                                                       id="<?= $itemIds['QUANTITY_DOWN_ID'] ?>"></span>
@@ -619,68 +627,69 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                                                           id="<?= $itemIds['QUANTITY_UP_ID'] ?>"></span>
                                                                 </div>
                                                             </div>
-                                                            <?
-                                                        }
-                                                            ?>
+                                                            <?php endif; ?>
                                                             <div class="detail-action"
                                                                  data-entity="main-button-container">
 
-                                                            <div id="<?= $itemIds['BASKET_ACTIONS_ID'] ?>"
-                                                                 style="display: <?= ($actualItem['CAN_BUY'] ? '' : 'none') ?>;">
-                                                                <?
-                                                                if ($showAddBtn) {
-                                                                    ?>
+                                                                <div id="<?= $itemIds['BASKET_ACTIONS_ID'] ?>"
+                                                                     style="display: <?= ($actualItem['CAN_BUY'] ? '' : 'none') ?>;">
+                                                                    <?php if ($showAddBtn): ?>
 
-                                                                    <a class="btn main-btn <?= $showButtonClassName ?>"
-                                                                       id="<?= $itemIds['ADD_BASKET_LINK'] ?>"
-                                                                       href="javascript:void(0);">
-                                                                        <?= $arParams['MESS_BTN_ADD_TO_BASKET'] ?>
+                                                                        <a class="btn main-btn <?= $showButtonClassName ?>"
+                                                                           id="<?= $itemIds['ADD_BASKET_LINK'] ?>"
+                                                                           href="javascript:void(0);">
+                                                                            <?= $arParams['MESS_BTN_ADD_TO_BASKET'] ?>
+                                                                        </a>
+
+                                                                    <?php endif; ?>
+                                                                    <?php if ($showBuyBtn):?>
+                                                                        <a class="btn main-btn <?= $buyButtonClassName ?>"
+                                                                           id="<?= $itemIds['BUY_LINK'] ?>"
+                                                                           href="javascript:void(0);">
+                                                                            <?= $arParams['MESS_BTN_BUY'] ?>
+                                                                        </a>
+                                                                    <?php endif; ?>
+                                                                    <a class="btn main-btn" href="javascript:void(0)"
+                                                                       rel="nofollow"
+                                                                       id="<?= $itemIds['NOT_AVAILABLE_MESS'] ?>"
+                                                                       style="display: <?= (!$actualItem['CAN_BUY'] ? '' : 'none') ?>;">
+                                                                        <?= $arParams['MESS_NOT_AVAILABLE'] ?>
                                                                     </a>
+                                                                </div>
 
-                                                                    <?
-                                                                }
-
-                                                                if ($showBuyBtn) {
-                                                                    ?>
-
-                                                                    <a class="btn main-btn <?= $buyButtonClassName ?>"
-                                                                       id="<?= $itemIds['BUY_LINK'] ?>"
-                                                                       href="javascript:void(0);">
-                                                                        <?= $arParams['MESS_BTN_BUY'] ?>
-                                                                    </a>
-
-                                                                    <?
-                                                                }
+                                                                <?php
+                                                                if($USER->IsAuthorized()):
+                                                                $inFaforites = in_array($arResult['ID'], $productsInFavoriteIds) !== false;
                                                                 ?>
-                                                                <a class="btn main-btn" href="javascript:void(0)"
-                                                                   rel="nofollow"
-                                                                   id="<?= $itemIds['NOT_AVAILABLE_MESS'] ?>"
-                                                                   style="display: <?= (!$actualItem['CAN_BUY'] ? '' : 'none') ?>;">
-                                                                    <?= $arParams['MESS_NOT_AVAILABLE'] ?>
-                                                                </a>
-                                                            </div>
-                                                            <? if ($arParams['DISPLAY_COMPARE']) { ?>
-                                                            <div class="btn-icon"
-                                                                 style="display: flex;align-items: center;justify-content: center;">
-                                                                <label id="<?= $itemIds['COMPARE_LINK'] ?>"
-                                                                       style="margin-bottom: 0;">
-                                                                    <input type="checkbox"
-                                                                           data-entity="compare-checkbox"
-                                                                           style="display: none;">
-                                                                    <a class="icon-btn" href=""><span
-                                                                                class="pe-7s-repeat"></span></a>
-                                                                </label>
-                                                            </div>
+                                                                <button type="button"
+                                                                        id="favorites_list_<?=$arResult['ID']?>"
+                                                                        data-product-id="<?=$arResult['ID']?>"
+                                                                        class="btn-icon fav-btn <?=$inFaforites ? 'delFavorites' : 'addFavorites'?>"
+                                                                        data-toggle="tooltip"
+                                                                        data-original-title="В закладки">
+                                                                    <span class="pe-7s-like"></span>
+                                                                </button>
+                                                                <?php endif; ?>
+
+                                                                <? if ($arParams['DISPLAY_COMPARE']): ?>
+                                                                <div class="btn-icon"
+                                                                     style="display: flex;align-items: center;justify-content: center;">
+                                                                    <label id="<?= $itemIds['COMPARE_LINK'] ?>"
+                                                                           style="margin-bottom: 0;">
+                                                                        <input type="checkbox"
+                                                                               data-entity="compare-checkbox"
+                                                                               style="display: none;">
+                                                                        <a class="icon-btn" href="">
+                                                                            <span class="pe-7s-repeat"></span>
+                                                                        </a>
+                                                                    </label>
+                                                                </div>
+                                                                <?php endif; ?>
 
                                                             </div>
-                                                            <?
-                                                        }
-
-                                                            break;
-                                                    }
-                                                }
-                                                ?>
-
+                                                            <?php break; ?>
+                                                    <?php endswitch; ?>
+                                                <?php endforeach; ?>
 
                                             </div>
                                         </div>
@@ -859,7 +868,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                                                 ? implode(' / ', $property['DISPLAY_VALUE'])
                                                                 : $property['DISPLAY_VALUE']
                                                             ) ?>
-										</span>
+										                </span>
                                                     </li>
                                                     <?
                                                 }
@@ -1693,6 +1702,15 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                         'COMPARE_DELETE_URL_TEMPLATE' => $arResult['~COMPARE_DELETE_URL_TEMPLATE'],
                         'COMPARE_PATH' => $arParams['COMPARE_PATH']
                     );
+                }
+
+                if(isset($_REQUEST['offer_id'])){
+                    $selectedOffer = $_REQUEST['offer_id'];
+                    foreach($jsParams['OFFERS'] as $offerKey => $offer){
+                        if($offer['ID'] == $selectedOffer){
+                            $jsParams['OFFER_SELECTED'] = $offerKey;
+                        }
+                    }
                 }
                 ?>
             </div>

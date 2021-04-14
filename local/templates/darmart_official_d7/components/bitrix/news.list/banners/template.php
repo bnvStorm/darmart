@@ -12,8 +12,6 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-
-
 <? foreach ($arResult["ITEMS"] as $arItem): ?>
     <div class="col-md-4">
         <div class="banner-box">
@@ -32,7 +30,9 @@ $this->setFrameMode(true);
                         <? echo $arItem["PREVIEW_TEXT"]; ?>
                     <? endif; ?>
                 </div>
-                <a href="<?= $arItem["PROPERTIES"]["LINK"]["VALUE"] ?>">Смотреть все</a>
+                <? if ($arItem["DISPLAY_PROPERTIES"]["LINK"]["VALUE"]): ?>
+                    <a href="<?= $arItem["DISPLAY_PROPERTIES"]["LINK"]["VALUE"] ?>">Смотреть все</a>
+                <? endif; ?>
             </div>
             <img src="<?= $arItem["PREVIEW_PICTURE"]["SRC"] ?>" alt="<?= $arItem["PREVIEW_PICTURE"]["ALT"] ?>"
                  title="<?= $arItem["PREVIEW_PICTURE"]["TITLE"] ?>"/>

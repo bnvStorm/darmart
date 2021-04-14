@@ -10,3 +10,18 @@ $event_manager = EventManager::getInstance();
     '\Rating1C\Damart\User\UserEventHandler',
     'onBeforeUserUpdate',
 ]);*/
+
+$event_manager->addEventHandlerCompatible('main', 'OnBeforeUserRegister', [
+    \Rating1C\Darmart\Users\UserEventHandler::class,
+    'onBeforeUserRegister',
+]);
+
+$event_manager->addEventHandlerCompatible('main', 'OnAfterUserRegister', [
+    \Rating1C\Darmart\Users\UserEventHandler::class,
+    'onAfterUserRegister',
+]);
+
+$event_manager->addEventHandlerCompatible('rest', 'OnRestServiceBuildDescription', [
+    \Rating1C\Darmart\Favorites\FavoriteEventHandler::class,
+    'onRestServiceBuildDescription'
+]);

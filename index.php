@@ -1,7 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
-?><div id="slideshow0" class="owl-carousel owl-loaded owl-drag" style="opacity: 1;">
+?>
+<div id="slideshow0" class="owl-carousel owl-loaded owl-drag" style="opacity: 1;">
 	<div class="owl-stage-outer">
 		<div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 3600px;">
 			 <?$APPLICATION->IncludeComponent(
@@ -68,7 +69,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 	</div>
 	 <!--                <div class="owl-dots">--> <!--                    <button role="button" class="owl-dot active"><span></span></button>--> <!--                    <button role="button" class="owl-dot"><span></span></button>--> <!--                    <button role="button" class="owl-dot"><span></span></button>--> <!--                    <button role="button" class="owl-dot"><span></span></button>--> <!--                    <button role="button" class="owl-dot"><span></span></button>--> <!--                </div>-->
 </div>
- <script type="text/javascript"><!--
+<script type="text/javascript"><!--
     $('#slideshow0').owlCarousel({
         items: 1,
         autoPlay: true,
@@ -79,6 +80,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
         pagination: true
     });
     --></script>
+
 <div>
 	<div class="banner-block-home">
 		<div class="row">
@@ -112,7 +114,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
-		"IBLOCK_ID" => "8",
+		"IBLOCK_ID" => "9",
 		"IBLOCK_TYPE" => "Content",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
 		"INCLUDE_SUBSECTIONS" => "Y",
@@ -129,7 +131,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"PROPERTY_CODE" => array(
-			0 => "",
+			0 => "LINK",
 			1 => "",
 		),
 		"SET_BROWSER_TITLE" => "Y",
@@ -150,12 +152,13 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		</div>
 	</div>
 </div>
-<div class="card">
+
+<!--<div class="card">
 	<h3 class="section-title">Последние</h3>
 	<div id="latest-carousel" class="owl-carousel custom-nav owl-loaded owl-drag">
 		<div class="owl-stage-outer">
-			<div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1385px;">
-				 <!--                <div class="owl-item active" style="width: 247px; margin-right: 30px;">--> <!--                    <div class="product-layout">--> <?$APPLICATION->IncludeComponent(
+			<div class="owl-stage" style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 1385px;">-->
+<?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.products.viewed",
 	"pvprod",
 	Array(
@@ -218,68 +221,46 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		"USE_PRICE_COUNT" => "N",
 		"USE_PRODUCT_QUANTITY" => "N"
 	)
-);?> <!--                        <div class="product-thumb transition">--> <!--                            <div class="image">--> <!--                                <a href="http://darmart.kz/index.php?route=product/product&product_id=250"> <img alt="R-WH-1.5-80 Водонагреватель Royal (эмаль)" src="https://darmart.kz/image/cache/catalog/pylesosy/artel-art-wh-2-0-80-white-3900776-1%281%29-250x250.jpg" title="R-WH-1.5-80 Водонагреватель Royal (эмаль)" class="img-responsive"> </a>--> <!--                            </div>--> <!--                            <div class="quiqview-continer">--> <!--                                <div class="quiqview-btns">--> <!--                                    <button class="icon-btn" type="button" data-toggle="tooltip" title="" onclick="wishlist.add('250');" data-original-title="В закладки"><span class="pe-7s-like"></span></button> <button class="icon-btn" type="button" data-toggle="tooltip" title="" onclick="compare.add('250');" data-original-title="В сравнение"><span class="pe-7s-repeat"></span></button>--> <!--                                </div>--> <!--                            </div>--> <!--                            <div class="caption">--> <!--                                <div class="rating">--> <!--                                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span> <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span> <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span> <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span> <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>--> <!--                                </div>--> <!--                                <h3><a href="http://darmart.kz/index.php?route=product/product&product_id=250">R-WH-1.5-80 Водонагреватель Royal (эмаль)</a></h3>--> <!--                                <p class="price">--> <!--                                    46 990 тг <span class="price-tax">Без налога: 46 990 тг</span>--> <!--                                </p>--> <!--                                <div class="button-group">--> <!--                                    <button class="btn main-btn" type="button" onclick="cart.add('250');">В корзину </button>--> <!--                                </div>--> <!--                            </div>--> <!--                        </div>--> <!--                    </div>--> <!--                </div>-->
-			</div>
+);?>
+<!--			</div>
 		</div>
-		 <!--        <div class="owl-nav">--> <!--            <button type="button" role="presentation" class="owl-prev disabled"><span class="pe-7s-angle-left"></span></button> --> <!--            <button type="button" role="presentation" class="owl-next"><span class="pe-7s-angle-right"></span> </button>--> <!--        </div>-->
 		<div class="owl-dots disabled">
 		</div>
 	</div>
-</div>
- <script>
-    $('#latest-carousel').owlCarousel({
-        loop: false,
-        nav: true,
-        navText: ["<span class='pe-7s-angle-left'></span", "<span class='pe-7s-angle-right'></span"],
-        dots: false,
-        margin: 30,
-        responsive: {
-            0: {
-                items: 1,
-            },
-            600: {
-                items: 2,
-            },
-            992: {
-                items: 3,
-            },
-            1200: {
-                items: 4,
-            }
-        }
-    })
-</script>
-<div class="category-card">
+</div>-->
+
+<!--<div class="category-card">
 	<h3 class="section-title">Стена категорий</h3>
-	<div class="row">
+	<div class="row">-->
 		 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.section.list",
 	"category_wall",
-	Array(
-		"ADD_SECTIONS_CHAIN" => "Y",
-		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "Y",
-		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "A",
-		"COMPONENT_TEMPLATE" => "category_wall",
-		"COUNT_ELEMENTS" => "Y",
-		"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
-		"FILTER_NAME" => "sectionsFilter",
-		"IBLOCK_ID" => "2",
-		"IBLOCK_TYPE" => "catalog",
-		"SECTION_CODE" => "",
-		"SECTION_FIELDS" => array(0=>"PICTURE",1=>"DETAIL_PICTURE",2=>"",),
-		"SECTION_ID" => "",
-		"SECTION_URL" => "",
-		"SECTION_USER_FIELDS" => array(0=>"",1=>"",),
-		"SHOW_PARENT_NAME" => "Y",
-		"TOP_DEPTH" => "2",
-		"VIEW_MODE" => "LINE"
-	)
-);?>
-	</div>
-</div>
-<?$APPLICATION->IncludeComponent(
+            Array(
+                "ADD_SECTIONS_CHAIN" => "Y",
+                "CACHE_FILTER" => "N",
+                "CACHE_GROUPS" => "Y",
+                "CACHE_TIME" => "36000000",
+                "CACHE_TYPE" => "A",
+                "COMPONENT_TEMPLATE" => "category_wall",
+                "COUNT_ELEMENTS" => "Y",
+                "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
+                "FILTER_NAME" => "sectionsFilter",
+                "IBLOCK_ID" => "2",
+                "IBLOCK_TYPE" => "catalog",
+                "SECTION_CODE" => "",
+                "SECTION_FIELDS" => array(0=>"PICTURE",1=>"DETAIL_PICTURE",2=>"",),
+                "SECTION_ID" => "",
+                "SECTION_URL" => "",
+                "SECTION_USER_FIELDS" => array(0=>"",1=>"",),
+                "SHOW_PARENT_NAME" => "Y",
+                "TOP_DEPTH" => "2",
+                "VIEW_MODE" => "LINE"
+            )
+        );?>
+<!--	</div>
+</div>-->
+
+<?/*$APPLICATION->IncludeComponent(
 	"bitrix:catalog.products.viewed",
 	".default",
 	Array(
@@ -337,4 +318,6 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		"USE_PRICE_COUNT" => "N",
 		"USE_PRODUCT_QUANTITY" => "N"
 	)
-);?><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+);*/?>
+
+<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="SshConfigs">
     <configs>
-      <sshConfig authType="PASSWORD" host="127.0.0.2" id="43895468-8cab-43fc-a9b6-cd5a136b4292" port="22" nameFormat="DESCRIPTIVE" username="bitrix" />
+      <sshConfig authType="PASSWORD" connectionConfig="{&quot;serverAliveInterval&quot;:300}" host="127.0.0.2" id="43895468-8cab-43fc-a9b6-cd5a136b4292" port="22" nameFormat="DESCRIPTIVE" username="bitrix" />
     </configs>
   </component>
 </project>

@@ -30,4 +30,11 @@ $arTemplateParameters = [
         "DEFAULT" => "change_password/",
         "PARENT" => "SEF_MODE",
     ),
+    "SEF_URL_TEMPLATES_favorites" => array(
+        "NAME" => Loc::getMessage('FAVORITES_URL'),
+        "TYPE" => "STRING",
+        "MULTIPLE" => "N",
+        "DEFAULT" => "favorites/",
+        "PARENT" => "SEF_MODE",
+    ),
 ];

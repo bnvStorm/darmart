@@ -105,17 +105,17 @@ $assets_manager->addString('<link rel="shortcut icon" type="image/x-icon" href="
                     </a>
                     <ul class="dropdown-menu dropdown-menu-right">
                         <? $APPLICATION->IncludeComponent(
-	"bitrix:system.auth.form", 
-	"auth", 
-	array(
-		"COMPONENT_TEMPLATE" => "auth",
-		"FORGOT_PASSWORD_URL" => "/personal/",
-		"PROFILE_URL" => "/personal/profile.php",
-		"REGISTER_URL" => "/personal/registration.php",
-		"SHOW_ERRORS" => "N"
-	),
-	false
-); ?>
+                            "bitrix:system.auth.form",
+                            "auth",
+                            array(
+                                "COMPONENT_TEMPLATE" => "auth",
+                                "FORGOT_PASSWORD_URL" => "/personal/",
+                                "PROFILE_URL" => "/personal/profile.php",
+                                "REGISTER_URL" => "/personal/registration.php",
+                                "SHOW_ERRORS" => "N"
+                            ),
+                            false
+                        ); ?>
 
                     </ul>
                 </li>
@@ -154,34 +154,34 @@ $assets_manager->addString('<link rel="shortcut icon" type="image/x-icon" href="
                 ); ?>
                 <div id="cart">
                     <? $APPLICATION->IncludeComponent(
-	"bitrix:sale.basket.basket.line", 
-	"top_basket", 
-	array(
-		"HIDE_ON_BASKET_PAGES" => "N",
-		"PATH_TO_AUTHORIZE" => "",
-		"PATH_TO_BASKET" => SITE_DIR."personal/cart/",
-		"PATH_TO_ORDER" => SITE_DIR."personal/order/make/",
-		"PATH_TO_PERSONAL" => SITE_DIR."personal/",
-		"PATH_TO_PROFILE" => SITE_DIR."personal/",
-		"PATH_TO_REGISTER" => SITE_DIR."login/",
-		"POSITION_FIXED" => "N",
-		"SHOW_AUTHOR" => "N",
-		"SHOW_EMPTY_VALUES" => "Y",
-		"SHOW_NUM_PRODUCTS" => "Y",
-		"SHOW_PERSONAL_LINK" => "Y",
-		"SHOW_PRODUCTS" => "Y",
-		"SHOW_REGISTRATION" => "N",
-		"SHOW_TOTAL_PRICE" => "Y",
-		"COMPONENT_TEMPLATE" => "top_basket",
-		"SHOW_DELAY" => "Y",
-		"SHOW_NOTAVAIL" => "N",
-		"SHOW_IMAGE" => "Y",
-		"SHOW_PRICE" => "Y",
-		"SHOW_SUMMARY" => "Y",
-		"MAX_IMAGE_SIZE" => "70"
-	),
-	false
-); ?>
+                        "bitrix:sale.basket.basket.line",
+                        "top_basket",
+                        array(
+                            "HIDE_ON_BASKET_PAGES" => "N",
+                            "PATH_TO_AUTHORIZE" => "",
+                            "PATH_TO_BASKET" => SITE_DIR . "personal/cart/",
+                            "PATH_TO_ORDER" => SITE_DIR . "personal/order/make/",
+                            "PATH_TO_PERSONAL" => SITE_DIR . "personal/",
+                            "PATH_TO_PROFILE" => SITE_DIR . "personal/",
+                            "PATH_TO_REGISTER" => SITE_DIR . "login/",
+                            "POSITION_FIXED" => "N",
+                            "SHOW_AUTHOR" => "N",
+                            "SHOW_EMPTY_VALUES" => "Y",
+                            "SHOW_NUM_PRODUCTS" => "Y",
+                            "SHOW_PERSONAL_LINK" => "Y",
+                            "SHOW_PRODUCTS" => "Y",
+                            "SHOW_REGISTRATION" => "N",
+                            "SHOW_TOTAL_PRICE" => "Y",
+                            "COMPONENT_TEMPLATE" => "top_basket",
+                            "SHOW_DELAY" => "Y",
+                            "SHOW_NOTAVAIL" => "N",
+                            "SHOW_IMAGE" => "Y",
+                            "SHOW_PRICE" => "Y",
+                            "SHOW_SUMMARY" => "Y",
+                            "MAX_IMAGE_SIZE" => "70"
+                        ),
+                        false
+                    ); ?>
                 </div>
                 <div class="online-help-box">
                     <span class="pe-7s-headphones"></span>
@@ -258,11 +258,9 @@ $assets_manager->addString('<link rel="shortcut icon" type="image/x-icon" href="
                 ); ?>
             <?php endif; ?>
             <?php
-            $url= $APPLICATION->GetCurPage();
-            $catalogurl   = '/catalog/';
-            $perurl   = '/personal/';
-            if ((strpos($url, $catalogurl) !== false) or ($APPLICATION->GetCurPage() == SITE_DIR) or (strpos($url, $perurl) !== false)):?>
-
-             <? else:  ?>
-                <div class="card" style="min-height: 600px";>
-           <?php endif; ?>
+            $url = $APPLICATION->GetCurPage();
+            $catalogurl = '/catalog/';
+            $perurl = '/personal/';
+            if ((SITE_DIR !== $url) && ((strpos($url, $catalogurl)) === false) && ((strpos($url, $perurl)) === false)): ?>
+            <div class="card" style="min-height: 600px" ;>
+            <?php endif; ?>

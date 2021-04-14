@@ -44,6 +44,7 @@ $strSectionEdit = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_EDIT");
 $strSectionDelete = CIBlock::GetArrayByID($arParams["IBLOCK_ID"], "SECTION_DELETE");
 $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_CONFIRM'));
 
+
 ?>
     <div class="col-md-4">
         <div class="banner-box">
@@ -94,23 +95,23 @@ $arSectionDeleteParams = array("CONFIRM" => GetMessage('CT_BCSL_ELEMENT_DELETE_C
                         )
                     );
                 ?>
-                <!--                <img src="--><?// echo $arSection['PICTURE']['SRC'];
-                ?><!--" alt="alt"> -->
-
 
                 <?
                 if ('' != $arSection['DESCRIPTION'])
                 {
                 ?>
                 <div class="title">
-                    <? echo $arSection['DESCRIPTION']; ?>
+                    <?= $arResult['SECTION']['DESCRIPTION'] ?>
                 </div>
                 <a href="<? echo $arSection['SECTION_PAGE_URL']; ?>">Смотреть все</a>
             </div>
             <?
             }
             ?>
-            <img src="<? echo $arSection['PICTURE']['SRC'];?>" alt="alt">
+            <?php
+            $picture = CFile::GetFileArray($arResult['SECTION']['PICTURE']);
+            ?>
+            <img src="<? echo $picture['SRC'];?>" alt="alt">
             <?
             }
             unset($arSection);

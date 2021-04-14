@@ -196,6 +196,10 @@
 		this.basketUrl = '';
 		this.basketParams = {};
 
+		//favorites
+		this.favUrlProcessing = '/ajax/favorites.php';
+		this.favBtn = null;
+
 		this.errorCode = 0;
 
 		if (typeof arParams === 'object')
@@ -611,7 +615,18 @@
 							}
 						}
 
+						if(this.offers.length != 0 && this.favBtn != null){
+							this.checkOffersInFav();
+							//Отключаем обработчик добавления избранного из /scripts/scripts.js
+							BX.unbindAll(this.favBtn);
+							//Подключаем свой обработчик из текущего файла
+							this.defineFavOffer(this.offerNum);
+						}
+
+
 						this.setCurrent();
+
+
 						break;
 				}
 
@@ -627,6 +642,8 @@
 					BX.addCustomEvent('onCatalogDeleteCompare', BX.proxy(this.checkDeletedCompare, this));
 				}
 			}
+
+			BX.bind(this.favBtn, 'click', BX.delegate(this.clickFavBtn, this));
 		},
 
 		initConfig: function()
@@ -774,6 +791,8 @@
 					}
 				}
 
+				this.favBtn = BX('favorites_list_'+this.product.id);
+
 				this.currentIsSet = true;
 			}
 			else
@@ -811,6 +830,8 @@
 					this.product.name = this.params.PRODUCT.NAME;
 					this.product.category = this.params.PRODUCT.CATEGORY;
 				}
+
+				this.favBtn = BX('favorites_list_'+this.product.id);
 			}
 			else
 			{
@@ -1929,7 +1950,7 @@
 		quantitySet: function(index)
 		{
 			var strLimit, resetQuantity;
-			
+
 			var newOffer = this.offers[index],
 				oldOffer = this.offers[this.offerNum];
 
@@ -2579,6 +2600,12 @@
 				this.setPrice();
 				this.setCompared(this.offers[index].COMPARED);
 
+				this.setOfferIdToFavBtn(this.offers[index].ID);
+
+				if(this.offers.length != 0 && this.favBtn != null){
+					this.defineFavOffer(index);
+				}
+
 				this.offerNum = index;
 				this.fixFontCheck();
 				this.setAnalyticsDataLayer('showDetail');
@@ -2591,6 +2618,182 @@
 				BX.onCustomEvent('onCatalogElementChangeOffer', [eventData]);
 				eventData = null;
 			}
+		},
+
+		/**
+		 * Устанавливает Id торгового предложения в data атрибут кнопки "добавить товар в избранное"
+		 * @param {number} offerId
+		 * @return void
+		 */
+		setOfferIdToFavBtn: function(offerId){
+			var favBtn = document.querySelector('.fav-btn');
+			if(favBtn != null){
+				BX.adjust(
+					favBtn,
+					{
+						attrs: {
+							'data-offer-id': offerId
+						}
+					}
+				);
+			}
+		},
+
+		setSelectedFav: function(id){
+			var favBtn = document.querySelector('.fav-btn');
+
+			BX.adjust(
+				favBtn,
+				{
+					attrs: {
+						'data-selected-id': id
+					}
+				}
+			);
+		},
+		setNote: function(text){
+
+			var note = `
+			<div class="alert alert-success top-alert">
+				<i class="fa fa-check-circle"></i>
+				${text}
+				<button type="button" class="close" data-dismiss="alert">
+					<span class="pe-7s-close"></span>
+				</button>
+			</div>
+			`;
+
+			if(document.querySelector('.top-alert'))
+				document.querySelector('.top-alert').remove();
+
+			document.querySelector('body').insertAdjacentHTML('beforebegin', note);
+		},
+
+		/**
+		 * Устанавливает состояние (вид) кнопки "Добавить в избранное"
+		 * @param {string} state Возможные состояния: del, add
+		 * @return void
+		 */
+		setFavBtnState: function( state){
+			var favBtnTextPresets = {
+				'add': {
+					'ru': 'добавить товар в избранное',
+					'kz': 'тауарды таңдаулыға қосу'
+				},
+				'delete': {
+					'ru': 'удалить товар из избранного',
+					'kz': 'тауарды таңдаулыдан өшіру'
+				},
+			};
+			var favBtn = document.querySelector('.fav-btn');
+			//var favBtnText = favBtn.querySelector('.link_text');
+			favBtn.classList.add('addFavorites');
+			if(state == 'add'){
+				//favBtnText.textContent = favBtnTextPresets[state][this.config.languageId];
+				favBtn.classList.remove('delFavorites');
+				favBtn.classList.add('addFavorites');
+				favBtn.classList.remove('checked');
+			}
+			if(state == 'delete'){
+				//favBtnText.textContent = favBtnTextPresets[state][this.config.languageId];
+				favBtn.classList.add('delFavorites');
+				favBtn.classList.remove('addFavorites');
+				favBtn.classList.add('checked');
+			}
+		},
+
+		/**
+		 * Определяет добавлено ли в избранное и устанавливает состояние (удалить или добавить).
+		 * @param {number} index - индекс торгового предложения в массиве торговых предложений
+		 */
+		defineFavOffer: function(index){
+			if(this.offers[index]['IS_FAVORITE']){
+				this.setFavBtnState('delete');
+				this.setOfferIdToFavBtn(this.offers[index].ID);
+			} else {
+				this.setFavBtnState('add');
+				this.setOfferIdToFavBtn(this.offers[index].ID);
+			}
+		},
+
+		/**
+		 * Проверяет через ajax добавлены ли торговые предложения в избранные
+		 * return array
+		 */
+		checkOffersInFav: function(){
+			BX.ajax({
+				method: 'POST',
+				dataType: 'json',
+				url: this.favUrlProcessing,
+				data: {'action': 'get_list'},
+				async: false,
+				onsuccess: BX.delegate(function(data){
+					if (data['success'] == 1) {
+						var favs = data['favorites'];
+						this.offers = this.offers.map(function(offer){
+							offer.IS_FAVORITE = favs.includes(offer.ID);
+							return offer;
+						});
+					}
+				}, this)
+			});
+		},
+
+		/**
+		 * Обрабатывает событие клика на кнопку "Добавить в избранное".<br>
+		 * Удаляет и добавляет товар из избранного а также меняет состояние кнопки.
+		 * @param {Event} e
+		 * @return void
+		 */
+		clickFavBtn: function(e){
+			e.stopPropagation();
+
+			var action = '';
+			var isFavorite = {
+				'delete': false,
+				'add': true
+			};
+
+			var favBtn = e.currentTarget;
+			var favoriteProductId = favBtn.dataset.productId;
+			if(favBtn.hasAttribute('data-offer-id')){
+				favoriteProductId = favBtn.dataset.offerId;
+			}
+
+			favBtn.setAttribute('data-selected-id', favoriteProductId);
+
+			if(favBtn.classList.contains('addFavorites'))
+				action = 'add'
+			if(favBtn.classList.contains('delFavorites'))
+				action = 'delete'
+
+			console.log(favoriteProductId);
+			console.log(isFavorite[action]);
+
+			BX.ajax({
+				method: 'POST',
+				dataType: 'json',
+				url: this.favUrlProcessing,
+				data: {'action': action, 'product_id': favoriteProductId},
+				onsuccess: BX.delegate(function(data){
+					if (data['success'] == 1) {
+						this.setFavBtnState(action == 'add' ? 'delete' : 'add');
+
+						this.setNote(data.message);
+
+
+						this.offers = this.offers.map(function(offer){
+							if(offer.ID == favoriteProductId){
+								offer.IS_FAVORITE = isFavorite[action];
+								return offer;
+							}
+							return offer;
+						});
+					} else {
+						this.setNote(data.error_text);
+					}
+				}, this)
+			});
 		},
 
 		drawImages: function(images)

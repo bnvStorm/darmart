@@ -4,8 +4,8 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Персональный раздел");
 ?>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:sale.personal.section",
-	"personal",
+	"bitrix:sale.personal.section", 
+	"personal", 
 	array(
 		"ACCOUNT_PAYMENT_ELIMINATED_PAY_SYSTEMS" => array(
 			0 => "0",
@@ -52,7 +52,7 @@ $APPLICATION->SetTitle("Персональный раздел");
 		"PATH_TO_BASKET" => "/personal/cart",
 		"PATH_TO_CATALOG" => "/catalog/",
 		"PATH_TO_CONTACT" => "/about/contacts",
-		"PATH_TO_FAVORITES" => "/personal/favorites",
+		"PATH_TO_FAVORITES" => "/personal/favorites/",
 		"PATH_TO_PAYMENT" => "/personal/order/payment/",
 		"PER_PAGE" => "20",
 		"PROFILES_PER_PAGE" => "20",
@@ -82,6 +82,7 @@ $APPLICATION->SetTitle("Персональный раздел");
 		"SHOW_CHANGE_PASSWORD_PAGE" => "Y",
 		"SEF_URL_TEMPLATES" => array(
 			"change_password" => "change_password/",
+			"favorites" => "favorites/",
 			"index" => "index.php",
 			"orders" => "orders/",
 			"account" => "account/",
