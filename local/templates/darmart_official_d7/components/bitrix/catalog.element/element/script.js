@@ -1355,7 +1355,7 @@
 		{
 			if (this.config.usePopup)
 			{
-				this.node.imageContainer.style.cursor = 'zoom-in';
+				// this.node.imageContainer.style.cursor = 'zoom-in'; fix!
 				BX.bind(this.node.imageContainer, 'click', BX.delegate(this.toggleMainPictPopup, this));
 				BX.bind(document, 'keyup', BX.proxy(this.closeByEscape, this));
 				BX.bind(

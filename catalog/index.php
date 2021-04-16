@@ -229,8 +229,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 			1 => "MANUFACTURER",
 			2 => "MATERIAL",
 		),
-		"DETAIL_MAIN_BLOCK_OFFERS_PROPERTY_CODE" => array(
-		),
+		"DETAIL_MAIN_BLOCK_OFFERS_PROPERTY_CODE" => "",
 		"DETAIL_BLOG_URL" => "catalog_comments",
 		"DETAIL_BLOG_EMAIL_NOTIFY" => "N",
 		"DETAIL_FB_APP_ID" => "",
@@ -306,6 +305,8 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 		"COMPARE_ELEMENT_SORT_ORDER" => "asc",
 		"COMPARE_POSITION_FIXED" => "Y",
 		"COMPARE_POSITION" => "top left",
+		"SEARCH_USE_SEARCH_RESULT_ORDER" => "N",
+		"SHOW_SKU_DESCRIPTION" => "N",
 		"SEF_URL_TEMPLATES" => array(
 			"sections" => "",
 			"section" => "#SECTION_CODE#/",

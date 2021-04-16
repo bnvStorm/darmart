@@ -6,6 +6,9 @@ body {
     color: #222;
     background-color: #f7f7f7;
 }
+.thumb-container .slider-thumb .slick-slide{
+    outline-color: #20293c;
+}
 .auth_succes{
     display: flex;
     justify-content: center;
@@ -31,11 +34,6 @@ body {
     border-color: #dff0d8;
 }
 
-.bx_soc_comments_div.bx_important.bx_yellow .bx_bt_button:hover{
-    background: #20293c;
-    color: #fff;
-    border-color: #20293c;
-}
 .product-item-detail-main{
     display: flex;
     flex-direction: row;
@@ -43,32 +41,13 @@ body {
 .product-item-detail-tabs-container-fixed{
     display: none;
 }
-.product-item-detail-slider-controls-image{
-    outline-style: auto;
-}
-.bx-yellow .product-item-selected-scu, .bx-yellow .product-item-detail-slider-controls-image:hover, .bx-yellow .product-item-detail-slider-controls-image.active{
+
+.bx-yellow .product-item-selected-scu{
     /*border: 1px solid #20293c;*/
     outline-color: #20293c;
     outline-style: auto;
 }
 
-.product-item-detail-slider-container{
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    width: 100%;
-}
-.product-item-detail-slider-controls-block{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.product-item-detail-slider-controls-image{
-    margin-bottom: 10px;
-}
-.product-item-detail-slider-image{
-    left: 10px;
-}
 .bx-catalog-tab-section-container input[type="button"],input[type="button"]{
     background: #8ecd3d;
     color: #fff;
@@ -137,6 +116,7 @@ button, html input[type=button], input[type=reset], input[type=submit]{
 }
 .quiqview-btns label{
     margin-bottom: 0;
+    width: 50%;
 }
 .product-item-info-container{
     display: none;
@@ -188,12 +168,6 @@ button, html input[type=button], input[type=reset], input[type=submit]{
     min-height: 120px;
 }
 @media (max-width: 480px) {
-    .product-item-detail-slider-container{
-        flex-direction: column-reverse;
-        justify-content: space-around;
-    }
-    .product-item-detail-slider-controls-block{
-        flex-direction: row;
-    }
+
 
 }

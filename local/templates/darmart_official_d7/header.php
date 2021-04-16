@@ -9,20 +9,28 @@ use \Bitrix\Main\Localization\Loc;
 
 Loc::loadMessages(__FILE__);
 $assets_manager = Asset::getInstance();
+$assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/jquery-3.3.1.min.js');
+
 $assets_manager->addCss(SITE_TEMPLATE_PATH . '/css/bootstrap.min.css');
-$assets_manager->addCss(SITE_TEMPLATE_PATH . '/css/slick.css');
+$assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/bootstrap.min.js');
+
 $assets_manager->addCss(SITE_TEMPLATE_PATH . '/css/pe-icon-7-stroke/css/pe-icon-7-stroke.css');
 $assets_manager->addCss(SITE_TEMPLATE_PATH . '/css/fa4/css/font-awesome.min.css');
+
+$assets_manager->addCss(SITE_TEMPLATE_PATH . '/css/slick.css');
+$assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/slick.min.js');
+
 $assets_manager->addCss(SITE_TEMPLATE_PATH . '/css/lightbox.min.css');
+$assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/lightbox.min.js');
+
 $assets_manager->addCss(SITE_TEMPLATE_PATH . '/css/owl.carousel.css');
+$assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/owl.carousel.min.js');
+
 $assets_manager->addCss(SITE_TEMPLATE_PATH . '/css/stylesheet.css');
 $assets_manager->addCss(SITE_TEMPLATE_PATH . '/css/addons.css');
-$assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/jquery-3.3.1.min.js');
-$assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/bootstrap.min.js');
-$assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/slick.min.js');
-$assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/lightbox.min.js');
 $assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/common.js');
-$assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/owl.carousel.min.js');
+$assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/slider-settings.js');
+
 $assets_manager->addString('<meta name="viewport" content="width=device-width, initial-scale=1">');
 $assets_manager->addString('<meta http-equiv="X-UA-Compatible" content="IE=edge">');
 $assets_manager->addString('<link rel="preconnect" href="https://fonts.gstatic.com">');

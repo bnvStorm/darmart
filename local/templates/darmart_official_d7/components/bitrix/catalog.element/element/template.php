@@ -38,12 +38,12 @@ $templateData = array(
 
 global $USER;
 
-if($USER->IsAuthorized()){
+if ($USER->IsAuthorized()) {
     $favorite = \Rating1C\Darmart\App::getInstance()->favorite();
     $productsInFavoriteIds = $favorite->getProductsIds($USER->GetID());
 
     //Check if offer in wishlist
-    foreach($arResult['JS_OFFERS'] as $key => $offer)
+    foreach ($arResult['JS_OFFERS'] as $key => $offer)
         $arResult['JS_OFFERS'][$key]['IS_FAVORITE'] = in_array($offer['ID'], $productsInFavoriteIds);
 
 }
@@ -167,132 +167,59 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
         <div class="container-fluid">
             <div class="card">
                 <div class="row">
-                    <div id="content" class="col-md-7 col-sm-7 thumbnail product-item-detail-main">
-                        <div class="product-item-detail-slider-container" id="<?= $itemIds['BIG_SLIDER_ID'] ?>">
-                            <span class="product-item-detail-slider-close" data-entity="close-popup"></span>
-                            <div style="width:100%;" class="product-item-detail-slider-block
-						<?= ($arParams['IMAGE_RESOLUTION'] === '1by1' ? 'product-item-detail-slider-block-square' : '') ?>"
-                                 data-entity="images-slider-block">
-                                <span class="product-item-detail-slider-left" data-entity="slider-control-left"
-                                      style="display: none;"></span>
-                                <span class="product-item-detail-slider-right" data-entity="slider-control-right"
-                                      style="display: none;"></span>
-                                <div class="product-item-label-text <?= $labelPositionClass ?>"
-                                     id="<?= $itemIds['STICKER_ID'] ?>"
-                                    <?= (!$arResult['LABEL'] ? 'style="display: none;"' : '') ?>>
-                                    <?
-                                    if ($arResult['LABEL'] && !empty($arResult['LABEL_ARRAY_VALUE'])) {
-                                        foreach ($arResult['LABEL_ARRAY_VALUE'] as $code => $value) {
-                                            ?>
-                                            <div<?= (!isset($arParams['LABEL_PROP_MOBILE'][$code]) ? ' class="hidden-xs"' : '') ?>>
-                                                <span title="<?= $value ?>"><?= $value ?></span>
-                                            </div>
-                                            <?
-                                        }
-                                    }
-                                    ?>
+                    <div class="col-md-7">
+
+                        <div class="thumb-container">
+                            <?php if (!empty($actualItem['MORE_PHOTO'])):?>
+                            <div class="slider-thumb-container">
+
+                                <div class="prev">
+                                    <span class="pe-7s-angle-up"></span>
                                 </div>
-                                <?
-                                if ($arParams['SHOW_DISCOUNT_PERCENT'] === 'Y') {
-                                    if ($haveOffers) {
-                                        ?>
-                                        <div class="product-item-label-ring <?= $discountPositionClass ?>"
-                                             id="<?= $itemIds['DISCOUNT_PERCENT_ID'] ?>"
-                                             style="display: none;">
-                                        </div>
-                                        <?
-                                    } else {
-                                        if ($price['DISCOUNT'] > 0) {
-                                            ?>
-                                            <div class="product-item-label-ring <?= $discountPositionClass ?>"
-                                                 id="<?= $itemIds['DISCOUNT_PERCENT_ID'] ?>"
-                                                 title="<?= -$price['PERCENT'] ?>%">
-                                                <span><?= -$price['PERCENT'] ?>%</span>
-                                            </div>
-                                            <?
-                                        }
-                                    }
-                                }
-                                ?>
-                                <div class="product-item-detail-slider-images-container" data-entity="images-container">
+
+                                <div class="slider-thumb" style="height: 472px;">
+
                                     <?
                                     if (!empty($actualItem['MORE_PHOTO'])) {
                                         foreach ($actualItem['MORE_PHOTO'] as $key => $photo) {
                                             ?>
-                                            <div class="product-item-detail-slider-image<?= ($key == 0 ? ' active' : '') ?>"
-                                                 data-entity="image" data-id="<?= $photo['ID'] ?>">
-                                                <img src="<?= $photo['SRC'] ?>" alt="<?= $alt ?>"
-                                                     title="<?= $title ?>"<?= ($key == 0 ? ' itemprop="image"' : '') ?>>
-                                            </div>
+                                            <img src="<?= $photo['SRC'] ?>" alt="<?= $alt ?>" title="<?= $title ?>">
                                             <?
                                         }
-                                    }
+                                    } ?>
 
-                                    if ($arParams['SLIDER_PROGRESS'] === 'Y') {
-                                        ?>
-                                        <div class="product-item-detail-slider-progress-bar"
-                                             data-entity="slider-progress-bar" style="width: 0;"></div>
-                                        <?
-                                    }
-                                    ?>
                                 </div>
-                            </div>
-                            <?
-                            if ($showSliderControls) {
-                                if ($haveOffers) {
-                                    foreach ($arResult['OFFERS'] as $keyOffer => $offer) {
-                                        if (!isset($offer['MORE_PHOTO_COUNT']) || $offer['MORE_PHOTO_COUNT'] <= 0)
-                                            continue;
 
-                                        $strVisible = $arResult['OFFERS_SELECTED'] == $keyOffer ? '' : 'none';
+                                <div class="next">
+                                    <span class="pe-7s-angle-down"></span>
+                                </div>
+
+                            </div>
+                            <? endif; ?>
+                            <div class="slider-bigthumb">
+                                <?
+                                if (!empty($actualItem['MORE_PHOTO'])) {
+                                    foreach ($actualItem['MORE_PHOTO'] as $key => $photo) {
                                         ?>
-                                        <div class="product-item-detail-slider-controls-block"
-                                             id="<?= $itemIds['SLIDER_CONT_OF_ID'] . $offer['ID'] ?>"
-                                             style="display:flex">
-                                            <?
-                                            foreach ($offer['MORE_PHOTO'] as $keyPhoto => $photo) {
-                                                ?>
-                                                <div class="product-item-detail-slider-controls-image<?= ($keyPhoto == 0 ? ' active' : '') ?>"
-                                                     data-entity="slider-control"
-                                                     data-value="<?= $offer['ID'] . '_' . $photo['ID'] ?>">
-                                                    <img src="<?= $photo['SRC'] ?>">
-                                                </div>
-                                                <?
-                                            }
-                                            ?>
-                                        </div>
+                                        <a data-lightbox="gallery" href="<?= $photo['SRC'] ?>"
+                                           title="<?= $title ?>">
+                                            <img src="<?= $photo['SRC'] ?>" alt="<?= $alt ?>"
+                                                 title="<?= $title ?>">
+                                        </a>
                                         <?
                                     }
-                                } else {
-                                    ?>
-                                    <div class="product-item-detail-slider-controls-block"
-                                         id="<?= $itemIds['SLIDER_CONT_ID'] ?>">
-                                        <?
-                                        if (!empty($actualItem['MORE_PHOTO'])) {
-                                            foreach ($actualItem['MORE_PHOTO'] as $key => $photo) {
-                                                ?>
-                                                <div class="product-item-detail-slider-controls-image<?= ($key == 0 ? ' active' : '') ?>"
-                                                     data-entity="slider-control" data-value="<?= $photo['ID'] ?>">
-                                                    <img src="<?= $photo['SRC'] ?>">
-                                                </div>
-                                                <?
-                                            }
-                                        }
-                                        ?>
-                                    </div>
-                                    <?
-                                }
-                            }
-                            ?>
+                                } ?>
+                            </div>
+                            </div>
+
                         </div>
-                    </div>
-                    <?
+                                        <?
                     $showOffersBlock = $haveOffers && !empty($arResult['OFFERS_PROP']);
                     $mainBlockProperties = array_intersect_key($arResult['DISPLAY_PROPERTIES'], $arParams['MAIN_BLOCK_PROPERTY_CODE']);
                     $showPropsBlock = !empty($mainBlockProperties) || $arResult['SHOW_OFFERS_PROPS'];
                     $showBlockWithOffersAndProps = $showOffersBlock || $showPropsBlock;
                     ?>
-                    <div class="col-md-5 col-sm-5">
+                    <div class="col-md-5">
                         <div class="row">
                             <div class="product-item-detail-pay-block">
                                 <?
@@ -602,7 +529,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
 
 
                                                         <?php case 'buttons': ?>
-                                                            <?php if ($arParams['USE_PRODUCT_QUANTITY']): ?>
+                                                        <?php if ($arParams['USE_PRODUCT_QUANTITY']): ?>
                                                             <div class="form-group">
                                                                 <?php if (Loc::getMessage('CATALOG_QUANTITY')): ?>
                                                                     <div class="product-item-detail-info-container-title text-center"><?= Loc::getMessage('CATALOG_QUANTITY') ?></div>
@@ -617,8 +544,8 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                                                                value="<?= $price['MIN_QUANTITY'] ?>">
                                                                         <span class="product-item-amount-description-container">
 
-<!--														<span id="--><?//= $itemIds['QUANTITY_MEASURE'] ?><!--">-->
-                                                                            <?//= $actualItem['ITEM_MEASURE']['TITLE'] ?><!--</span>-->
+<!--														<span id="--><? //= $itemIds['QUANTITY_MEASURE'] ?><!--">-->
+                                                                            <? //= $actualItem['ITEM_MEASURE']['TITLE'] ?><!--</span>-->
 														<span id="<?= $itemIds['PRICE_TOTAL'] ?>"></span>
 
 													</span>
@@ -627,51 +554,51 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                                                           id="<?= $itemIds['QUANTITY_UP_ID'] ?>"></span>
                                                                 </div>
                                                             </div>
-                                                            <?php endif; ?>
-                                                            <div class="detail-action"
-                                                                 data-entity="main-button-container">
+                                                        <?php endif; ?>
+                                                        <div class="detail-action"
+                                                             data-entity="main-button-container">
 
-                                                                <div id="<?= $itemIds['BASKET_ACTIONS_ID'] ?>"
-                                                                     style="display: <?= ($actualItem['CAN_BUY'] ? '' : 'none') ?>;">
-                                                                    <?php if ($showAddBtn): ?>
+                                                            <div id="<?= $itemIds['BASKET_ACTIONS_ID'] ?>"
+                                                                 style="display: <?= ($actualItem['CAN_BUY'] ? '' : 'none') ?>;">
+                                                                <?php if ($showAddBtn): ?>
 
-                                                                        <a class="btn main-btn <?= $showButtonClassName ?>"
-                                                                           id="<?= $itemIds['ADD_BASKET_LINK'] ?>"
-                                                                           href="javascript:void(0);">
-                                                                            <?= $arParams['MESS_BTN_ADD_TO_BASKET'] ?>
-                                                                        </a>
-
-                                                                    <?php endif; ?>
-                                                                    <?php if ($showBuyBtn):?>
-                                                                        <a class="btn main-btn <?= $buyButtonClassName ?>"
-                                                                           id="<?= $itemIds['BUY_LINK'] ?>"
-                                                                           href="javascript:void(0);">
-                                                                            <?= $arParams['MESS_BTN_BUY'] ?>
-                                                                        </a>
-                                                                    <?php endif; ?>
-                                                                    <a class="btn main-btn" href="javascript:void(0)"
-                                                                       rel="nofollow"
-                                                                       id="<?= $itemIds['NOT_AVAILABLE_MESS'] ?>"
-                                                                       style="display: <?= (!$actualItem['CAN_BUY'] ? '' : 'none') ?>;">
-                                                                        <?= $arParams['MESS_NOT_AVAILABLE'] ?>
+                                                                    <a class="btn main-btn <?= $showButtonClassName ?>"
+                                                                       id="<?= $itemIds['ADD_BASKET_LINK'] ?>"
+                                                                       href="javascript:void(0);">
+                                                                        <?= $arParams['MESS_BTN_ADD_TO_BASKET'] ?>
                                                                     </a>
-                                                                </div>
 
-                                                                <?php
-                                                                if($USER->IsAuthorized()):
+                                                                <?php endif; ?>
+                                                                <?php if ($showBuyBtn): ?>
+                                                                    <a class="btn main-btn <?= $buyButtonClassName ?>"
+                                                                       id="<?= $itemIds['BUY_LINK'] ?>"
+                                                                       href="javascript:void(0);">
+                                                                        <?= $arParams['MESS_BTN_BUY'] ?>
+                                                                    </a>
+                                                                <?php endif; ?>
+                                                                <a class="btn main-btn" href="javascript:void(0)"
+                                                                   rel="nofollow"
+                                                                   id="<?= $itemIds['NOT_AVAILABLE_MESS'] ?>"
+                                                                   style="display: <?= (!$actualItem['CAN_BUY'] ? '' : 'none') ?>;">
+                                                                    <?= $arParams['MESS_NOT_AVAILABLE'] ?>
+                                                                </a>
+                                                            </div>
+
+                                                            <?php
+                                                            if ($USER->IsAuthorized()):
                                                                 $inFaforites = in_array($arResult['ID'], $productsInFavoriteIds) !== false;
                                                                 ?>
                                                                 <button type="button"
-                                                                        id="favorites_list_<?=$arResult['ID']?>"
-                                                                        data-product-id="<?=$arResult['ID']?>"
-                                                                        class="btn-icon fav-btn <?=$inFaforites ? 'delFavorites' : 'addFavorites'?>"
+                                                                        id="favorites_list_<?= $arResult['ID'] ?>"
+                                                                        data-product-id="<?= $arResult['ID'] ?>"
+                                                                        class="btn-icon fav-btn <?= $inFaforites ? 'delFavorites' : 'addFavorites' ?>"
                                                                         data-toggle="tooltip"
                                                                         data-original-title="В закладки">
                                                                     <span class="pe-7s-like"></span>
                                                                 </button>
-                                                                <?php endif; ?>
+                                                            <?php endif; ?>
 
-                                                                <? if ($arParams['DISPLAY_COMPARE']): ?>
+                                                            <? if ($arParams['DISPLAY_COMPARE']): ?>
                                                                 <div class="btn-icon"
                                                                      style="display: flex;align-items: center;justify-content: center;">
                                                                     <label id="<?= $itemIds['COMPARE_LINK'] ?>"
@@ -684,10 +611,10 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                                                         </a>
                                                                     </label>
                                                                 </div>
-                                                                <?php endif; ?>
+                                                            <?php endif; ?>
 
-                                                            </div>
-                                                            <?php break; ?>
+                                                        </div>
+                                                        <?php break; ?>
                                                     <?php endswitch; ?>
                                                 <?php endforeach; ?>
 
@@ -1704,10 +1631,10 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                     );
                 }
 
-                if(isset($_REQUEST['offer_id'])){
+                if (isset($_REQUEST['offer_id'])) {
                     $selectedOffer = $_REQUEST['offer_id'];
-                    foreach($jsParams['OFFERS'] as $offerKey => $offer){
-                        if($offer['ID'] == $selectedOffer){
+                    foreach ($jsParams['OFFERS'] as $offerKey => $offer) {
+                        if ($offer['ID'] == $selectedOffer) {
                             $jsParams['OFFER_SELECTED'] = $offerKey;
                         }
                     }

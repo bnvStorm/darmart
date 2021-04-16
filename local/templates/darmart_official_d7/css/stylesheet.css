@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Exo+2:200,300,400,500,600,700&subset=cyrillic');
 
+body {
+    font-family: 'Exo 2', sans-serif;
+    font-weight: 300;
+    color: #222;
+    background-color: #f7f7f7;
+}
 
 body.open-minicart,
 body.open-sidebar,
@@ -101,26 +108,19 @@ textarea.form-control {
     padding: 12px 30px;
     font-size: 14px;
     border-radius: 10px;
-    /*background: #fff;*/
-    /*border: 1px solid#ddd;*/
-    /*color: #777;*/
+    background: #fff;
+    border: 1px solid#ddd;
+    color: #777;
     font-weight: 500;
     -webkit-transition: 0.3s all;
     -moz-transition: 0.3s all;
     -ms-transition: 0.3s all;
     -o-transition: 0.3s all;
     transition: 0.3s all;
-    background: #8ecd3d;
-    color: #fff;
-    border: none;
 }
 
 .btn:hover{
-    /*background: #ddd;*/
-    background: #20293c;
-    color: #fff;
-    border-color: #20293c;
-    text-decoration: none;
+    background: #ddd;
 }
 
 .main-btn {
@@ -242,7 +242,6 @@ div.required .control-label:before {
     width: 100%;
     text-align: left;
     font-size: 14px;
-    color:#333;
 }
 
 
@@ -517,7 +516,7 @@ header {
     display: table-cell;
 }
 #menu .dropdown-inner a {
-    min-width: 166px;
+    min-width: 160px;
     display: block;
     padding: 7px 20px;
     clear: both;
@@ -687,7 +686,7 @@ header {
 }
 /* content */
 #content {
-    /*min-height: 600px;*/
+    min-height: 600px;
 }
 /* footer */
 
@@ -1979,15 +1978,10 @@ h2.price {
 
 .box-info-product .detail-action {
     overflow: hidden;
-    /*margin-top: 23px;*/
+    margin-top: 23px;
     float: right;
 }
-.product-item-detail-info-container-title {
-    margin-bottom: 3px;
-    color: #a5a5a5;
-    font-weight: normal;
-    font-size: 15px;
-}
+
 .box-info-product .detail-action button{
     float: left;
 }
@@ -2217,10 +2211,9 @@ h2.price {
 }
 
 .main-table tr th {
-    font-weight: normal;
-    /*border-bottom: 1px solid#ddd;*/
+    font-weight: 500;
+    border-bottom: 1px solid#ddd;
     vertical-align: middle;
-    font-size: 14px;
     padding: 10px;
 }
 
@@ -3049,8 +3042,25 @@ h2.price {
 }
 
 @media (max-width: 380px) {
-    .card-info .nav-tabs > li {
+    .card-info .nav-tabs>li {
         width: 50%;
     }
-}
 
+    .card-info .nav-tabs>li>a {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+
+    .box-info-product .form-group {
+        float: none;
+    }
+
+    .box-info-product .detail-action {
+        margin-top: 15px;
+        float: none;
+    }
+
+    .box-review .rating {
+        display: block;
+    }
+}
