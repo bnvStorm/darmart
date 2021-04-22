@@ -108,16 +108,11 @@ if (isset($arResult['ITEM'])) {
             <div class="image">
                 <? if ($itemHasDetailUrl): ?>
                 <a href="<?= $item['DETAIL_PAGE_URL'] ?>" title="<?= $imgTitle ?>" data-entity="image-wrapper">
- 
-<!--                    --><?//
-//
-//                    $renderImage = CFile::ResizeImageGet($item["PREVIEW_PICTURE"]['SRC'], array("width" => 20, "height" => 20), BX_RESIZE_IMAGE_EXACT, false);
-//
-//                    echo '<img alt="' . $item["NAME"] . '" src="' . $renderImage["src"] . '" />';
-//                    ?>
-                    <img src="<?= $item['PREVIEW_PICTURE']['SRC'] ?>" alt="<?= $imgTitle ?>" title="<?= $imgTitle ?>"
-                         class="img-responsive" style="max-width: 215px;">
-
+                    <? if (isset($arResult['NEW_SRC'])): ?>
+                        <img alt="<?= $item["NAME"] ?>" src="<?= $arResult['NEW_SRC'] ?>"/>
+                    <? else: ?>
+                        <img alt="<?= $item["NAME"] ?>" src="<?= SITE_TEMPLATE_PATH . '/img/no_photo.png' ?>"/>
+                    <? endif; ?>
                     <? endif; ?>
                     <input type="hidden" class="product-item-image-slider-slide-container slide"
                            id="<?= $itemIds['PICT_SLIDER'] ?>">
@@ -176,13 +171,26 @@ if (isset($arResult['ITEM'])) {
             }
             ?>
             <div class="caption">
+
                 <div class="rating">
-                    
-                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
-                    <span class="fa fa-stack"><i class="fa fa-star fa-stack-2x"></i></span>
+                    <? $APPLICATION->IncludeComponent(
+                        "bitrix:iblock.vote",
+                        "stars",
+                        array(
+                            "IBLOCK_TYPE" => $arParams['IBLOCK_TYPE'],
+                            "IBLOCK_ID" => $arParams['IBLOCK_ID'],
+                            "ELEMENT_ID" => $arResult['ITEM']['ID'],
+                            "ELEMENT_CODE" => "",
+                            "MAX_VOTE" => "5",
+                            "VOTE_NAMES" => array("1", "2", "3", "4", "5"),
+                            "SET_STATUS_404" => "N",
+                            "DISPLAY_AS_RATING" => $arParams['VOTE_DISPLAY_AS_RATING'],
+                            "CACHE_TYPE" => $arParams['CACHE_TYPE'],
+                            "CACHE_TIME" => $arParams['CACHE_TIME']
+                        ),
+                        $component,
+                        array("HIDE_ICONS" => "Y")
+                    ); ?>
                 </div>
                 <? if ($itemHasDetailUrl): ?>
                 <h3><a href="<?= $item['DETAIL_PAGE_URL'] ?>" title="<?= $productTitle ?>">
