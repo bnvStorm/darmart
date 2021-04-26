@@ -3,7 +3,7 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
     if (isset($arResult['ITEM']['PREVIEW_PICTURE'])) {
         $item = $arResult['ITEM'];
-        $renderImage = CFile::ResizeImageGet($item["PREVIEW_PICTURE"]['ID'], array("width" => 240, "height" => 240), BX_RESIZE_IMAGE_PROPORTIONAL, false);
+        $renderImage = CFile::ResizeImageGet($item["PREVIEW_PICTURE"]['ID'], array("width" => 215, "height" => 228), BX_RESIZE_IMAGE_PROPORTIONAL, false);
         $arResult['NEW_SRC'] = $renderImage['src'];
     }
 

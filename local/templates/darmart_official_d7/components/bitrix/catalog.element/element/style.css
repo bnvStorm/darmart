@@ -21,12 +21,12 @@
 }
 
 .product-item-detail-pay-block {
-	position: relative;
-	margin-bottom: 15px;
-	padding: 20px 20px 0;
-	border: 1px solid #e4e4e4;
-	border-radius: 3px;
-	background-color: #fff;
+	/*position: relative;*/
+	/*margin-bottom: 15px;*/
+	/*padding: 20px 20px 0;*/
+	/*border: 1px solid #e4e4e4;*/
+	/*border-radius: 3px;*/
+	/*background-color: #fff;*/
 }
 
 .bx-retina .product-item-detail-pay-block { border-width: .5px; }

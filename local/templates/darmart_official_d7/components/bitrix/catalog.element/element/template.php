@@ -162,6 +162,7 @@ if (!empty($arParams['LABEL_PROP_POSITION'])) {
 
 $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_THEME'] : '';
 ?>
+
     <div class="bx-catalog-element<?= $themeClass ?>" id="<?= $itemIds['ID'] ?>" itemscope
          itemtype="http://schema.org/Product">
         <div class="container-fluid">
@@ -170,31 +171,31 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                     <div class="col-md-7">
 
                         <div class="thumb-container">
-                            <?php if (!empty($actualItem['MORE_PHOTO'])):?>
-                            <div class="slider-thumb-container">
+                            <?php if (!empty($actualItem['MORE_PHOTO'])): ?>
+                                <div class="slider-thumb-container">
 
-                                <div class="prev">
-                                    <span class="pe-7s-angle-up"></span>
+                                    <div class="prev">
+                                        <span class="pe-7s-angle-up"></span>
+                                    </div>
+
+                                    <div class="slider-thumb" style="height: 472px;">
+
+                                        <?
+                                        if (!empty($actualItem['MORE_PHOTO'])) {
+                                            foreach ($actualItem['MORE_PHOTO'] as $key => $photo) {
+                                                ?>
+                                                <img src="<?= $photo['SRC'] ?>" alt="<?= $alt ?>" title="<?= $title ?>">
+                                                <?
+                                            }
+                                        } ?>
+
+                                    </div>
+
+                                    <div class="next">
+                                        <span class="pe-7s-angle-down"></span>
+                                    </div>
+
                                 </div>
-
-                                <div class="slider-thumb" style="height: 472px;">
-
-                                    <?
-                                    if (!empty($actualItem['MORE_PHOTO'])) {
-                                        foreach ($actualItem['MORE_PHOTO'] as $key => $photo) {
-                                            ?>
-                                            <img src="<?= $photo['SRC'] ?>" alt="<?= $alt ?>" title="<?= $title ?>">
-                                            <?
-                                        }
-                                    } ?>
-
-                                </div>
-
-                                <div class="next">
-                                    <span class="pe-7s-angle-down"></span>
-                                </div>
-
-                            </div>
                             <? endif; ?>
                             <div class="slider-bigthumb">
                                 <?
@@ -210,10 +211,10 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                     }
                                 } ?>
                             </div>
-                            </div>
-
                         </div>
-                                        <?
+
+                    </div>
+                    <?
                     $showOffersBlock = $haveOffers && !empty($arResult['OFFERS_PROP']);
                     $mainBlockProperties = array_intersect_key($arResult['DISPLAY_PROPERTIES'], $arParams['MAIN_BLOCK_PROPERTY_CODE']);
                     $showPropsBlock = !empty($mainBlockProperties) || $arResult['SHOW_OFFERS_PROPS'];
@@ -621,6 +622,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                             </div>
                                         </div>
                                     </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -861,7 +863,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                             $componentCommentsParams["USER_CONSENT_IS_LOADED"] = $arParams["USER_CONSENT_IS_LOADED"];
                                         $APPLICATION->IncludeComponent(
                                             'bitrix:catalog.comments',
-                                            '',
+                                            'mod_comment',
                                             $componentCommentsParams,
                                             $component,
                                             array('HIDE_ICONS' => 'Y')
@@ -877,27 +879,27 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                     <?
                     if ($arParams['BRAND_USE'] === 'Y') {
                         ?>
-                        <div class="col-sm-4 col-md-3">
-                            <? $APPLICATION->IncludeComponent(
-                                'bitrix:catalog.brandblock',
-                                'bootstrap_v4',
-                                array(
-                                    'IBLOCK_TYPE' => $arParams['IBLOCK_TYPE'],
-                                    'IBLOCK_ID' => $arParams['IBLOCK_ID'],
-                                    'ELEMENT_ID' => $arResult['ID'],
-                                    'ELEMENT_CODE' => '',
-                                    'PROP_CODE' => $arParams['BRAND_PROP_CODE'],
-                                    'CACHE_TYPE' => $arParams['CACHE_TYPE'],
-                                    'CACHE_TIME' => $arParams['CACHE_TIME'],
-                                    'CACHE_GROUPS' => $arParams['CACHE_GROUPS'],
-                                    'WIDTH' => '',
-                                    'HEIGHT' => ''
-                                ),
-                                $component,
-                                array('HIDE_ICONS' => 'Y')
-                            );
-                            ?>
-                        </div>
+<!--                        <div class="col-sm-4 col-md-3">-->
+<!--                            --><?// $APPLICATION->IncludeComponent(
+//                                'bitrix:catalog.brandblock',
+//                                'bootstrap_v4',
+//                                array(
+//                                    'IBLOCK_TYPE' => $arParams['IBLOCK_TYPE'],
+//                                    'IBLOCK_ID' => $arParams['IBLOCK_ID'],
+//                                    'ELEMENT_ID' => $arResult['ID'],
+//                                    'ELEMENT_CODE' => '',
+//                                    'PROP_CODE' => $arParams['BRAND_PROP_CODE'],
+//                                    'CACHE_TYPE' => $arParams['CACHE_TYPE'],
+//                                    'CACHE_TIME' => $arParams['CACHE_TIME'],
+//                                    'CACHE_GROUPS' => $arParams['CACHE_GROUPS'],
+//                                    'WIDTH' => '',
+//                                    'HEIGHT' => ''
+//                                ),
+//                                $component,
+//                                array('HIDE_ICONS' => 'Y')
+//                            );
+//                            ?>
+<!--                        </div>-->
                         <?
                     }
                     ?>
