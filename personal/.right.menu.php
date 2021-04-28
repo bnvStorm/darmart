@@ -1,67 +1,88 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Личный кабинет",
-		"/personal/",
-		Array(),
-		Array(),
-		""
+		"Авторизация", 
+		"/personal/?login=yes", 
+		Array(), 
+		Array(), 
+		"\$GLOBALS[\"USER\"]->HasNoAccess() && \$_SERVER[\"REMOTE_USER\"]==\"\"" 
 	),
 	Array(
-		"Учетная запись",
-		"/personal/private/",
-		Array(),
-		Array(),
-		""
+		"Регистрация", 
+		"/personal/register/", 
+		Array(), 
+		Array(), 
+		"\$GLOBALS[\"USER\"]->HasNoAccess() && \$_SERVER[\"REMOTE_USER\"]==\"\"" 
 	),
 	Array(
-		"Смена пароля",
-		"/personal/change_password/",
-		Array(),
-		Array(),
-		""
+		"Напомнить пароль", 
+		"/personal/change_password/?forgot_password=yes", 
+		Array(), 
+		Array(), 
+		"\$GLOBALS[\"USER\"]->HasNoAccess() && \$_SERVER[\"REMOTE_USER\"]==\"\"" 
 	),
 	Array(
-		"Мои закладки",
-		"/personal/favorites/",
-		Array(),
-		Array(),
-		""
+		"Личный кабинет", 
+		"/personal/", 
+		Array(), 
+		Array(), 
+		"" 
 	),
 	Array(
-		"Текущие заказы",
-		"/personal/orders/",
-		Array(),
-		Array(),
-		""
+		"Учетная запись", 
+		"/personal/private/", 
+		Array(), 
+		Array(), 
+		"" 
 	),
 	Array(
-		"История заказов",
-		"/personal/orders/?filter_history=Y",
-		Array(),
-		Array(),
-		""
+		"Смена пароля", 
+		"/personal/change_password/", 
+		Array(), 
+		Array(), 
+		"" 
 	),
 	Array(
-		"Подписка на новости",
-		"/personal/subscribe/",
-		Array(),
-		Array(),
-		""
+		"Мои закладки", 
+		"/personal/favorites/", 
+		Array(), 
+		Array(), 
+		"" 
 	),
 	Array(
-		"Возврат товара",
-		"/personal/add-return/",
-		Array(),
-		Array(),
-		""
+		"Текущие заказы", 
+		"/personal/orders/", 
+		Array(), 
+		Array(), 
+		"" 
 	),
 	Array(
-		"Выйти",
-		"/personal/?logout=yes&".bitrix_sessid_get(),
-		Array(),
-		Array(),
-		""
+		"История заказов", 
+		"/personal/orders/?filter_history=Y", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Подписка на новости", 
+		"/personal/subscribe/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Возврат товара", 
+		"/personal/add-return/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Выйти", 
+		"/personal/?logout=yes", 
+		Array(), 
+		Array(), 
+		"\$USER->IsAuthorized()" 
 	)
 );
 ?>

@@ -164,14 +164,61 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y') {
 }
 ?>
 
+<?php if(!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS'])): ?>
+    <div class="row">
+    <?php foreach ($arResult['ITEMS'] as $item):
+        $areaIds = [];
+        $uniqueId = $item['ID'] . '_' . md5($this->randString() . $component->getAction());
+        $areaIds[$item['ID']] = $this->GetEditAreaId($uniqueId);
+        $this->AddEditAction($uniqueId, $item['EDIT_LINK'], $elementEdit);
+        $this->AddDeleteAction($uniqueId, $item['DELETE_LINK'], $elementDelete, $elementDeleteParams);
+
+        ?>
+        <?php
+        $areaId = $areaIds[$item['ID']];
+
+        $isOffer = false;
+        if(!empty($item['OFFERS'])){
+            $areaId = $item['OFFERS'][0]['ID'];
+            $isOffer = true;
+        }
+        $APPLICATION->IncludeComponent(
+            'bitrix:catalog.item',
+            'favorite_item_card',
+            array(
+                'RESULT' => array(
+                    'ITEM' => $item,
+                    'AREA_ID' => $areaId,
+                    'IS_OFFER' => $item['IS_OFFER']
+                ),
+                'PARAMS' => $generalParams
+                    + array('SKU_PROPS' => $arResult['SKU_PROPS'][$item['IBLOCK_ID']])
+            ),
+            $component
+        );
+        ?>
+    <?php endforeach; ?>
+    </div>
+<?php else: ?>
+    <?php
+    // load css for bigData/deferred load
+    $APPLICATION->IncludeComponent(
+        'bitrix:catalog.item',
+        'favorite_item',
+        array(),
+        $component,
+        array('HIDE_ICONS' => 'Y')
+    );
+    ?>
+<?php endif; ?>
+
+<?php if(false): ?>
 <div class="table-responsive" data-entity="<?= $containerName ?>">
     <table class="table table-bordered table-hover">
         <thead>
         <tr>
             <td class="text-center"><?= Loc::getMessage('COLUMN_IMAGE') ?></td>
             <td class="text-left"><?= Loc::getMessage('COLUMN_PRODUCT_NAME') ?></td>
-            <td class="text-left"><?= Loc::getMessage('COLUMN_MODEL') ?></td>
-            <td class="text-right"><?= Loc::getMessage('COLUMN_WAREHOUSE') ?></td>
             <td class="text-right"><?= Loc::getMessage('COLUMN_PRICE') ?></td>
             <td class="text-right"><?= Loc::getMessage('COLUMN_ACTION') ?></td>
         </tr>
@@ -225,6 +272,7 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y') {
         </tbody>
     </table>
 </div>
+<?php endif; ?>
 
 <? if ($showBottomPager): ?>
     <div data-pagination-num="<?= $navParams['NavNum'] ?>">

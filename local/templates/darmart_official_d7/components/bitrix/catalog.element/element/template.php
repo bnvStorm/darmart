@@ -182,13 +182,18 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                     <div class="slider-thumb" data-entity="images-container" style="height: 472px;">
 
                                         <?
-                                        if (!empty($actualItem['MORE_PHOTO'])) {
-                                            foreach ($actualItem['MORE_PHOTO'] as $key => $photo) {
+                                        if (!empty($actualItem['MORE_PHOTO'])) :
+                                            foreach ($actualItem['MORE_PHOTO'] as $key => $photo) :
                                                 ?>
                                                 <img src="<?= $photo['SRC'] ?>" alt="<?= $alt ?>" title="<?= $title ?>">
-                                                <?
-                                            }
-                                        } ?>
+                                            <?
+                                            endforeach;
+                                        else:
+                                        ?>
+                                        <p>2</p>
+                                       <?
+                                       endif;
+                                       ?>
 
                                     </div>
 
@@ -228,7 +233,9 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                         </a>
                                         <?
                                     }
-                                } ?>
+                                } else {?>
+                                    <p>2</p>
+                                <?}?>
                             </div>
                         </div>
                     </div>
@@ -289,7 +296,8 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                         <div class="new-price"
                                              id="<?= $itemIds['PRICE_ID'] ?>"><?= $price['PRINT_RATIO_PRICE'] ?></div>
                                         <div class="tax">
-                                          Без НДС:  <?= (($price['PRINT_RATIO_PRICE'])-($price['PRINT_RATIO_VAT']))?>
+                                            Без
+                                            НДС: <?= (($price['PRINT_RATIO_PRICE']) - ($price['PRINT_RATIO_VAT'])) ?>
                                         </div>
 
                                         <?
@@ -569,7 +577,8 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
 
 <!--														<span id="--><? //= $itemIds['QUANTITY_MEASURE'] ?><!--">-->
                                                                         <? //= $actualItem['ITEM_MEASURE']['TITLE'] ?><!--</span>-->
-<!--			на сумму											<span id="--><?//= $itemIds['PRICE_TOTAL'] ?><!--"></span>-->
+                                                                        <!--			на сумму											<span id="-->
+                                                                        <? //= $itemIds['PRICE_TOTAL'] ?><!--"></span>-->
 
 													</span>
                                                                 </div>

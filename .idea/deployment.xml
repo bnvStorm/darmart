@@ -2,6 +2,13 @@
 <project version="4">
   <component name="PublishConfigData" serverName="darmart local" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
+      <paths name="bnvstorm">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="darmart host">
         <serverdata>
           <mappings>

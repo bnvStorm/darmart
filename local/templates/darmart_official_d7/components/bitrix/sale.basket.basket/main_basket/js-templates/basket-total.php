@@ -87,16 +87,18 @@ use Bitrix\Main\Localization\Loc;
         <div class="col-sm-4 col-sm-offset-8">
             <table class="table main-table">
                 <tbody>
+                {{#DISCOUNT_PRICE_FORMATED}}
                 <tr>
                     <td class="text-right"><strong><?= Loc::getMessage('SBB_TOTAL2') ?>:</strong></td>
                     <td class="text-right">
-                        {{#DISCOUNT_PRICE_FORMATED}}
+
                         <div class="basket-coupon-block-total-price-old">
                             {{{PRICE_WITHOUT_DISCOUNT_FORMATED}}}
                         </div>
-                        {{/DISCOUNT_PRICE_FORMATED}}
+
                     </td>
                 </tr>
+                {{/DISCOUNT_PRICE_FORMATED}}
                 <tr>
                     <td class="text-right"><strong><?= Loc::getMessage('SBB_TOTAL') ?>:</strong></td>
                     <td class="text-right">

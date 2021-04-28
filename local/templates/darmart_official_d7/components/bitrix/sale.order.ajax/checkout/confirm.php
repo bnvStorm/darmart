@@ -18,9 +18,12 @@ if ($arParams["SET_TITLE"] == "Y")
 
     <h1><?= Loc::getMessage('ORDER_PAGE_SUCCESS_TITLE') ?></h1>
     <p><?= Loc::getMessage('ORDER_SUCCESS_TEXT1') ?></p>
+    <p><?//= Loc::getMessage('ORDER_SUCCESS_TEXT4') ?></p>
     <p><?= Loc::getMessage('ORDER_SUCCESS_TEXT2') ?></p>
     <p><?= Loc::getMessage('ORDER_SUCCESS_TEXT3') ?></p>
-
+    <div class="buttons">
+        <div class="pull-right"><a href="/" class="btn main-btn"><?= Loc::getMessage('CONTINUE_BTN') ?></a></div>
+    </div>
 <? else: ?>
 
 

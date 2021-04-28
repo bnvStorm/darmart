@@ -55,26 +55,20 @@ $arJSParams = array(
 	),
 	'readOnly' => (isset($arParams['READ_ONLY']) && $arParams['READ_ONLY'] === 'Y')
 );
+\Bitrix\Main\Diag\Debug::dumpToFile($arJSParams);
+//\Bitrix\Main\Diag\Debug::dumpToFile($arResult);
+\Bitrix\Main\Diag\Debug::dumpToFile($arParams);
 ?>
 <div class="rating">
-
-
-<table align="center" class="bx_item_detail_rating">
-	<tr>
-		<td>
-			<div class="bx_item_rating">
-				<div class="bx_stars_container">
-					<div id="<?=$arJSParams["starsId"]?>" class="bx_stars_bg"></div>
-					<div id="<?=$arJSParams["progressId"]?>" class="bx_stars_progress"></div>
-				</div>
-			</div>
-		</td>
-		<td>
-			<span id="<?=$arJSParams["ratingId"]?>" class="bx_stars_rating_votes">(0)</span>
-		</td>
-	</tr>
-</table>
-
+    <?php for($i = 0; $i != $arParams['MAX_VOTE']; $i++):
+        $starClass = "";
+        if($i <= $votesCount)
+            $starClass = 'stary';
+        ?>
+        <span class="fa fa-stack">
+            <i class="fa fa-star fa-stack-2x <?= $starClass ?>"></i>
+        </span>
+    <?php endfor;?>
 </div>
 
 <script type="text/javascript">

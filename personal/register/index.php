@@ -1,9 +1,11 @@
-<?
+<?php
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Регистрация");
-?><?$APPLICATION->IncludeComponent(
-	"bitrix:main.register", 
-	"personal_registration", 
+?>
+
+<?php $APPLICATION->IncludeComponent(
+	"bitrix:main.register",
+	"personal_registration",
 	array(
 		"AUTH" => "Y",
 		"REQUIRED_FIELDS" => array(
@@ -43,3 +45,5 @@ $APPLICATION->SetTitle("Регистрация");
 	),
 	false
 );?>
+
+<?php require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

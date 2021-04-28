@@ -170,14 +170,6 @@ if (isset($arResult['ITEM'])) {
                                 data-original-title="В сравнение">
                             <span class="pe-7s-repeat"></span>
                         </button>
-
-                        <?/*
-                        <label id="<?= $itemIds['COMPARE_LINK'] ?>" style="display:block;">
-                            <input type="checkbox" data-entity="compare-checkbox" style="display: none;">
-                            <a class="icon-btn" href=""><span class="pe-7s-repeat"></span></a>
-                        </label>
-                        */?>
-
                     </div>
                 </div>
                 <?
@@ -185,20 +177,18 @@ if (isset($arResult['ITEM'])) {
                 ?>
                 <div class="caption">
                 <div class="rating">
-                    <?
+                    <?php
                     $APPLICATION->IncludeComponent(
                         'bitrix:iblock.vote',
                         'stars',
                         array(
-                            'CUSTOM_SITE_ID' => isset($arParams['CUSTOM_SITE_ID']) ? $arParams['CUSTOM_SITE_ID'] : null,
-                            'IBLOCK_TYPE' => $arParams['IBLOCK_TYPE'],
-                            'IBLOCK_ID' => $arParams['IBLOCK_ID'],
-                            'ELEMENT_ID' => $arResult['ITEM']['ID'],
+                            'IBLOCK_TYPE' => $item['IBLOCK_TYPE_ID'],
+                            'IBLOCK_ID' => $item['IBLOCK_ID'],
+                            'ELEMENT_ID' => $item['ID'],
                             'ELEMENT_CODE' => '',
                             'MAX_VOTE' => '5',
                             'VOTE_NAMES' => array('1', '2', '3', '4', '5'),
                             'SET_STATUS_404' => 'N',
-                            'DISPLAY_AS_RATING' => $arParams['VOTE_DISPLAY_AS_RATING'],
                             'CACHE_TYPE' => $arParams['CACHE_TYPE'],
                             'CACHE_TIME' => $arParams['CACHE_TIME']
                         ),
@@ -206,7 +196,6 @@ if (isset($arResult['ITEM'])) {
                         array('HIDE_ICONS' => 'Y')
                     );
                     ?>
-
                 </div>
                     <? if ($itemHasDetailUrl): ?>
                     <h3><a href="<?=$item['DETAIL_PAGE_URL']?>" title="<?=$productTitle?>">

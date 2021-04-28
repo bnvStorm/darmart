@@ -95,6 +95,7 @@ else:
     ?>
     <form action="<?= $arResult["AUTH_URL"] ?>">
         <li><a class="btn-link-drop" href="/personal/">Личный кабинет</a></li>
+        <li><a class="btn-link-drop" href="/personal/favorites/">Мои закладки</a></li>
         <li><a class="btn-link-drop" href="/personal/orders/">История заказов</a></li>
         <li><a class="btn-link-drop" href="/transactions/">История платежей</a></li>
         <li><a class="btn-link-drop" href="/checkout/" title="Оформление заказа">Оформление заказа</a></li>
@@ -106,38 +107,5 @@ else:
         <input class="btn-link-drop" type="submit" name="logout_butt" value="<?= GetMessage("AUTH_LOGOUT_BUTTON") ?>">
     </form>
 
-    <!--<form action="--><? //=$arResult["AUTH_URL"]
-    ?><!--">-->
-    <!--	<table width="95%">-->
-    <!--		<tr>-->
-    <!--			<td align="center">-->
-    <!--				--><? //=$arResult["USER_NAME"]
-    ?><!--<br />-->
-    <!--				[--><? //=$arResult["USER_LOGIN"]
-    ?><!--]<br />-->
-    <!--				<a href="--><? //=$arResult["PROFILE_URL"]
-    ?><!--" title="--><? //=GetMessage("AUTH_PROFILE")
-    ?><!--">--><? //=GetMessage("AUTH_PROFILE")
-    ?><!--</a><br />-->
-    <!--			</td>-->
-    <!--		</tr>-->
-    <!--		<tr>-->
-    <!--			<td align="center">-->
-    <!--			--><? //foreach ($arResult["GET"] as $key => $value):
-    ?>
-    <!--				<input type="hidden" name="--><? //=$key
-    ?><!--" value="--><? //=$value
-    ?><!--" />-->
-    <!--			--><? //endforeach
-    ?>
-    <!--			--><? //=bitrix_sessid_post()
-    ?>
-    <!--			<input type="hidden" name="logout" value="yes" />-->
-    <!--			<input type="submit" name="logout_butt" value="--><? //=GetMessage("AUTH_LOGOUT_BUTTON")
-    ?><!--" />-->
-    <!--			</td>-->
-    <!--		</tr>-->
-    <!--	</table>-->
-    <!--</form>-->
 <? endif ?>
 

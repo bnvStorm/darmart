@@ -87,6 +87,7 @@
 }
 
 .text-muted .basket-coupon-text:after {
+	display: none;
 	position: absolute;
 	top: 0;
 	left: 2px;

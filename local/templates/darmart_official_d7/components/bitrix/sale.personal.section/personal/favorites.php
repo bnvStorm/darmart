@@ -114,7 +114,7 @@ if(count($favoritesIds) != 0){
 		"DETAIL_URL" => "/catalog/#SECTION_CODE_PATH#/#ELEMENT_CODE#/",
 		"DISABLE_INIT_JS_IN_COMPONENT" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
-		"DISPLAY_COMPARE" => "N",
+		"DISPLAY_COMPARE" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
 		"ELEMENT_SORT_FIELD" => "sort",
 		"ELEMENT_SORT_FIELD2" => "id",
@@ -208,7 +208,11 @@ if(count($favoritesIds) != 0){
 		"USE_PRICE_COUNT" => "N",
 		"USE_PRODUCT_QUANTITY" => "N",
 		"SEF_RULE" => "",
-		"SECTION_CODE_PATH" => ""
+		"SECTION_CODE_PATH" => "",
+		"COMPARE_PATH" => "",
+		"USE_COMPARE_LIST" => "N",
+		"MESS_BTN_COMPARE" => "Сравнить",
+		"COMPARE_NAME" => "CATALOG_COMPARE_LIST"
 	),
 	false
 );

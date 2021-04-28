@@ -16,6 +16,13 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
+      <webServer id="30aa9070-a8c1-4a85-8ff7-e14924ef2af5" name="bnvstorm" url="http://157.90.95.223">
+        <fileTransfer rootFolder="/www/bnvstorm.online" host="157.90.95.223" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
     </option>
   </component>
 </project>

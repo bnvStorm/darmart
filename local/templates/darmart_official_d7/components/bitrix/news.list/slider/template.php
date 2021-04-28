@@ -12,16 +12,19 @@
 /** @var CBitrixComponent $component */
 $this->setFrameMode(true);
 ?>
-<?// if ($USER->IsAdmin()) {echo '<pre>'; var_dump($arResult); echo '</pre>'; } ?>
-
 
 <?foreach($arResult["ITEMS"] as $arItem):?>
+    <?
+    $this->AddEditAction($arItem['ID'], $arItem['EDIT_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_EDIT"));
+    $this->AddDeleteAction($arItem['ID'], $arItem['DELETE_LINK'], CIBlock::GetArrayByID($arItem["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
+    ?>
     <? if(is_array($arItem["PREVIEW_PICTURE"])):?>
-        <div class="owl-item active" style="width: 720px;">
+        <div class="owl-item">
             <div class="item">
                 <img src="<?=$arItem["PREVIEW_PICTURE"]["SRC"]?>" alt="Кондиционеры"
-                     class="img-responsive">
+                     class="img-responsive" id="<?=$this->GetEditAreaId($arItem['ID']);?>">
             </div>
         </div>
     <?endif;?>
+
 <?endforeach;?>

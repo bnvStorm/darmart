@@ -102,9 +102,9 @@ $assets_manager->addString('<link rel="shortcut icon" type="image/x-icon" href="
                         </div>
                     </form>
                 </li>
-                <!--                <li><a class="btn-link" href="#" id="wishlist-total"-->
-                <!--                       title="--><? //= Loc::getMessage('BOOKMARKS') ?><!--">-->
-                <? //= Loc::getMessage('BOOKMARKS') ?><!--</a></li>-->
+                <li><a class="btn-link" href="/personal/favorites/" id="wishlist-total"
+                       title="<?= Loc::getMessage('BOOKMARKS') ?>">
+                        <?= Loc::getMessage('BOOKMARKS') ?></a></li>
                 <li class="dropdown">
                     <a href="#" title="<?= Loc::getMessage('PERSONAL_AREA') ?>" class="btn-link dropdown-toggle"
                        data-toggle="dropdown">
@@ -252,24 +252,24 @@ $assets_manager->addString('<link rel="shortcut icon" type="image/x-icon" href="
 </nav>
 <div class="container">
     <div class="row">
-        <div id="content" class="col-sm-12">
+        <div id="content" class="col-sm-12" style="min-height: 600px">
             <?php if ($APPLICATION->GetCurPage() !== SITE_DIR): ?>
                 <? $APPLICATION->IncludeComponent(
-	"bitrix:breadcrumb", 
-	"bread", 
-	array(
-		"COMPONENT_TEMPLATE" => "bread",
-		"PATH" => "",
-		"SITE_ID" => "s1",
-		"START_FROM" => "0"
-	),
-	false
-); ?>
+                    "bitrix:breadcrumb",
+                    "bread",
+                    array(
+                        "COMPONENT_TEMPLATE" => "bread",
+                        "PATH" => "",
+                        "SITE_ID" => "s1",
+                        "START_FROM" => "0"
+                    ),
+                    false
+                ); ?>
             <?php endif; ?>
             <?php
             $url = $APPLICATION->GetCurPage();
             $catalogurl = '/catalog/';
             $perurl = '/personal/';
             if ((SITE_DIR !== $url) && ((strpos($url, $catalogurl)) === false) && ((strpos($url, $perurl)) === false)): ?>
-            <div class="card" style="min-height: 600px" ;>
-            <?php endif; ?>
+            <div class="card"  ;>
+                <?php endif; ?>

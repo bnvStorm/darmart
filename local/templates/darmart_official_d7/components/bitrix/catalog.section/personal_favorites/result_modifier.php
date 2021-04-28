@@ -44,7 +44,7 @@ if(!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS'])){
 
         $resized = CFile::ResizeImageGet(
             CFile::GetFileArray($imageId),
-            array("width" => 47, "height" => 47),
+            array("width" => 180, "height" => 180),
             BX_RESIZE_IMAGE_PROPORTIONAL ,
             true
         );
@@ -53,7 +53,7 @@ if(!empty($arResult['ITEMS']) && !empty($arResult['ITEM_ROWS'])){
             $resized = CFile::ResizeImageFile(
                 $sourceFile = $_SERVER['DOCUMENT_ROOT'] . SITE_TEMPLATE_PATH . '/img/no_photo.png',
                 $destinationFile = $_SERVER['DOCUMENT_ROOT'] . "/upload/no_photo.png",
-                $arSize = array('width'=>47,'height'=>47),
+                $arSize = array('width'=>180,'height'=>180),
                 $resizeType = BX_RESIZE_IMAGE_PROPORTIONAL,
             );
 

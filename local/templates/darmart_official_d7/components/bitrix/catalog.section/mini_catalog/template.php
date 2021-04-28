@@ -184,24 +184,14 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
                     <a href="/catalog/compare/" id="compare-total" class="btn-link">Сравнение товаров</a>
                 </div>
             </div>
-<!--            <p class="sort">Сортировка:-->
-<!--                <a --><?//if ($_GET["sort"] == "name"):?><!-- class="active" --><?//endif;?>
-<!--                        href="--><?//=$arResult["SECTION_PAGE_URL"]?><!--?sort=name&method=asc">название</a>-->
-<!--                <a --><?//if ($_GET["sort"] == "catalog_PRICE_3"):?><!-- class="active" --><?//endif;?>
-<!--                        href="--><?//=$arResult["SECTION_PAGE_URL"]?><!--?sort=catalog_PRICE_3&method=asc">цена</a>-->
-<!--                <a --><?//if ($_GET["sort"] == "property_PRODUCT_TYPE"):?><!-- class="active" --><?//endif;?>
-<!--                        href="--><?//=$arResult["SECTION_PAGE_URL"]?><!--?sort=property_PRODUCT_TYPE&method=desc">лидер продаж</a>-->
-<!--                <a --><?//if ($_GET["sort"] == "timestamp_x"):?><!-- class="active" --><?//endif;?>
-<!--                        href="--><?//=$arResult["SECTION_PAGE_URL"]?><!--?sort=timestamp_x&method=desc">дата поступления</a>-->
-<!--            </p>-->
             <div class="col-md-4">
                 <div class="form-group input-group">
                     <label class="input-group-addon" for="input-sort">Сортировать:</label>
                     <select id="input-sort" class="form-control" onchange="location = this.value;">
-                        <option value="?sort=none" <?if ($_GET["sort"] == "none"):?>selected="selected"<?endif;?>>По умолчанию</option>
-                        <option <?if ($_GET["sort"] == "price_desc"):?>selected="selected"<?endif;?> value="<?=$APPLICATION->GetCurPageParam("sort=price_desc", Array("sort", "count") )?>">По цене вниз</option>
-                        <option <?if ($_GET["sort"] == "price_asc"):?>selected="selected"<?endif;?> value="<?=$APPLICATION->GetCurPageParam("sort=price_asc", Array("sort", "count") )?>">По цене вверх</option>
-                        <option <?if ($_GET["sort"] == "sort_asc"):?>selected="selected"<?endif;?> value="<?=$APPLICATION->GetCurPageParam("sort=sort_asc", Array("sort", "count") )?>">По названию</option>
+                        <option <?if ($_GET["sort"] == "price_desc"):?>selected="selected"<?endif;?> value="<?=$APPLICATION->GetCurPageParam("sort=price_desc", Array("sort", "count") )?>">По цене (убыванию)</option>
+                        <option <?if ($_GET["sort"] == "price_asc"):?>selected="selected"<?endif;?> value="<?=$APPLICATION->GetCurPageParam("sort=price_asc", Array("sort", "count") )?>">По цене (возрастанию)</option>
+                        <option <?if ($_GET["sort"] == "sort_asc"):?>selected="selected"<?endif;?> value="<?=$APPLICATION->GetCurPageParam("sort=sort_asc", Array("sort", "count") )?>">По названию (А-Я)</option>
+                        <option <?if ($_GET["sort"] == "sort_desc"):?>selected="selected"<?endif;?> value="<?=$APPLICATION->GetCurPageParam("sort=sort_desc", Array("sort", "count") )?>">По названию (Я-А)</option>
                     </select>
                 </div>
             </div>
