@@ -234,7 +234,7 @@ div.required .control-label:before {
 #top .btn-link:hover, #top-links a:hover {
     color: #444;
 }
-#top-links .dropdown-menu .btn-link-drop {
+.pull-right  .dropdown-menu .btn-link-drop {
     display: block;
     padding: 5px 15px;
     border: none;
@@ -897,13 +897,14 @@ footer .list-unstyled {
     color: #222;
 }
 
-.breadcrumb > li a:before {
-    content: '\f105';
-    font-family: FontAwesome;
+.breadcrumb i{
+    /*content: '\f105';*/
+    /*font-family: FontAwesome;*/
     font-size: 16px;
-    position: absolute;
-    right: -20px;
-    top: -2px;
+    position: relative;
+    right: 10px;
+    top: 0px;
+    color: #989898;
 }
 
 .breadcrumb > li:last-child a:before{

@@ -5,7 +5,8 @@
  * @var array $arParams
  * @var array $templateData
  */
-
+use \Bitrix\Catalog\CatalogViewedProductTable as CatalogViewedProductTable;
+CatalogViewedProductTable::refresh($arResult['ID'], CSaleBasket::GetBasketUserID());
 // check compared state
 if ($arParams['DISPLAY_COMPARE'])
 {

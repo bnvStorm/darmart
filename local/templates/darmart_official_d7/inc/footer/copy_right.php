@@ -1,1 +1,1 @@
-Ваш <a href="https://google.ru" target="_blank">copyright</a>
+<a href="https://1c-rating.kz" target="_blank">Разработка сайта 1С-Рейтинг</a>

@@ -45,6 +45,35 @@ if (isset($arResult['ITEM'])) {
         'DISPLAY_PROP_DIV' => $areaId . '_sku_prop',
         'BASKET_PROP_DIV' => $areaId . '_basket_prop',
     );
+
+
+    $templateData = array(
+        'TEMPLATE_THEME' => $arParams['TEMPLATE_THEME'],
+        'TEMPLATE_LIBRARY' => $templateLibrary,
+        'CURRENCIES' => $currencyList,
+        'ITEM' => array(
+            'ID' => $arResult['ID'],
+            'IBLOCK_ID' => $arResult['IBLOCK_ID'],
+            'OFFERS_SELECTED' => $arResult['OFFERS_SELECTED'],
+            'JS_OFFERS' => $arResult['JS_OFFERS']
+        )
+    );
+
+
+    global $USER;
+
+    if ($USER->IsAuthorized()) {
+        $favorite = \Rating1C\Darmart\App::getInstance()->favorite();
+        $productsInFavoriteIds = $favorite->getProductsIds($USER->GetID());
+
+        //Check if offer in wishlist
+        //Возникает какая-то ошибка - разобраться
+//    foreach ($arResult['JS_OFFERS'] as $key => $offer)
+//        $arResult['JS_OFFERS'][$key]['IS_FAVORITE'] = in_array($offer['ID'], $productsInFavoriteIds);
+
+    }
+
+
     $obName = 'ob' . preg_replace("/[^a-zA-Z0-9_]/", "x", $areaId);
     $isBig = isset($arResult['BIG']) && $arResult['BIG'] === 'Y';
 
@@ -106,8 +135,19 @@ if (isset($arResult['ITEM'])) {
         <div class="product-thumb transition" id="<?= $areaId ?>" data-entity="item">
 
             <div class="image">
+
                 <? if ($itemHasDetailUrl): ?>
+
                 <a href="<?= $item['DETAIL_PAGE_URL'] ?>" title="<?= $imgTitle ?>" data-entity="image-wrapper">
+                    <!--!!!-->
+                    <? if ($item['SECOND_PICT']) {
+                        $bgImage = !empty($item['PREVIEW_PICTURE_SECOND']) ? $item['PREVIEW_PICTURE_SECOND']['SRC'] : $item['PREVIEW_PICTURE']['SRC'];
+                        ?>
+                        <span class="product-item-image-alternative" id="<?= $itemIds['SECOND_PICT'] ?>"
+                              style="background-image: url('<?= $bgImage ?>'); <?= ($showSlider ? 'display: none;' : '') ?>"></span>
+                        <?
+                    } ?>
+                    <!--!!!-->
                     <? if (isset($arResult['NEW_SRC'])): ?>
                         <img alt="<?= $item["NAME"] ?>" src="<?= $arResult['NEW_SRC'] ?>"/>
                     <? else: ?>
@@ -158,9 +198,22 @@ if (isset($arResult['ITEM'])) {
                 ?>
                 <div class="quiqview-continer">
                     <div class="quiqview-btns">
-                        <button class="icon-btn" type="button" data-toggle="tooltip" title=""
-                                onclick="wishlist.add('250');" data-original-title="В закладки"><span
-                                    class="pe-7s-like"></span></button>
+<!--                        <button class="icon-btn" type="button" data-toggle="tooltip" title=""-->
+<!--                                onclick="wishlist.add('250');" data-original-title="В закладки"><span-->
+<!--                                    class="pe-7s-like"></span></button>-->
+                        <?php
+                        if ($USER->IsAuthorized()):
+                            $inFaforites = in_array($arResult['ID'], $productsInFavoriteIds) !== false;
+                            ?>
+                            <button type="button"
+                                    id="favorites_list_<?= $arResult['ID'] ?>"
+                                    data-product-id="<?= $arResult['ID'] ?>"
+                                    class="icon-btn <?= $inFaforites ? 'delFavorites' : 'addFavorites' ?>"
+                                    data-toggle="tooltip"
+                                    data-original-title="В закладки">
+                                <span class="pe-7s-like"></span>
+                            </button>
+                        <?php endif; ?>
                         <label id="<?= $itemIds['COMPARE_LINK'] ?>">
                             <input type="checkbox" data-entity="compare-checkbox" style="display: none;">
                             <a class="icon-btn" href=""><span class="pe-7s-repeat"></span></a>
@@ -221,6 +274,7 @@ if (isset($arResult['ITEM'])) {
                         <?
                     } ?>
                 </div>
+
                 <p class="price" id="<?= $itemIds['PRICE'] ?>">
                     <?
                     if (!empty($price)) {
@@ -238,8 +292,10 @@ if (isset($arResult['ITEM'])) {
                         }
                     }
                     ?>
-                    <!--                        <span class="price-tax">Без налога: 68 500 тг</span>-->
                     <input type="hidden" id="<?= $itemIds['PROP_DIV'] ?>">
+                    <span class="price-tax">
+                        Без НДС:  <?= (($price['PRINT_RATIO_PRICE']) - ($price['PRINT_RATIO_VAT'])) ?>
+                    </span>
                 </p>
                 <div class="product-item-info-container product-item-hidden"
                      data-entity="quantity-block">
@@ -260,7 +316,7 @@ if (isset($arResult['ITEM'])) {
                 </div>
                 <div class="button-group">
                     <?
-                    if ($arParams['PRODUCT_DISPLAY_MODE'] === 'Y') {
+//                    if ($arParams['PRODUCT_DISPLAY_MODE'] === 'Y') {
                         ?>
                         <a class="btn main-btn <?= $buttonSizeClass ?>"
                            id="<?= $itemIds['NOT_AVAILABLE_MESS'] ?>" href="javascript:void(0)"
@@ -276,7 +332,7 @@ if (isset($arResult['ITEM'])) {
                             </a>
                         </div>
                         <?
-                    }
+//                    }
                     ?>
                 </div>
                 <?
@@ -512,7 +568,9 @@ if (isset($arResult['ITEM'])) {
             'JS_OFFERS' => $item['JS_OFFERS']
         )
     );
+
     ?>
+
     <script>
         var <?=$obName?> = new JCCatalogItem(<?=CUtil::PhpToJSObject($jsParams, false, true)?>);
     </script>

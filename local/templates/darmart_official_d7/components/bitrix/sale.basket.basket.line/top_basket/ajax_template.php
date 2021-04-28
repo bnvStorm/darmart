@@ -33,31 +33,34 @@ if ($arParams["SHOW_PRODUCTS"] == "Y" && ($arResult['NUM_PRODUCTS'] > 0 || !empt
 
 
                             </div>
-                            <div class="bx-basket-item-list-item-name">
-                                <? if ($v["DETAIL_PAGE_URL"]):?>
-                                    <a href="<?= $v["DETAIL_PAGE_URL"] ?>"><?= $v["NAME"] ?></a>
-                                <? else:?>
-                                    <?= $v["NAME"] ?>
-                                <? endif ?>
-                            </div>
-                            <? if (true):/*$category != "SUBSCRIBE") TODO */
-                                ?>
-                                <div class="bx-basket-item-list-item-price-block">
-                                    <? if ($arParams["SHOW_PRICE"] == "Y"):?>
-                                        <div class="bx-basket-item-list-item-price">
-                                            <strong><?= $v["PRICE_FMT"] ?></strong></div>
-                                        <? if ($v["FULL_PRICE"] != $v["PRICE_FMT"]):?>
-                                            <div class="bx-basket-item-list-item-price-old"><?= $v["FULL_PRICE"] ?></div>
-                                        <? endif ?>
-                                    <? endif ?>
-                                    <? if ($arParams["SHOW_SUMMARY"] == "Y"):?>
-                                        <div class="bx-basket-item-list-item-price-summ">
-                                            <strong><?= $v["QUANTITY"] ?></strong> <?= $v["MEASURE_NAME"] ?> <?= GetMessage("TSB1_SUM") ?>
-                                            <strong><?= $v["SUM"] ?></strong>
-                                        </div>
+                            <div class="basket-txt">
+                                <div class="bx-basket-item-list-item-name">
+                                    <? if ($v["DETAIL_PAGE_URL"]):?>
+                                        <a href="<?= $v["DETAIL_PAGE_URL"] ?>"><?= $v["NAME"] ?></a>
+                                    <? else:?>
+                                        <?= $v["NAME"] ?>
                                     <? endif ?>
                                 </div>
-                            <? endif ?>
+                                <? if (true):/*$category != "SUBSCRIBE") TODO */
+                                    ?>
+                                    <div class="bx-basket-item-list-item-price-block">
+                                        <? if ($arParams["SHOW_PRICE"] == "Y"):?>
+                                            <div class="bx-basket-item-list-item-price">
+                                                <strong><?= $v["PRICE_FMT"] ?></strong></div>
+                                            <? if ($v["FULL_PRICE"] != $v["PRICE_FMT"]):?>
+                                                <div class="bx-basket-item-list-item-price-old"><?= $v["FULL_PRICE"] ?></div>
+                                            <? endif ?>
+                                        <? endif ?>
+                                        <? if ($arParams["SHOW_SUMMARY"] == "Y"):?>
+                                            <div class="bx-basket-item-list-item-price-summ">
+                                                <strong><?= $v["QUANTITY"] ?></strong> <?= $v["MEASURE_NAME"] ?> <?= GetMessage("TSB1_SUM") ?>
+                                                <strong><?= $v["SUM"] ?></strong>
+                                            </div>
+                                        <? endif ?>
+                                    </div>
+                                <? endif ?>
+                            </div>
+
                             <button type="button" onclick="<?= $cartId ?>.removeItemFromCart(<?= $v['ID'] ?>)" title="<?= GetMessage("TSB1_DELETE") ?>" class="btn-del-cart">
                                 <span class="pe-7s-close"></span>
                             </button>

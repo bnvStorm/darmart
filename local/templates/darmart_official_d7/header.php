@@ -255,15 +255,16 @@ $assets_manager->addString('<link rel="shortcut icon" type="image/x-icon" href="
         <div id="content" class="col-sm-12">
             <?php if ($APPLICATION->GetCurPage() !== SITE_DIR): ?>
                 <? $APPLICATION->IncludeComponent(
-                    "bitrix:breadcrumb",
-                    "bread",
-                    array(
-                        "COMPONENT_TEMPLATE" => "bread",
-                        "PATH" => "",
-                        "SITE_ID" => "s1",
-                        "START_FROM" => "0"
-                    )
-                ); ?>
+	"bitrix:breadcrumb", 
+	"bread", 
+	array(
+		"COMPONENT_TEMPLATE" => "bread",
+		"PATH" => "",
+		"SITE_ID" => "s1",
+		"START_FROM" => "0"
+	),
+	false
+); ?>
             <?php endif; ?>
             <?php
             $url = $APPLICATION->GetCurPage();
