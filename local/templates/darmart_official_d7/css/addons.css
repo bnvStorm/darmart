@@ -38,12 +38,20 @@ body {
     margin-right: auto;
 }
 .product-list .product-thumb .rating{
-    padding-bottom: 0;
+    /*padding-bottom: 0;*/
 }
 .product-list .bx_item_detail_rating{
     margin-left: 0;
     margin-right: auto;
     margin-bottom: 0;
+}
+.product-price{
+    display:flex;
+    flex-direction:column;
+}
+.product-price .old-price
+{
+    margin-left: 0;
 }
 .product-item-detail-main{
     display: flex;
@@ -135,6 +143,7 @@ button, html input[type=button], input[type=reset], input[type=submit]{
 .quiqview-btns label{
     margin-bottom: 0;
     width: 50%;
+    cursor: pointer;
 }
 .product-item-info-container{
     display: none;
@@ -198,6 +207,18 @@ button, html input[type=button], input[type=reset], input[type=submit]{
 .basket-txt{
     width: 100%;
     max-width: 180px;
+}
+.product-item-image-alternative{
+    z-index: 0;
+}
+.compare-items{
+    margin: auto;
+}
+.bx-site .catalog-compare-list,.owl-stage-outer .bx_catalog-compare-list,#content .catalog-compare-list  {
+    display: none !important;
+}
+.bx_catalog-compare-list{
+    display:none !important;
 }
 @media (max-width: 480px) {
 

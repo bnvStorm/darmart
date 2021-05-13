@@ -1157,9 +1157,9 @@ footer .list-unstyled {
 .product-list .quiqview-continer {
     position: absolute;
     margin-top: 0;
-    bottom: 18px;
+    bottom: 24px;
     left: 425px;
-    z-index: 3;
+    z-index: 9999;
 }
 
 .product-list .product-thumb .quiqview-btns {
@@ -1173,6 +1173,7 @@ footer .list-unstyled {
 }
 
 .product-list .product-thumb .quiqview-btns .icon-btn {
+    display: block;
     width: 46px;
     height: 46px;
     color: #777;
@@ -1193,8 +1194,8 @@ footer .list-unstyled {
 }
 
 .product-list .product-thumb .image img {
-    width: 180px;
-    height: 180px;
+    /*width: 180px;*/
+    /*height: 180px;*/
 }
 
 @media (max-width: 767px) {

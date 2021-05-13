@@ -9,7 +9,8 @@ use \Bitrix\Main\Localization\Loc;
 
 Loc::loadMessages(__FILE__);
 $assets_manager = Asset::getInstance();
-$assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/jquery-3.3.1.min.js');
+//$assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/jquery-3.3.1.min.js');
+$assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/jquery-2.1.1.min.js');
 
 $assets_manager->addCss(SITE_TEMPLATE_PATH . '/css/bootstrap.min.css');
 $assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/bootstrap.min.js');
@@ -26,6 +27,11 @@ $assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/lightbox.min.js');
 $assets_manager->addCss(SITE_TEMPLATE_PATH . '/css/owl.carousel.css');
 $assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/owl.carousel.min.js');
 
+$assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/moment.js');
+$assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/ru-ru.js');
+$assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/bootstrap-datetimepicker.min.js');
+$assets_manager->addCss(SITE_TEMPLATE_PATH . '/css/bootstrap-datetimepicker.min.css');
+
 $assets_manager->addCss(SITE_TEMPLATE_PATH . '/css/stylesheet.css');
 $assets_manager->addCss(SITE_TEMPLATE_PATH . '/css/addons.css');
 $assets_manager->addJs(SITE_TEMPLATE_PATH . '/js/common.js');
@@ -36,6 +42,24 @@ $assets_manager->addString('<meta http-equiv="X-UA-Compatible" content="IE=edge"
 $assets_manager->addString('<link rel="preconnect" href="https://fonts.gstatic.com">');
 $assets_manager->addString('<link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">');
 $assets_manager->addString('<link rel="shortcut icon" type="image/x-icon" href="/favic.png" />');
+
+/*\CJSCore::RegisterExt('moment', [
+    'js' => SITE_TEMPLATE_PATH . '/js/moment.js',
+    'rel' => [],
+]);
+
+\CJSCore::RegisterExt('datetimepicker', [
+    'js' => SITE_TEMPLATE_PATH . '/js/bootstrap-datetimepicker.min.js',
+    'css' => SITE_TEMPLATE_PATH . '/css/bootstrap-datetimepicker.min.css',
+    'rel' => ['moment', 'ruru'],
+]);
+
+\CJSCore::RegisterExt('ruru', [
+    'js' => SITE_TEMPLATE_PATH . '/js/ru-ru.js',
+    'rel' => [],
+]);
+
+CUtil::InitJSCore(['moment', 'datetimepicker', 'ruru']);*/
 
 ?>
 <!DOCTYPE html>

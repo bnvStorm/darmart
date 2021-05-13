@@ -1,1 +1,0 @@
-<a href="mailto:info@darmart.kz"> <i class="fa fa-envelope"></i>info@darmart.kz</a>

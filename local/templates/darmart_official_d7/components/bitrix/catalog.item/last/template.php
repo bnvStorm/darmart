@@ -15,6 +15,13 @@ use \Bitrix\Main;
 
 $this->setFrameMode(true);
 
+global $USER;
+
+if ($USER->IsAuthorized()) {
+    $favorite = \Rating1C\Darmart\App::getInstance()->favorite();
+    $productsInFavoriteIds = $favorite->getProductsIds($USER->GetID());
+}
+
 if (isset($arResult['ITEM'])) {
     $item = $arResult['ITEM'];
     $areaId = $arResult['AREA_ID'];
@@ -96,14 +103,11 @@ if (isset($arResult['ITEM'])) {
     $buttonSizeClass = isset($arResult['BIG_BUTTONS']) && $arResult['BIG_BUTTONS'] === 'Y' ? 'btn-md' : 'btn-sm';
     $itemHasDetailUrl = isset($item['DETAIL_PAGE_URL']) && $item['DETAIL_PAGE_URL'] != '';
     ?>
-
-    <!--    <div class="row" id="--><? //= $areaId ?><!--" data-entity="item">-->
     <?
     $documentRoot = Main\Application::getDocumentRoot();
     $templatePath = mb_strtolower($arResult['TYPE']) . '/template.php';
     $file = new Main\IO\File($documentRoot . $templateFolder . '/' . $templatePath);
     if ($file->isExists()) {
-//			include($file->getPath());
         ?>
         <div class="product-thumb transition" id="<?= $areaId ?>" data-entity="item">
 
@@ -171,11 +175,25 @@ if (isset($arResult['ITEM'])) {
                 ?>
                 <div class="quiqview-continer">
                     <div class="quiqview-btns">
-                        <button class="icon-btn" type="button" data-toggle="tooltip" title=""
-                                onclick="wishlist.add('250');" data-original-title="В закладки"><span
-                                    class="pe-7s-like"></span></button>
-                        <label id="<?= $itemIds['COMPARE_LINK'] ?>">
-                            <input type="checkbox" data-entity="compare-checkbox" style="display: none;">
+                        <?php
+                        if ($USER->IsAuthorized()):
+                            $inFaforites = in_array($item['ID'], $productsInFavoriteIds) !== false;
+                            ?>
+                            <button type="button"
+                                    id="favorites_list_<?= $item['ID'] ?>"
+                                    data-product-id="<?= $item['ID'] ?>"
+                                    class="btn-icon fav-btn <?= $inFaforites ? 'delFavorites' : 'addFavorites' ?> icon-btn"
+                                    data-toggle="tooltip"
+                                    data-original-title="В закладки">
+                                <span class="pe-7s-like"></span>
+                            </button>
+                        <?php endif; ?>
+                        <!--                        <button class="icon-btn" type="button" data-toggle="tooltip" title=""-->
+                        <!--                                onclick="wishlist.add('250');" data-original-title="В закладки"><span-->
+                        <!--                                    class="pe-7s-like"></span></button>-->
+                        <label for="<?= $itemIds['COMPARE_LINK'] ?>-inp" id="<?= $itemIds['COMPARE_LINK'] ?>">
+                            <input id="<?= $itemIds['COMPARE_LINK'] ?>-inp" type="checkbox"
+                                   data-entity="compare-checkbox" style="display: none;">
                             <a class="icon-btn" href=""><span class="pe-7s-repeat"></span></a>
                         </label>
                     </div>
@@ -235,7 +253,16 @@ if (isset($arResult['ITEM'])) {
                         <?
                     } ?>
                 </div>
-
+                <?
+                if ($arParams['SHOW_OLD_PRICE'] === 'Y') {
+                    ?>
+                    <span class="product-item-price-old" id="<?= $itemIds['PRICE_OLD'] ?>"
+								<?= ($price['RATIO_PRICE'] >= $price['RATIO_BASE_PRICE'] ? 'style="display: none;"' : '') ?>>
+								<?= $price['PRINT_RATIO_BASE_PRICE'] ?>
+							</span>&nbsp;
+                    <?
+                }
+                ?>
                 <p class="price" id="<?= $itemIds['PRICE'] ?>">
                     <?
                     if (!empty($price)) {
@@ -276,25 +303,19 @@ if (isset($arResult['ITEM'])) {
                     </div>
                 </div>
                 <div class="button-group">
-                    <?
-//                    if ($arParams['PRODUCT_DISPLAY_MODE'] === 'Y') {
-                        ?>
+                    <a class="btn main-btn <?= $buttonSizeClass ?>"
+                       id="<?= $itemIds['NOT_AVAILABLE_MESS'] ?>" href="javascript:void(0)"
+                       rel="nofollow"
+                        <?= ($actualItem['CAN_BUY'] ? 'style="display: none;"' : '') ?>>
+                        <?= $arParams['MESS_NOT_AVAILABLE'] ?>
+                    </a>
+                    <div id="<?= $itemIds['BASKET_ACTIONS'] ?>" <?= ($actualItem['CAN_BUY'] ? '' : 'style="display: none;"') ?>>
                         <a class="btn main-btn <?= $buttonSizeClass ?>"
-                           id="<?= $itemIds['NOT_AVAILABLE_MESS'] ?>" href="javascript:void(0)"
-                           rel="nofollow"
-                            <?= ($actualItem['CAN_BUY'] ? 'style="display: none;"' : '') ?>>
-                            <?= $arParams['MESS_NOT_AVAILABLE'] ?>
+                           id="<?= $itemIds['BUY_LINK'] ?>"
+                           href="javascript:void(0)" rel="nofollow">
+                            <?= ($arParams['ADD_TO_BASKET_ACTION'] === 'BUY' ? $arParams['MESS_BTN_BUY'] : $arParams['MESS_BTN_ADD_TO_BASKET']) ?>
                         </a>
-                        <div id="<?= $itemIds['BASKET_ACTIONS'] ?>" <?= ($actualItem['CAN_BUY'] ? '' : 'style="display: none;"') ?>>
-                            <a class="btn main-btn <?= $buttonSizeClass ?>"
-                               id="<?= $itemIds['BUY_LINK'] ?>"
-                               href="javascript:void(0)" rel="nofollow">
-                                <?= ($arParams['ADD_TO_BASKET_ACTION'] === 'BUY' ? $arParams['MESS_BTN_BUY'] : $arParams['MESS_BTN_ADD_TO_BASKET']) ?>
-                            </a>
-                        </div>
-                        <?
-//                    }
-                    ?>
+                    </div>
                 </div>
                 <?
                 if (!empty($arParams['PRODUCT_BLOCKS_ORDER'])) {
@@ -535,7 +556,6 @@ if (isset($arResult['ITEM'])) {
     <script>
         var <?=$obName?> = new JCCatalogItem(<?=CUtil::PhpToJSObject($jsParams, false, true)?>);
     </script>
-    <!--    </div>-->
     <?
     unset($item, $actualItem, $minOffer, $itemIds, $jsParams);
 }

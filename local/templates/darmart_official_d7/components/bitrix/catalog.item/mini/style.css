@@ -870,8 +870,8 @@ input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
 }
 .product-thumb .image img{
-	width: 228px;
-	height: 228px;
+	/*width: 228px;*/
+	/*height: 228px;*/
 }
 .product-thumb .quiqview-btns{
 	justify-content: center;

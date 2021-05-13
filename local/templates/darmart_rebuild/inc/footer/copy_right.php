@@ -1,1 +1,0 @@
-Ваш <a href="https://google.ru" target="_blank">copyright</a>

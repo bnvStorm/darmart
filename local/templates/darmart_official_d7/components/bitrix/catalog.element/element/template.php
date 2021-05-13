@@ -43,7 +43,6 @@ if ($USER->IsAuthorized()) {
     $productsInFavoriteIds = $favorite->getProductsIds($USER->GetID());
 
     //Check if offer in wishlist
-    //Возникает какая-то ошибка - разобраться
 //    foreach ($arResult['JS_OFFERS'] as $key => $offer)
 //        $arResult['JS_OFFERS'][$key]['IS_FAVORITE'] = in_array($offer['ID'], $productsInFavoriteIds);
 
@@ -249,7 +248,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                         <div class="row">
                             <!--                            <div class="product-item-detail-pay-block">-->
                             <?
-                            if ($showBlockWithOffersAndProps) {
+//                            if ($showBlockWithOffersAndProps) {
                             ?>
                             <div class="col-md-12">
                                 <div class="product-info">
@@ -285,7 +284,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                         <?
                                         if ($arParams['SHOW_OLD_PRICE'] === 'Y') {
                                             ?>
-                                            <div class="new-price"
+                                            <div class="old-price"
                                                  id="<?= $itemIds['OLD_PRICE_ID'] ?>"
                                                 <?= ($showDiscount ? '' : 'style="display: none;"') ?>><?= ($showDiscount ? $price['PRINT_RATIO_BASE_PRICE'] : '') ?></div>
                                             <?
@@ -307,7 +306,8 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                                  id="<?= $itemIds['DISCOUNT_PRICE_ID'] ?>"
                                                 <?= ($showDiscount ? '' : 'style="display: none;"') ?>><?
                                                 if ($showDiscount) {
-                                                    echo Loc::getMessage('CT_BCE_CATALOG_ECONOMY_INFO2', array('#ECONOMY#' => $price['PRINT_RATIO_DISCOUNT']));
+                                                    //Временно скрыл, мб не надо отображать
+//                                                    echo Loc::getMessage('CT_BCE_CATALOG_ECONOMY_INFO2', array('#ECONOMY#' => $price['PRINT_RATIO_DISCOUNT']));
                                                 }
                                                 ?></div>
                                             <?
@@ -432,7 +432,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                         }
                                         ?>
                                         <?
-                                        }
+//                                        }
                                         ?>
                                         <div class="box-info-product">
                                             <?php
@@ -1701,5 +1701,6 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
 
         var <?=$obName?> = new JCCatalogElement(<?=CUtil::PhpToJSObject($jsParams, false, true)?>);
     </script>
+
 <?
 unset($actualItem, $itemIds, $jsParams);

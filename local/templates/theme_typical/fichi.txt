@@ -1,3 +1,0 @@
-<?
-echo '<pre>'; print_r($arResutl); echo '</pre>';
-?>

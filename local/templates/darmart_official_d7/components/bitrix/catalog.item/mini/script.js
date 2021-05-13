@@ -2543,7 +2543,7 @@ $(document).ready(function(){
 			}
 			else
 			{
-				this.initPopupWindow();
+				this.initPopupWindow2();
 
 				if (successful)
 				{
@@ -2627,22 +2627,48 @@ $(document).ready(function(){
 			location.href = (this.basketData.basketUrl ? this.basketData.basketUrl : BX.message('BASKET_URL'));
 		},
 
-		initPopupWindow: function()
-		{
+		// initPopupWindow: function()
+		// {
+		// 	if (this.obPopupWin)
+		// 		return;
+		//
+		// 	this.obPopupWin = BX.PopupWindowManager.create('CatalogSectionBasket_' + this.visual.ID, null, {
+		// 		autoHide: true,
+		// 		offsetLeft: 0,
+		// 		offsetTop: 0,
+		// 		overlay : true,
+		// 		closeByEsc: true,
+		// 		titleBar: true,
+		// 		closeIcon: true,
+		// 		contentColor: 'white',
+		// 		className: this.templateTheme ? 'bx-' + this.templateTheme : ''
+		// 	});
+		// }
+		initPopupWindow: function () {
+
+
 			if (this.obPopupWin)
 				return;
 
-			this.obPopupWin = BX.PopupWindowManager.create('CatalogSectionBasket_' + this.visual.ID, null, {
-				autoHide: true,
-				offsetLeft: 0,
-				offsetTop: 0,
-				overlay : true,
-				closeByEsc: true,
-				titleBar: true,
-				closeIcon: true,
-				contentColor: 'white',
-				className: this.templateTheme ? 'bx-' + this.templateTheme : ''
-			});
-		}
+			var resp = '<i class="fa fa-check-circle"></i>'+ this.product.name + ' ' + BX.message('COMPARE_MESSAGE_OK')  + '<button type="button" class="close" data-dismiss="alert"><span class="pe-7s-close"></span></button>';
+			var newDiv = document.createElement('div');
+			newDiv.className = 'alert alert-success';
+			newDiv.innerHTML = resp;
+			document.body.appendChild(newDiv);
+
+		},
+		initPopupWindow2: function () {
+
+
+			if (this.obPopupWin)
+				return;
+
+			var resp = '<i class="fa fa-check-circle"></i>' + 'Товар ' + this.product.name + ' добавлен в вашу корзину !' + '<button type="button" class="close" data-dismiss="alert"><span class="pe-7s-close"></span></button>';
+			var newDiv = document.createElement('div');
+			newDiv.className = 'alert alert-success';
+			newDiv.innerHTML = resp;
+			document.body.appendChild(newDiv);
+
+		},
 	};
 })(window);

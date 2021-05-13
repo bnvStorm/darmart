@@ -16,8 +16,8 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
-      <webServer id="30aa9070-a8c1-4a85-8ff7-e14924ef2af5" name="bnvstorm" url="http://157.90.95.223">
-        <fileTransfer rootFolder="/www/bnvstorm.online" host="157.90.95.223" port="21">
+      <webServer id="26e569ec-ba66-4fd3-b1b8-df753a9dd183" name="resy" url="http://31.31.198.207">
+        <fileTransfer rootFolder="/resyfiltration.ru" host="31.31.198.207" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>

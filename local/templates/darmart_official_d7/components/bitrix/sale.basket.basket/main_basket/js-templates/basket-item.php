@@ -426,8 +426,10 @@ if (!empty($arParams['LABEL_PROP_POSITION']))
 			{
 				?>
 				<td class="basket-items-list-item-remove d-none d-md-block">
-					<div class="basket-item-block-actions">
-						<span class="basket-item-actions-remove" data-entity="basket-item-delete"></span>
+					<div class="input-group-btn">
+						<button style="border-radius: 10px;" type="button" data-toggle="tooltip" class="btn" data-entity="basket-item-delete" data-original-title="Удалить">
+                            <i class="fa fa-times-circle"></i>
+                        </button>
 						{{#SHOW_LOADING}}
 							<div class="basket-items-list-item-overlay"></div>
 						{{/SHOW_LOADING}}

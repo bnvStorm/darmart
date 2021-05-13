@@ -37,4 +37,11 @@ $arTemplateParameters = [
         "DEFAULT" => "favorites/",
         "PARENT" => "SEF_MODE",
     ),
+    "SEF_URL_TEMPLATES_return_order" => array(
+        "NAME" => "Страница возврата товара",
+        "TYPE" => "STRING",
+        "MULTIPLE" => "N",
+        "DEFAULT" => "return_order/",
+        "PARENT" => "SEF_MODE",
+    ),
 ];
