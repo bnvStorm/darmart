@@ -1,0 +1,1 @@
+<!--<a href="#" class="icon-social-vk"></a> <a href="#" class="icon-social-ok"></a> <a href="#" class="icon-social-fb"></a> <a href="#" class="icon-social-tw"></a> <a href="#" class="icon-social-yt"></a> <a href="#" class="icon-social-inst"></a> <a href="#" class="icon-social-gplus"></a>-->

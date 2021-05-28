@@ -139,7 +139,7 @@ else
 			?>
 			<div id="form_comment_" style="display:none;">
 				<div id="form_c_del" style="display:none;">
-				<div class="blog-comment-form">
+				<div class="2 blog-comment-form">
 				<form method="POST" name="form_comment" id="<?=$component->createPostFormId()?>" action="<?=$ajaxPath; ?>">
 				<input type="hidden" name="parentId" id="parentId" value="">
 				<input type="hidden" name="edit_id" id="edit_id" value="">
@@ -155,7 +155,7 @@ else
 
 				echo makeInputsFromParams($arParams["PARENT_PARAMS"]);
 				echo bitrix_sessid_post();?>
-				<div class="blog-comment-fields">
+				<div class="blog-comment-fields form-horizontal">
 					<?
 					if(empty($arResult["User"]))
 					{
@@ -183,7 +183,7 @@ else
 					}
 
 					include($_SERVER["DOCUMENT_ROOT"].$templateFolder."/neweditor.php");
-					
+
 					if($arResult["COMMENT_PROPERTIES"]["SHOW"] == "Y")
 					{
 						?><br /><?
@@ -231,7 +231,7 @@ else
 						<?
 					}
 					?>
-					
+
 					<?php
 //					only for not registered users
 					if($arResult['userID'] == null && $arParams['USER_CONSENT'] == 'Y')
@@ -256,9 +256,45 @@ else
 					}
 					?>
 
-					<div class="blog-comment-buttons">
-						<input tabindex="10" value="<?=GetMessage("B_B_MS_SEND")?>" type="button" name="sub-post" id="post-button" onclick="submitCommentNew()">
-					</div>
+                    <div class="form-group required">
+                        <div class="col-sm-12">
+                            <label class="control-label">Рейтинг</label>
+                            &nbsp;&nbsp;&nbsp; Плохо&nbsp;
+                            <input type="radio" name="rating" value="1">
+                            &nbsp;
+                            <input type="radio" name="rating" value="2">
+                            &nbsp;
+                            <input type="radio" name="rating" value="3">
+                            &nbsp;
+                            <input type="radio" name="rating" value="4">
+                            &nbsp;
+                            <input type="radio" name="rating" value="5">
+                            &nbsp;Хорошо
+                        </div>
+                    </div>
+					<div class="blog-comment-buttons buttons-overflow">
+						<button class="btn main-btn" tabindex="10" value="<?=GetMessage("B_B_MS_SEND")?>" type="button" name="sub-post" id="post-button" onclick="submitCommentNew()">
+                            <?=GetMessage("B_B_MS_SEND")?>
+                        </button>
+
+                    </div>
+
+<!--                    --><?//$APPLICATION->IncludeComponent(
+//                        "bitrix:iblock.vote",
+//                        "stars",
+//                        Array(
+//                            "CACHE_TIME" => "36000000",
+//                            "CACHE_TYPE" => "A",
+//                            "ELEMENT_CODE" => $_REQUEST["code"],
+//                            "ELEMENT_ID" => $_REQUEST["ELEMENT_ID"],
+//                            "IBLOCK_ID" => $_REQUEST["IBLOCK_ID"],
+//                            "IBLOCK_TYPE" => "catalog",
+//                            "MAX_VOTE" => "5",
+//                            "MESSAGE_404" => "",
+//                            "SET_STATUS_404" => "N",
+//                            "VOTE_NAMES" => array("1","2","3","4","5","")
+//                        )
+//                    );?>
 				</div>
 				<input type="hidden" name="blog_upload_cid" id="upload-cid" value="">
 				</form>

@@ -91,31 +91,22 @@ else
 //						array('HIDE_ICONS' => 'Y')
 //					);
 //					?>
-                    <?$APPLICATION->IncludeComponent(
-                        "bitrix:catalog.section.list",
-                        "aside",
-                        Array(
-                            "ADD_SECTIONS_CHAIN" => "Y",
-                            "CACHE_FILTER" => "N",
-                            "CACHE_GROUPS" => "Y",
-                            "CACHE_TIME" => "36000000",
-                            "CACHE_TYPE" => "A",
-                            "COMPONENT_TEMPLATE" => "aside",
-                            "COUNT_ELEMENTS" => "Y",
-                            "COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
-                            "FILTER_NAME" => "sectionsFilter",
-                            "IBLOCK_ID" => "2",
-                            "IBLOCK_TYPE" => "catalog",
-                            "SECTION_CODE" => "",
-                            "SECTION_FIELDS" => array(0=>"",1=>"",),
-                            "SECTION_ID" => $_REQUEST["SECTION_ID"],
-                            "SECTION_URL" => "",
-                            "SECTION_USER_FIELDS" => array(0=>"",1=>"",),
-                            "SHOW_PARENT_NAME" => "Y",
-                            "TOP_DEPTH" => "2",
-                            "VIEW_MODE" => "LINE"
-                        )
-                    );?>
+                <?$APPLICATION->IncludeComponent(
+                    "bitrix:menu",
+                    "catalog_menu",
+                    Array(
+                        "ALLOW_MULTI_SELECT" => "N",
+                        "CHILD_MENU_TYPE" => "left",
+                        "DELAY" => "N",
+                        "MAX_LEVEL" => "2",
+                        "MENU_CACHE_GET_VARS" => array(0=>"",),
+                        "MENU_CACHE_TIME" => "3600",
+                        "MENU_CACHE_TYPE" => "N",
+                        "MENU_CACHE_USE_GROUPS" => "Y",
+                        "ROOT_MENU_TYPE" => "left",
+                        "USE_EXT" => "Y"
+                    )
+                );?>
 <!--				</div>-->
 			<? endif
 			//endregion

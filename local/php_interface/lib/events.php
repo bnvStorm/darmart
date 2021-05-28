@@ -25,3 +25,15 @@ $event_manager->addEventHandlerCompatible('rest', 'OnRestServiceBuildDescription
     \Rating1C\Darmart\Favorites\FavoriteEventHandler::class,
     'onRestServiceBuildDescription'
 ]);
+
+$event_manager->addEventHandlerCompatible('iblock', 'OnAfterIBlockElementAdd', [
+    \Rating1C\Darmart\Iblock\IblockEventHandler::class,
+    'sendOrderReturnNotice'
+]);
+
+$event_manager->addEventHandlerCompatible("blog", "OnCommentAdd", [
+    \Rating1C\Darmart\Comments\CommentsEventHandler::class,
+    'onCommentAdd'
+]);
+
+

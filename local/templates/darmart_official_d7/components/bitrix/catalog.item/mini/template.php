@@ -182,7 +182,7 @@ if (isset($arResult['ITEM'])) {
                             <button type="button"
                                     id="favorites_list_<?= $item['ID'] ?>"
                                     data-product-id="<?= $item['ID'] ?>"
-                                    class="btn-icon fav-btn <?= $inFaforites ? 'delFavorites' : 'addFavorites' ?> icon-btn"
+                                    class="add-fav-btn btn-icon fav-btn <?= $inFaforites ? 'delFavorites' : 'addFavorites' ?> icon-btn"
                                     data-toggle="tooltip"
                                     data-original-title="В закладки">
                                 <span class="pe-7s-like"></span>

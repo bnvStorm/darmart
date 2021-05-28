@@ -178,7 +178,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                         <span class="pe-7s-angle-up"></span>
                                     </div>
 
-                                    <div class="slider-thumb" data-entity="images-container" style="height: 472px;">
+                                    <div class="slider-thumb" data-entity="images-container">
 
                                         <?
                                         if (!empty($actualItem['MORE_PHOTO'])) :
@@ -244,12 +244,8 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                     $showPropsBlock = !empty($mainBlockProperties) || $arResult['SHOW_OFFERS_PROPS'];
                     $showBlockWithOffersAndProps = $showOffersBlock || $showPropsBlock;
                     ?>
-                    <div class="<?= ($showBlockWithOffersAndProps ? "col-md-5" : "col-md-4"); ?>">
+                    <div class="col-md-5">
                         <div class="row">
-                            <!--                            <div class="product-item-detail-pay-block">-->
-                            <?
-//                            if ($showBlockWithOffersAndProps) {
-                            ?>
                             <div class="col-md-12">
                                 <div class="product-info">
                                     <h1 class="bx-title"><?= $name ?></h1>
@@ -430,9 +426,6 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
 
                                         <?
                                         }
-                                        ?>
-                                        <?
-//                                        }
                                         ?>
                                         <div class="box-info-product">
                                             <?php
@@ -907,34 +900,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                         </div>
                     </div>
                 </div>
-                <?
-                if ($arParams['BRAND_USE'] === 'Y') {
-                    ?>
-                    <!--                        <div class="col-sm-4 col-md-3">-->
-                    <!--                            --><?// $APPLICATION->IncludeComponent(
-//                                'bitrix:catalog.brandblock',
-//                                'bootstrap_v4',
-//                                array(
-//                                    'IBLOCK_TYPE' => $arParams['IBLOCK_TYPE'],
-//                                    'IBLOCK_ID' => $arParams['IBLOCK_ID'],
-//                                    'ELEMENT_ID' => $arResult['ID'],
-//                                    'ELEMENT_CODE' => '',
-//                                    'PROP_CODE' => $arParams['BRAND_PROP_CODE'],
-//                                    'CACHE_TYPE' => $arParams['CACHE_TYPE'],
-//                                    'CACHE_TIME' => $arParams['CACHE_TIME'],
-//                                    'CACHE_GROUPS' => $arParams['CACHE_GROUPS'],
-//                                    'WIDTH' => '',
-//                                    'HEIGHT' => ''
-//                                ),
-//                                $component,
-//                                array('HIDE_ICONS' => 'Y')
-//                            );
-//                            ?>
-                    <!--                        </div>-->
-                    <?
-                }
-                ?>
-            </div>
+                 </div>
 
             <div class="row">
                 <div class="col">

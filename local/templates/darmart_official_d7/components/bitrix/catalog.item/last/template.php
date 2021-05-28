@@ -14,12 +14,17 @@ use \Bitrix\Main;
  */
 
 $this->setFrameMode(true);
-
 global $USER;
 
 if ($USER->IsAuthorized()) {
     $favorite = \Rating1C\Darmart\App::getInstance()->favorite();
     $productsInFavoriteIds = $favorite->getProductsIds($USER->GetID());
+
+    //Check if offer in wishlist
+    //Возникает какая-то ошибка - разобраться
+//    foreach ($arResult['JS_OFFERS'] as $key => $offer)
+//        $arResult['JS_OFFERS'][$key]['IS_FAVORITE'] = in_array($offer['ID'], $productsInFavoriteIds);
+
 }
 
 if (isset($arResult['ITEM'])) {
@@ -176,21 +181,18 @@ if (isset($arResult['ITEM'])) {
                 <div class="quiqview-continer">
                     <div class="quiqview-btns">
                         <?php
-                        if ($USER->IsAuthorized()):
+//                        if ($USER->IsAuthorized()):
                             $inFaforites = in_array($item['ID'], $productsInFavoriteIds) !== false;
                             ?>
                             <button type="button"
                                     id="favorites_list_<?= $item['ID'] ?>"
                                     data-product-id="<?= $item['ID'] ?>"
-                                    class="btn-icon fav-btn <?= $inFaforites ? 'delFavorites' : 'addFavorites' ?> icon-btn"
+                                    class="add-fav-btn btn-icon fav-btn <?= $inFaforites ? 'delFavorites' : 'addFavorites' ?> icon-btn"
                                     data-toggle="tooltip"
                                     data-original-title="В закладки">
                                 <span class="pe-7s-like"></span>
                             </button>
-                        <?php endif; ?>
-                        <!--                        <button class="icon-btn" type="button" data-toggle="tooltip" title=""-->
-                        <!--                                onclick="wishlist.add('250');" data-original-title="В закладки"><span-->
-                        <!--                                    class="pe-7s-like"></span></button>-->
+<!--                        --><?php //endif; ?>
                         <label for="<?= $itemIds['COMPARE_LINK'] ?>-inp" id="<?= $itemIds['COMPARE_LINK'] ?>">
                             <input id="<?= $itemIds['COMPARE_LINK'] ?>-inp" type="checkbox"
                                    data-entity="compare-checkbox" style="display: none;">

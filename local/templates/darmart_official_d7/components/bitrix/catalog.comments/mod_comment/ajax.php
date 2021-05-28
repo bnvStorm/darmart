@@ -40,7 +40,7 @@ if (check_bitrix_sessid())
 	{
 		$APPLICATION->IncludeComponent(
 			'bitrix:catalog.comments',
-			'.default',
+			'mod_comment',
 			$commParams,
 			null,
 			array('HIDE_ICONS' => 'Y')

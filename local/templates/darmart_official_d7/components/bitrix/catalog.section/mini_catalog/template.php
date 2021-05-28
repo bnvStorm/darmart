@@ -168,8 +168,6 @@ if ($showTopPager)
 if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
 {
 	?>
-<!--	<div class="bx-section-desc bx---><?//=$arParams['TEMPLATE_THEME']?><!--">-->
-<!--		<p class="bx-section-desc-post">--><?//=$arResult['DESCRIPTION']?><!--</p>-->
         <div class="row">
             <div class="col-md-2 col-sm-6 hidden-xs">
                 <div class="btn-group btn-group-sm btn-view">
@@ -208,7 +206,6 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
                 </div>
             </div>
         </div>
-<!--	</div>-->
 	<?
 }
 ?>
@@ -233,8 +230,6 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
 		{
 			$rowItems = array_splice($arResult['ITEMS'], 0, $rowData['COUNT']);
 			?>
-<!--			<div class="row --><?//=$rowData['CLASS']?><!--" data-entity="items-row">-->
-<!--							<div class="row">-->
 								<?
 								foreach ($rowItems as $item)
 								{
@@ -262,12 +257,9 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
 												);
 												?>
 											</div>
-<!--										</div>-->
-<!--									</div>-->
 									<?
 								}
 								?>
-<!--							</div>-->
 			<?
 		}
 		unset($generalParams, $rowItems);

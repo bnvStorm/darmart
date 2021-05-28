@@ -1,0 +1,60 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Главная", 
+		"/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"О комплексе", 
+		"/sveden/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Номера", 
+		"/houses/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Бронирование номеров", 
+		"/timetable/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Медиа", 
+		"/media/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Документы", 
+		"/sveden/document/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Отзывы", 
+		"/reviews/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		"/contacts/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

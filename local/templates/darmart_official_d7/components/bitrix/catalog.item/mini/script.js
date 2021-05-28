@@ -1,6 +1,5 @@
 $(document).ready(function(){
 	$('.add-fav-btn').on('click', function(e){
-		e.stopPropagation();
 		let btn = this;
 		let productId = btn.dataset.productId;
 		console.log(btn);
@@ -19,7 +18,7 @@ $(document).ready(function(){
 					<button type="button" class="close" data-dismiss="alert"><span class="pe-7s-close"></span></button></div>
 					`;
 
-					$('.card').prepend(alert);
+					$('#content').prepend(alert);
 				}
 			}
 		);

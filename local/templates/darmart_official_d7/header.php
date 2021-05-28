@@ -156,6 +156,16 @@ CUtil::InitJSCore(['moment', 'datetimepicker', 'ruru']);*/
     </div>
 </nav>
 <header>
+    <? $APPLICATION->IncludeComponent(
+        "bitrix:main.include",
+        "",
+        array(
+            "AREA_FILE_SHOW" => "file",
+            "AREA_FILE_SUFFIX" => "inc",
+            "EDIT_TEMPLATE" => "",
+            "PATH" => "/local/templates/darmart_official_d7/inc/header/counters.php"
+        )
+    ); ?>
     <div class="container">
         <div class="row">
             <div class="col-sm-3">

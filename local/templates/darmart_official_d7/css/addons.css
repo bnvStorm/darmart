@@ -28,6 +28,12 @@ body {
 .nav-tabs{
     height: 42px;
 }
+.list-group a.selected{
+    color: #444444;
+    background: #eeeeee;
+    border: 1px solid #DDDDDD;
+    text-shadow: 0 1px 0 #fff;
+}
 .bx_soc_comments_div.bx_important.bx_yellow .bx_bt_button{
     background: #8ecd3d;
     color: #fff;

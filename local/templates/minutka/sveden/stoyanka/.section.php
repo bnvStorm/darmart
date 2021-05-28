@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Стоянка";
+$arDirProperties = Array(
+
+);
+?>

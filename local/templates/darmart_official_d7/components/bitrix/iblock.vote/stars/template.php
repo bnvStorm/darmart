@@ -39,6 +39,7 @@ if (isset($arParams["AJAX_CALL"]) && $arParams["AJAX_CALL"]=="Y")
 }
 
 CJSCore::Init(array("ajax"));
+$strObName = "";
 $strObName = "bx_vo_".$arParams["IBLOCK_ID"]."_".$arParams["ELEMENT_ID"].'_'.$this->randString();
 $arJSParams = array(
 	"progressId" => $strObName."_progr",
@@ -55,14 +56,13 @@ $arJSParams = array(
 	),
 	'readOnly' => (isset($arParams['READ_ONLY']) && $arParams['READ_ONLY'] === 'Y')
 );
-\Bitrix\Main\Diag\Debug::dumpToFile($arJSParams);
-//\Bitrix\Main\Diag\Debug::dumpToFile($arResult);
-\Bitrix\Main\Diag\Debug::dumpToFile($arParams);
+
 ?>
+
 <div class="rating">
     <?php for($i = 0; $i != $arParams['MAX_VOTE']; $i++):
         $starClass = "";
-        if($i <= $votesCount)
+        if($votesValue != 0 && $i <= $votesValue)
             $starClass = 'stary';
         ?>
         <span class="fa fa-stack">
@@ -72,5 +72,5 @@ $arJSParams = array(
 </div>
 
 <script type="text/javascript">
-	<?=$strObName;?> = new JCIblockVoteStars(<?=CUtil::PhpToJSObject($arJSParams, false, true, true);?>);
+	var <?= $strObName ?> = new JCIblockVoteStars(<?=CUtil::PhpToJSObject($arJSParams, false, true, true);?>);
 </script>

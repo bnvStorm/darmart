@@ -5,7 +5,7 @@ use Bitrix\Main\{
     LoaderException
 };
 
-try {
+/*try {
     Loader::registerAutoLoadClasses(null,[
         '\Rating1C\Darmart\App' => '/local/php_interface/lib/app.php',
         '\Rating1C\Darmart\Users\UserEventHandler' => '/local/php_interface/lib/users/usereventhandler.php',
@@ -22,5 +22,25 @@ try {
         'DESCRIPTION' => $e->getMessage(),
     ]);
     die();
-}
+}*/
+
+
+/**
+ * Регистрируется обработчик для автозагрузки пользовательских классов из пространства имён \Rating1C\Services.
+ */
+
+use Bitrix\Main\IO\File;
+spl_autoload_register(function (string $class_name) {
+    $class_path = explode('\\', $class_name);
+    if ('Rating1C' === $class_path[0] && 'Darmart') {
+        $file_path = __DIR__;
+        foreach (array_slice($class_path, 2) as $step) {
+            $file_path .= '/' . strtolower($step);
+        }
+        $file_path .= '.php';
+        if (File::isFileExists($file_path)) {
+            require_once $file_path;
+        }
+    }
+});
 

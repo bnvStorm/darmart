@@ -1,0 +1,53 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Основные сведения", 
+		"/sveden/common/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Документы", 
+		"/sveden/document/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Правила проживания в гостинице", 
+		"/sveden/accommodation-rules/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Кафе", 
+		"/sveden/kafe/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Сауна", 
+		"/sveden/sauna/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Стоянка", 
+		"/sveden/stoyanka/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Автомойка", 
+		"/sveden/avtomoyka/", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>
