@@ -30,14 +30,16 @@ if(isset($_REQUEST["count"]) ) {
 
 // разобьем переменную sort на две element_sort_field и element_sort_order, и заодно исправим (price -> catalog_PRICE_1)
 $ar_sort=explode("_", $sort);
-$element_sort_field = ($ar_sort[0] == "price" )  ? "catalog_PRICE_1" : $ar_sort[0];
+$element_sort_field = ($ar_sort[0] == "price" )  ? "catalog_PRICE_3" : $ar_sort[0];
 $element_sort_order = $ar_sort[1];
 
 // вывод переменных для проверки
-//echo "sort=".$sort."<br/>";
-//echo "element_sort_field=".$element_sort_field."<br/>";
-//echo "element_sort_order=".$element_sort_order."<br/>";
-//echo "count=".$count."<br/><hr/>";
+/*if($USER->IsAdmin()){
+echo "sort=".$sort."<br/>";
+echo "element_sort_field=".$element_sort_field."<br/>";
+echo "element_sort_order=".$element_sort_order."<br/>";
+echo "count=".$count."<br/><hr/>";
+}*/
 $this->setFrameMode(true);
 
 if (!isset($arParams['FILTER_VIEW_MODE']) || (string)$arParams['FILTER_VIEW_MODE'] == '')

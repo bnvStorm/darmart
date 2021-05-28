@@ -19,7 +19,7 @@
 	<h5>Дополнительно</h5>
 	<ul class="list-unstyled">
 		<li><a href="/brands/">Производители</a></li>
-		<li><a href="/vouchers/">Подарочные сертификаты</a></li>
+<!--		<li><a href="/vouchers/">Подарочные сертификаты</a></li>-->
 		<li><a href="/affiliates/">Партнёры</a></li>
 		<li><a href="/specials/">Товары со скидкой</a></li>
 	</ul>
@@ -29,7 +29,7 @@
 	<ul class="list-unstyled">
 		<li><a href="/personal/">Личный кабинет</a></li>
 		<li><a href="/personal/orders/">История заказов</a></li>
-		<li><a href="/wishlist/">Мои закладки</a></li>
+		<li><a href="/personal/favorites/">Мои закладки</a></li>
 		<li><a href="/personal/subscribe/">Рассылка новостей</a></li>
 	</ul>
 </div>

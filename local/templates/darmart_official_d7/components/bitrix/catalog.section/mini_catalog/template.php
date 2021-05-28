@@ -188,8 +188,8 @@ if ($arParams['HIDE_SECTION_DESCRIPTION'] !== 'Y')
                     <select id="input-sort" class="form-control" onchange="location = this.value;">
                         <option <?if ($_GET["sort"] == "price_desc"):?>selected="selected"<?endif;?> value="<?=$APPLICATION->GetCurPageParam("sort=price_desc", Array("sort", "count") )?>">По цене (убыванию)</option>
                         <option <?if ($_GET["sort"] == "price_asc"):?>selected="selected"<?endif;?> value="<?=$APPLICATION->GetCurPageParam("sort=price_asc", Array("sort", "count") )?>">По цене (возрастанию)</option>
-                        <option <?if ($_GET["sort"] == "sort_asc"):?>selected="selected"<?endif;?> value="<?=$APPLICATION->GetCurPageParam("sort=sort_asc", Array("sort", "count") )?>">По названию (А-Я)</option>
-                        <option <?if ($_GET["sort"] == "sort_desc"):?>selected="selected"<?endif;?> value="<?=$APPLICATION->GetCurPageParam("sort=sort_desc", Array("sort", "count") )?>">По названию (Я-А)</option>
+                        <option <?if ($_GET["sort"] == "name_asc"):?>selected="selected"<?endif;?> value="<?=$APPLICATION->GetCurPageParam("sort=name_asc", Array("sort", "count") )?>">По названию (А-Я)</option>
+                        <option <?if ($_GET["sort"] == "name_desc"):?>selected="selected"<?endif;?> value="<?=$APPLICATION->GetCurPageParam("sort=name_desc", Array("sort", "count") )?>">По названию (Я-А)</option>
                     </select>
                 </div>
             </div>
