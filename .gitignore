@@ -1,3 +1,5 @@
 
 .idea/
 bitrix/
+.idea/deployment.xml
+.idea/webServers.xml

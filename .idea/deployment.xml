@@ -16,38 +16,10 @@
           </mappings>
         </serverdata>
       </paths>
-      <paths name="minutka">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$/local/templates/minutka" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
       <paths name="ndarmart">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="pilorama">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$/local/templates/pilorama" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="prommaterial">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$/local/templates/prommaterial" web="/" />
-          </mappings>
-        </serverdata>
-      </paths>
-      <paths name="resy">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$/local/templates/resy" web="/" />
           </mappings>
         </serverdata>
       </paths>

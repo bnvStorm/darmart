@@ -16,36 +16,8 @@
           </advancedOptions>
         </fileTransfer>
       </webServer>
-      <webServer id="26e569ec-ba66-4fd3-b1b8-df753a9dd183" name="resy" url="http://31.31.198.207">
-        <fileTransfer rootFolder="/resyfiltration.ru" host="31.31.198.207" port="21">
-          <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
-          </advancedOptions>
-        </fileTransfer>
-      </webServer>
-      <webServer id="9aa00117-6f4f-452a-a014-80c79525800b" name="minutka" url="http://135.181.131.208">
-        <fileTransfer host="135.181.131.208" port="21">
-          <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
-          </advancedOptions>
-        </fileTransfer>
-      </webServer>
-      <webServer id="0d37ace9-86a2-4e03-8394-c171d65d1652" name="prommaterial" url="http://135.181.131.208">
-        <fileTransfer host="135.181.131.208" port="21">
-          <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
-          </advancedOptions>
-        </fileTransfer>
-      </webServer>
       <webServer id="70e57139-87a5-44c0-90d4-2615719cfd93" name="ndarmart" url="http://bihost2.kz">
         <fileTransfer host="bihost2.kz" port="21">
-          <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
-          </advancedOptions>
-        </fileTransfer>
-      </webServer>
-      <webServer id="303eda7a-78d0-4cd7-a518-579203dbdf9a" name="pilorama" url="http://194.87.99.149">
-        <fileTransfer host="194.87.99.149" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
