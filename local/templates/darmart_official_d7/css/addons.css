@@ -230,6 +230,8 @@ button, html input[type=button], input[type=reset], input[type=submit]{
     display:none;
 }
 @media (max-width: 480px) {
-
+    .banner-box img{
+        max-width:380px;
+    }
 
 }

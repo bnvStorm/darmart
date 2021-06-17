@@ -164,6 +164,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
 
 
 ?>
+<?//= ($offer['CAN_BUY'] ? 'in stock' : 'out of stock') ?>
 <?$this->SetViewTarget('microdata');?>
     <!-- OpenGraph -->
     <meta property="og:title" content="<?=$name ?>">
@@ -171,7 +172,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
     <meta property="og:url" content="https://www.darmart.kz/<?=$arResult["DETAIL_PAGE_URL"]?>">
     <meta property="og:image" content="<?=$arResult["DETAIL_PICTURE"]["SRC"] ?>">
     <meta property="product:brand" content="Darmart">
-    <meta property="product:availability" content="<?= ($offer['CAN_BUY'] ? 'in stock' : 'out of stock') ?>">
+    <meta property="product:availability" content="in stock">
     <meta property="product:condition" content="new">
     <meta property="product:price:amount" content="<?=$price["PRICE"]?>">
     <meta property="product:price:currency" content="<?= $price['CURRENCY'] ?>">

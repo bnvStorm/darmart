@@ -308,9 +308,7 @@ CUtil::InitJSCore(['moment', 'datetimepicker', 'ruru']);*/
             </div>
             <div class="navbar-brand">
                 <a href="#">
-                    <img src="https://darmart.kz/image/catalog/logodarmart.png"
-                         title="DARMART | Интернет магазин бытовой техники"
-                         alt="DARMART | Интернет магазин бытовой техники" class="img-responsive"></a>
+                    <img src="/local/templates/darmart_official_d7/img/logo.png" title="DARMART|Интернет магазин бытовой техники" alt="DARMART" class="img-responsive"></a>
             </div>
         </div>
 
