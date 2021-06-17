@@ -158,7 +158,7 @@ $templateData = array(
 							<? foreach($arResult["ITEMS"] as $arElement)
 							{
 								?>
-								<td class="text-center">
+								<td class="text-left">
 									<? switch($code)
 									{
 										case "NAME":

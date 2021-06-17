@@ -1,6 +1,0 @@
-<?
-$sSectionName = "Сауна";
-$arDirProperties = Array(
-
-);
-?>

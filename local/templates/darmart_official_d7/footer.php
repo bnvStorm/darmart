@@ -31,10 +31,12 @@ if ((SITE_DIR !== $url) && ((strpos($url, $catalogurl)) === false) && ((strpos($
                 <div class="col-md-3 col-sm-6">
                     <div class="service-item">
                         <span class="pe-7s-car"></span>
-                        <div class="title">Бесплатная доставка</div>
-                        <div class="text">При заказе от 1000 тг.</div>
+                        <div class="title">Быстрая доставка</div>
+                        <div class="text">Уточняйте по телефону</div>
                     </div>
                 </div>
+
+
                 <div class="col-md-3 col-sm-6">
                     <div class="service-item">
                         <span class="pe-7s-comment"></span>
@@ -104,6 +106,8 @@ if ((SITE_DIR !== $url) && ((strpos($url, $catalogurl)) === false) && ((strpos($
         </div>
 
     </div>
+
+
 </footer>
 
 </body>

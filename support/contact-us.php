@@ -35,7 +35,7 @@ $APPLICATION->SetTitle("Связаться с нами");
         </div>
         <div class="col-md-6">
             <?$APPLICATION->IncludeComponent(
-	"bitrix:main.feedback", 
+	"bitrix:main.feedback",
 	"contact_us", 
 	array(
 		"EMAIL_TO" => "sale@127.0.0.2",

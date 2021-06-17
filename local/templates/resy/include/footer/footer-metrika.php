@@ -1,1 +1,0 @@
-<!-- File for metriks:Yandex.Metrika, Google.Analytics etc. -->

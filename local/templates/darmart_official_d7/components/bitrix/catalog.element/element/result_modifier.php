@@ -7,3 +7,17 @@
 
 $component = $this->getComponent();
 $arParams = $component->applyTemplateModifications();
+
+
+$dbPrice = \Bitrix\Catalog\Model\Price::getList([
+    "filter" => array(
+        "PRODUCT_ID" => $id,
+        "CATALOG_GROUP_ID" => 1
+    )]);
+
+if ($arPrice = $dbPrice->fetch()) {
+    $price = $arPrice['PRICE'];
+
+}
+
+

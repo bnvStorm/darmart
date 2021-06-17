@@ -21,11 +21,12 @@ if ($arParams["SET_TITLE"] == "Y")
     <p><?//= Loc::getMessage('ORDER_SUCCESS_TEXT4') ?></p>
     <p><?= Loc::getMessage('ORDER_SUCCESS_TEXT2') ?></p>
     <p><?= Loc::getMessage('ORDER_SUCCESS_TEXT3') ?></p>
-    <div class="buttons">
-        <div class="pull-right"><a href="/" class="btn main-btn"><?= Loc::getMessage('CONTINUE_BTN') ?></a></div>
-    </div>
+<!--    <div class="buttons">-->
+<!--        <div><a href="/" class="btn main-btn">--><?//= Loc::getMessage('CONTINUE_BTN2') ?><!--</a></div>-->
+<!--    </div>-->
 
     <!-- -- -->
+
     <?
     if ($arResult["ORDER"]["IS_ALLOW_PAY"] === 'Y')
     {
@@ -44,7 +45,7 @@ if ($arParams["SET_TITLE"] == "Y")
                         if (empty($arPaySystem["ERROR"]))
                         {
                             ?>
-                            <br /><br />
+
 
                             <table class="sale_order_full_table">
                                 <tr>
@@ -116,3 +117,6 @@ if ($arParams["SET_TITLE"] == "Y")
 	</div>
 
 <? endif ?>
+<script type="text/javascript">
+        fbq('track', 'Purchase', {value: <?=intval($arResult["ORDER"]["PRICE"])?>, currency: 'USD'});
+</script>

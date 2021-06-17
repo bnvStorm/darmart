@@ -26,12 +26,21 @@ $this->setFrameMode(true); ?>
             ),
             $component, array("HIDE_ICONS" => "Y")
         ); ?><? else: ?>
-        <input class="form-control" type="text" name="q" value="" size="15" maxlength="50"
+        <input  id="search_btn" class="form-control" type="text" name="q" value="" size="15" maxlength="50"
                placeholder="Поиск товара по каталогу"/><? endif; ?></td>
 
         <button name="s" type="button" value="<?= GetMessage("BSF_T_SEARCH_BUTTON"); ?>"><i class="fa fa-search"></i>
         </button>
         <!--		<input name="s" type="submit" value="--><? //=GetMessage("BSF_T_SEARCH_BUTTON");?><!--" />-->
-        
+        <script type="text/javascript">
+
+            $(document).ready(function() {
+                $('#search_btn').keydown(function(e) {
+                    if(e.keyCode === 13) {
+                        fbq('track', 'Search');
+                    }
+                });
+            });
+        </script>
     </form>
 </div>

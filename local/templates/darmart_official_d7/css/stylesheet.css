@@ -624,6 +624,7 @@ header {
     padding: 12px 30px 12px 15px;
     color: #222;
     position: relative;
+    white-space: pre-wrap;
 }
 
 .category-dropdown>li.dropdown-submenu>a:before{
@@ -1616,7 +1617,7 @@ h2.price {
 }
 
 .category-wall-box .image {
-    width: 40%;
+    width: 38%;
 }
 
 .category-wall-box .image img{
@@ -1632,9 +1633,9 @@ h2.price {
     display: block;
     margin-bottom: 10px;
     font-weight: 500;
-    white-space: nowrap;
+    /*white-space: nowrap;
     overflow: hidden;
-    text-overflow: ellipsis;
+    text-overflow: ellipsis;*/
     color: #1d2536;
 }
 

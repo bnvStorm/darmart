@@ -120,11 +120,17 @@ use Bitrix\Main\Localization\Loc;
     <div class="buttons-overflow clearfix">
         <div class="pull-left"><a href="<?= SITE_DIR ?>" class="btn">Продолжить покупки</a></div>
         <div class="pull-right">
-            <button class="btn main-btn basket-btn-checkout{{#DISABLE_CHECKOUT}} disabled{{/DISABLE_CHECKOUT}}"
+            <button id="btn_check"
+                    class="btn main-btn basket-btn-checkout{{#DISABLE_CHECKOUT}} disabled{{/DISABLE_CHECKOUT}}"
                     data-entity="basket-checkout-button">
                 <?= Loc::getMessage('SBB_ORDER') ?>
             </button>
-        </div>
-    </div>
+            <script type="text/javascript">
+                $("#btn_check").click(function () {
+                    fbq('track', 'InitiateCheckout');
+                });
+</script>
+</div>
+</div>
 
 </script>

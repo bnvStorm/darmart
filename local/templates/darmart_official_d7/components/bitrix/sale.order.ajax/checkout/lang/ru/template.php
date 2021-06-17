@@ -105,7 +105,7 @@ $MESS["PRICE_DEFAULT"] = "Стоимость";
 $MESS["PERIOD_DEFAULT"] = "Срок доставки";
 $MESS["NAV_BACK_DEFAULT"] = "Назад";
 $MESS["NAV_FORWARD_DEFAULT"] = "Вперед";
-$MESS["PRICE_FREE_DEFAULT"] = "бесплатно";
+$MESS["PRICE_FREE_DEFAULT"] = "Самовывоз";
 $MESS["ECONOMY_DEFAULT"] = "Экономия";
 $MESS["REGISTRATION_REFERENCE_DEFAULT"] = "Если вы впервые на сайте, и хотите, чтобы мы вас помнили, и все ваши заказы сохранялись, заполните регистрационную форму.";
 $MESS["AUTH_REFERENCE_1_DEFAULT"] = "Символом \"звездочка\" (*) отмечены обязательные для заполнения поля.";
@@ -148,4 +148,5 @@ $MESS['ORDER_SUCCESS_TEXT3'] = 'Спасибо за покупки в нашем
 $MESS['ORDER_SUCCESS_TEXT4'] = 'Если в вашем заказе есть цифровые товары для скачивания, вы можете посмотреть их на
  странице <a href="https://darmart.kz/downloads/">Файлы для скачивания</a>.';
 $MESS['CONTINUE_BTN'] = 'Продолжить';
+$MESS['CONTINUE_BTN2'] = 'Продолжить покупки';
 ?>

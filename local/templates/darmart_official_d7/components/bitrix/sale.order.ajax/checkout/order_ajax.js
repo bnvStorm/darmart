@@ -2249,7 +2249,7 @@ BX.namespace('BX.Sale.OrderAjaxComponent');
 			{
 				buttons.push(
 					BX.create('button', {
-						props: {href: 'javascript:void(0)', className: 'pull-right btn btn-primary pl-3 pr-3'},
+						props: {href: 'javascript:void(0)', className: 'pull-right btn btn-primary pl-3 pr-3 main-btn'},
 						html: this.params.MESS_FURTHER,
 						events: {click: BX.proxy(this.clickNextAction, this)}
 					})
@@ -5687,11 +5687,11 @@ BX.namespace('BX.Sale.OrderAjaxComponent');
 			if (item.PRICE >= 0 || typeof item.DELIVERY_DISCOUNT_PRICE !== 'undefined')
 			{
 				labelNodes.push(
-					BX.create('DIV', {
-						props: {className: 'bx-soa-pp-delivery-cost'},
-						html: typeof item.DELIVERY_DISCOUNT_PRICE !== 'undefined'
-							? item.DELIVERY_DISCOUNT_PRICE_FORMATED
-							: item.PRICE_FORMATED})
+					// BX.create('DIV', {
+					// 	props: {className: 'bx-soa-pp-delivery-cost'},
+					// 	html: typeof item.DELIVERY_DISCOUNT_PRICE !== 'undefined'
+					// 		? item.DELIVERY_DISCOUNT_PRICE_FORMATED
+					// 		: item.PRICE_FORMATED})
 				);
 			}
 			else if (deliveryCached && (deliveryCached.PRICE >= 0 || typeof deliveryCached.DELIVERY_DISCOUNT_PRICE !== 'undefined'))
@@ -8031,6 +8031,11 @@ BX.namespace('BX.Sale.OrderAjaxComponent');
 					deliveryValue = this.params.MESS_PRICE_FREE;
 					params.free = true;
 				}
+				else if (parseFloat(total.DELIVERY_PRICE) === 1)
+				{
+					deliveryValue = "Индивидуально";
+					params.free = true;
+				}
 				else
 				{
 					deliveryValue = total.DELIVERY_PRICE_FORMATED;
@@ -8145,6 +8150,7 @@ BX.namespace('BX.Sale.OrderAjaxComponent');
 			else
 			{
 				totalValue = [value];
+
 			}
 
 			if (params.total)

@@ -1,22 +1,45 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
-$APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
+$APPLICATION->SetPageProperty("description", "Купить бытовую технику Artel в Шымкенте можно в нашем интернет магазине artelshop.kz  Здесь вашему вниманию представлены бытовые техники Artel и не только...");
+$APPLICATION->SetPageProperty("keywords", "DARMART | Интернет магазин");
+$APPLICATION->SetPageProperty("title", "DARMART Интернет-магазин бытовой техники");
+$APPLICATION->SetTitle("DARMART Интернет-магазин бытовой техники");
 ?><div id="slideshow0" class="owl-carousel owl-loaded owl-drag" style="opacity: 1;">
 	<div class="owl-stage-outer">
 		<div class="owl-stage">
 			 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"slider",
+	"bitrix:catalog.compare.list",
+	"",
 	Array(
+		"ACTION_VARIABLE" => "action",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"AJAX_OPTION_HISTORY" => "N",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"COMPARE_URL" => "/catalog/compare/",
+		"DETAIL_URL" => "",
+		"IBLOCK_ID" => "2",
+		"IBLOCK_TYPE" => "catalog",
+		"NAME" => "CATALOG_COMPARE_LIST",
+		"POSITION" => "top left",
+		"POSITION_FIXED" => "N",
+		"PRODUCT_ID_VARIABLE" => "id"
+	)
+);?><br>
+			 <?$APPLICATION->IncludeComponent(
+	"bitrix:news.list", 
+	"slider", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
 		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "Y",
+		"CACHE_GROUPS" => "N",
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
@@ -27,12 +50,15 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array("",""),
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "6",
 		"IBLOCK_TYPE" => "Content",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",
 		"NEWS_COUNT" => "4",
@@ -46,26 +72,30 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array("LINK",""),
-		"SET_BROWSER_TITLE" => "Y",
+		"PROPERTY_CODE" => array(
+			0 => "LINK",
+			1 => "",
+		),
+		"SET_BROWSER_TITLE" => "N",
 		"SET_LAST_MODIFIED" => "N",
-		"SET_META_DESCRIPTION" => "Y",
-		"SET_META_KEYWORDS" => "Y",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
 		"SET_STATUS_404" => "N",
-		"SET_TITLE" => "Y",
+		"SET_TITLE" => "N",
 		"SHOW_404" => "N",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N"
-	)
-);?>
+		"STRICT_SECTION_CHECK" => "N",
+		"COMPONENT_TEMPLATE" => "slider"
+	),
+	false
+);?><br>
+ <br>
 		</div>
 	</div>
-<!--	<div class="owl-nav disabled">-->
-<!-- <button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button> <button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>-->
-<!--	</div>-->
+	 <!--	<div class="owl-nav disabled">--> <!-- <button type="button" role="presentation" class="owl-prev"><span aria-label="Previous">‹</span></button> <button type="button" role="presentation" class="owl-next"><span aria-label="Next">›</span></button>--> <!--	</div>-->
 </div>
  <script type="text/javascript">
     $('#slideshow0').owlCarousel({
@@ -82,18 +112,18 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 	<div class="banner-block-home">
 		<div class="row">
 			 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list",
-	"banners",
-	Array(
+	"bitrix:news.list", 
+	"banners", 
+	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
-		"ADD_SECTIONS_CHAIN" => "Y",
+		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
 		"AJAX_OPTION_ADDITIONAL" => "",
 		"AJAX_OPTION_HISTORY" => "N",
 		"AJAX_OPTION_JUMP" => "N",
 		"AJAX_OPTION_STYLE" => "Y",
 		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "Y",
+		"CACHE_GROUPS" => "N",
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
@@ -105,12 +135,15 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(0=>"",1=>"",),
+		"FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "9",
 		"IBLOCK_TYPE" => "Content",
-		"INCLUDE_IBLOCK_INTO_CHAIN" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"INCLUDE_SUBSECTIONS" => "Y",
 		"MESSAGE_404" => "",
 		"NEWS_COUNT" => "20",
@@ -124,20 +157,24 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(0=>"LINK",1=>"",),
-		"SET_BROWSER_TITLE" => "Y",
+		"PROPERTY_CODE" => array(
+			0 => "LINK",
+			1 => "",
+		),
+		"SET_BROWSER_TITLE" => "N",
 		"SET_LAST_MODIFIED" => "N",
-		"SET_META_DESCRIPTION" => "Y",
-		"SET_META_KEYWORDS" => "Y",
+		"SET_META_DESCRIPTION" => "N",
+		"SET_META_KEYWORDS" => "N",
 		"SET_STATUS_404" => "N",
-		"SET_TITLE" => "Y",
+		"SET_TITLE" => "N",
 		"SHOW_404" => "N",
 		"SORT_BY1" => "ACTIVE_FROM",
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N"
-	)
+	),
+	false
 );?>
 		</div>
 	</div>
@@ -147,6 +184,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 	"topproducts", 
 	array(
 		"ACTION_VARIABLE" => "action",
+		"ADD_PICT_PROP" => "-",
 		"ADD_PROPERTIES_TO_BASKET" => "Y",
 		"ADD_TO_BASKET_ACTION" => "ADD",
 		"BASKET_URL" => "/personal/basket.php",
@@ -155,8 +193,11 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"COMPARE_NAME" => "CATALOG_COMPARE_LIST",
+		"COMPARE_PATH" => "/catalog/compare/",
 		"COMPATIBLE_MODE" => "Y",
+		"COMPONENT_TEMPLATE" => "topproducts",
 		"CONVERT_CURRENCY" => "N",
+		"CUSTOM_FILTER" => "{\"CLASS_ID\":\"CondGroup\",\"DATA\":{\"All\":\"AND\",\"True\":\"True\"},\"CHILDREN\":[]}",
 		"DETAIL_URL" => "",
 		"DISPLAY_COMPARE" => "Y",
 		"ELEMENT_COUNT" => "9",
@@ -170,6 +211,12 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		"HIDE_NOT_AVAILABLE_OFFERS" => "Y",
 		"IBLOCK_ID" => "2",
 		"IBLOCK_TYPE" => "catalog",
+		"LABEL_PROP" => array(
+		),
+		"LABEL_PROP_MOBILE" => array(
+			0 => "NEWPRODUCT",
+		),
+		"LABEL_PROP_POSITION" => "top-left",
 		"LINE_ELEMENT_COUNT" => "3",
 		"MESS_BTN_ADD_TO_BASKET" => "В корзину",
 		"MESS_BTN_BUY" => "Купить",
@@ -179,7 +226,7 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		"OFFERS_LIMIT" => "5",
 		"PARTIAL_PRODUCT_PROPERTIES" => "Y",
 		"PRICE_CODE" => array(
-			0 => "BASE",
+			0 => "Типовое Розничное соглашение",
 		),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
@@ -188,9 +235,12 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		"PRODUCT_QUANTITY_VARIABLE" => "quantity",
 		"PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
 		"PRODUCT_SUBSCRIPTION" => "Y",
+		"PROPERTY_CODE_MOBILE" => array(
+		),
 		"ROTATE_TIMER" => "30",
 		"SECTION_URL" => "",
-		"SEF_MODE" => "N",
+		"SEF_MODE" => "Y",
+		"SEF_RULE" => "",
 		"SHOW_CLOSE_POPUP" => "N",
 		"SHOW_DISCOUNT_PERCENT" => "N",
 		"SHOW_MAX_QUANTITY" => "N",
@@ -205,18 +255,15 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 		"USE_PRICE_COUNT" => "N",
 		"USE_PRODUCT_QUANTITY" => "N",
 		"VIEW_MODE" => "SECTION",
-		"COMPONENT_TEMPLATE" => "topproducts",
-		"CUSTOM_FILTER" => "{\"CLASS_ID\":\"CondGroup\",\"DATA\":{\"All\":\"AND\",\"True\":\"True\"},\"CHILDREN\":[]}",
-		"PROPERTY_CODE_MOBILE" => array(
+		"OFFERS_SORT_FIELD" => "sort",
+		"OFFERS_SORT_ORDER" => "asc",
+		"OFFERS_SORT_FIELD2" => "id",
+		"OFFERS_SORT_ORDER2" => "desc",
+		"OFFERS_FIELD_CODE" => array(
+			0 => "",
+			1 => "",
 		),
-		"ADD_PICT_PROP" => "-",
-		"LABEL_PROP" => array(
-		),
-		"COMPARE_PATH" => "/catalog/compare/",
-		"LABEL_PROP_MOBILE" => array(
-			0 => "NEWPRODUCT",
-		),
-		"LABEL_PROP_POSITION" => "top-left"
+		"PRODUCT_DISPLAY_MODE" => "N"
 	),
 	false
 );?>
@@ -302,30 +349,36 @@ $APPLICATION->SetTitle("Интернет-магазин \"Одежда\"");
 	<h3 class="section-title">Стена категорий</h3>
 	<div class="row">-->
 <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section.list",
-	"category_wall",
-	Array(
-		"ADD_SECTIONS_CHAIN" => "Y",
+	"bitrix:catalog.section.list", 
+	"category_wall", 
+	array(
+		"ADD_SECTIONS_CHAIN" => "N",
 		"CACHE_FILTER" => "N",
-		"CACHE_GROUPS" => "Y",
+		"CACHE_GROUPS" => "N",
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"COMPONENT_TEMPLATE" => "category_wall",
-		"COUNT_ELEMENTS" => "Y",
+		"COUNT_ELEMENTS" => "N",
 		"COUNT_ELEMENTS_FILTER" => "CNT_ACTIVE",
 		"FILTER_NAME" => "sectionsFilter",
 		"IBLOCK_ID" => "2",
 		"IBLOCK_TYPE" => "catalog",
 		"SECTION_CODE" => "",
-		"SECTION_FIELDS" => array(0=>"PICTURE",1=>"DETAIL_PICTURE",2=>"",),
+		"SECTION_FIELDS" => array(
+			0 => "PICTURE",
+			1 => "DETAIL_PICTURE",
+			2 => "",
+		),
 		"SECTION_ID" => "",
 		"SECTION_URL" => "",
-		"SECTION_USER_FIELDS" => array(0=>"",1=>"",),
+		"SECTION_USER_FIELDS" => array(
+			0 => "",
+			1 => "",
+		),
 		"SHOW_PARENT_NAME" => "Y",
 		"TOP_DEPTH" => "2",
 		"VIEW_MODE" => "LINE"
-	)
+	),
+	false
 );?> <!--	</div>
-</div>-->
-
-<? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
+</div>--><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

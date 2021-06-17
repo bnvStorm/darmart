@@ -83,6 +83,7 @@ $APPLICATION->SetTitle("Персональный раздел");
 		"SEF_URL_TEMPLATES" => array(
 			"change_password" => "change_password/",
 			"favorites" => "favorites/",
+			"return_order" => "return_order/",
 			"index" => "index.php",
 			"orders" => "orders/",
 			"account" => "account/",

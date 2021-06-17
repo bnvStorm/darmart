@@ -40,23 +40,7 @@ $arUrlRewrite=array (
     'PATH' => '/desktop_app/router.php',
     'SORT' => 100,
   ),
-  0 => 
-  array (
-    'CONDITION' => '#^/stssync/calendar/#',
-    'RULE' => '',
-    'ID' => 'bitrix:stssync.server',
-    'PATH' => '/bitrix/services/stssync/calendar/index.php',
-    'SORT' => 100,
-  ),
-  9 => 
-  array (
-    'CONDITION' => '#^/personal/order/#',
-    'RULE' => '',
-    'ID' => 'bitrix:sale.personal.order',
-    'PATH' => '/personal/order/index.php',
-    'SORT' => 100,
-  ),
-  16 => 
+  11 => 
   array (
     'CONDITION' => '#^/personal/#',
     'RULE' => '',
@@ -64,7 +48,7 @@ $arUrlRewrite=array (
     'PATH' => '/personal/index.php',
     'SORT' => 100,
   ),
-  17 => 
+  23 => 
   array (
     'CONDITION' => '#^/catalog/#',
     'RULE' => '',
@@ -72,12 +56,20 @@ $arUrlRewrite=array (
     'PATH' => '/catalog/index.php',
     'SORT' => 100,
   ),
-  11 => 
+  9 => 
   array (
     'CONDITION' => '#^/store/#',
     'RULE' => '',
     'ID' => 'bitrix:catalog.store',
     'PATH' => '/store/index.php',
+    'SORT' => 100,
+  ),
+  22 => 
+  array (
+    'CONDITION' => '#^\\??(.*)#',
+    'RULE' => '&$1',
+    'ID' => 'bitrix:catalog.top',
+    'PATH' => '/index.php',
     'SORT' => 100,
   ),
   5 => 
@@ -88,7 +80,7 @@ $arUrlRewrite=array (
     'PATH' => '/bitrix/services/rest/index.php',
     'SORT' => 100,
   ),
-  7 => 
+  10 => 
   array (
     'CONDITION' => '#^/news/#',
     'RULE' => '',

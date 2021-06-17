@@ -72,7 +72,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Возврат товара", 
-		"/personal/add-return/", 
+		"/personal/return_order/", 
 		Array(), 
 		Array(), 
 		"" 

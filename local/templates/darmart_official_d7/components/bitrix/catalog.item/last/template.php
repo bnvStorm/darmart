@@ -114,6 +114,23 @@ if (isset($arResult['ITEM'])) {
     $file = new Main\IO\File($documentRoot . $templateFolder . '/' . $templatePath);
     if ($file->isExists()) {
         ?>
+        <?$this->SetViewTarget('microdata');?>
+        <!-- Facebook Pixel Code -->
+        <meta property="og:title" content="<?= $productTitle ?>">
+        <meta property="og:description" content="<?= $productTitle ?>">
+        <meta property="og:url" content="https://www.darmart.kz/<?=$arResult["DETAIL_PAGE_URL"]?>">
+        <meta property="og:image" content="<?= $itemIds['SECOND_PICT'] ?>">
+        <meta property="product:brand" content="Darmart">
+        <meta property="product:availability" content="<?= ($offer['CAN_BUY'] ? 'in stock' : 'out of stock') ?>">
+        <meta property="product:condition" content="new">
+        <meta property="product:price:amount" content="<?=$price["PRICE"]?>">
+        <meta property="product:price:currency" content="<?= $price['CURRENCY'] ?>">
+        <meta property="product:retailer_item_id" content="<?=$itemIds['ID'] ?>">
+        <meta property="product:item_group_id" content="Товары с главной_<?=$itemIds['ID'] ?>">
+        <meta property="product:category" content="Apparel &amp; Accessories &gt;"/>
+        <!-- End Facebook Pixel Code -->
+        <?$this->EndViewTarget();?>
+
         <div class="product-thumb transition" id="<?= $areaId ?>" data-entity="item">
 
             <div class="image">
@@ -192,6 +209,11 @@ if (isset($arResult['ITEM'])) {
                                     data-original-title="В закладки">
                                 <span class="pe-7s-like"></span>
                             </button>
+                        <script type="text/javascript">
+                            $("#favorites_list_<?= $arResult['ID'] ?>").click(function() {
+                                fbq('track', 'AddToWishlist');
+                            });
+                        </script>
 <!--                        --><?php //endif; ?>
                         <label for="<?= $itemIds['COMPARE_LINK'] ?>-inp" id="<?= $itemIds['COMPARE_LINK'] ?>">
                             <input id="<?= $itemIds['COMPARE_LINK'] ?>-inp" type="checkbox"
@@ -317,6 +339,11 @@ if (isset($arResult['ITEM'])) {
                            href="javascript:void(0)" rel="nofollow">
                             <?= ($arParams['ADD_TO_BASKET_ACTION'] === 'BUY' ? $arParams['MESS_BTN_BUY'] : $arParams['MESS_BTN_ADD_TO_BASKET']) ?>
                         </a>
+                        <script type="text/javascript">
+                            $("#<?= $itemIds['BUY_LINK'] ?>").click(function() {
+                                fbq('track', 'addToCart', {currency: "USD", value: <?=$price["PRICE"]?>});
+                            });
+                        </script>
                     </div>
                 </div>
                 <?

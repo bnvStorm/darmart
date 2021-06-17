@@ -66,13 +66,3 @@ else
         </div>
     </div>
 </script>
-
-<?php /*
-<?= Loc::getMessage('POLICY_TEXT') ?>
-<a href="https://darmart.kz/index.php?route=information/information/agree&amp;information_id=3"
-   class="agree <?=$linkClassName?>"><b><?= Loc::getMessage('POLICY_LABEL') ?></b></a>
-<input type="checkbox"
-        name="<?=htmlspecialcharsbx($arParams['INPUT_NAME'])?>"
-        value="Y" <?=($arParams['IS_CHECKED'] ? 'checked' : '')?>>
-
-*/?>

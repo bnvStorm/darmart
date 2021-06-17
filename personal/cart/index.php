@@ -2,19 +2,21 @@
 define("HIDE_SIDEBAR", true);
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Корзина");
-?>
-
-<?$APPLICATION->IncludeComponent(
+?><?$APPLICATION->IncludeComponent(
 	"bitrix:sale.basket.basket", 
 	"main_basket", 
 	array(
 		"ACTION_VARIABLE" => "basketAction",
+		"ADDITIONAL_PICT_PROP_12" => "-",
+		"ADDITIONAL_PICT_PROP_16" => "-",
+		"ADDITIONAL_PICT_PROP_17" => "-",
 		"ADDITIONAL_PICT_PROP_2" => "-",
 		"ADDITIONAL_PICT_PROP_3" => "-",
 		"AUTO_CALCULATION" => "Y",
 		"BASKET_IMAGES_SCALING" => "adaptive",
 		"COLUMNS_LIST_EXT" => array(
 			0 => "PREVIEW_PICTURE",
+			1 => "DELETE",
 		),
 		"COLUMNS_LIST_MOBILE" => array(
 			0 => "PREVIEW_PICTURE",
@@ -56,7 +58,7 @@ $APPLICATION->SetTitle("Корзина");
 		),
 		"USE_DYNAMIC_SCROLL" => "Y",
 		"USE_ENHANCED_ECOMMERCE" => "N",
-		"USE_GIFTS" => "Y",
+		"USE_GIFTS" => "N",
 		"USE_PREPAYMENT" => "N",
 		"USE_PRICE_ANIMATION" => "Y",
 		"COMPONENT_TEMPLATE" => "main_basket"

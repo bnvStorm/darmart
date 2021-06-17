@@ -1,0 +1,1386 @@
+2021-05-13 16:10:22 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'HttpClient' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/ajax/favorites.php:33
+----------
+2021-05-13 16:10:24 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'HttpClient' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/ajax/favorites.php:33
+----------
+2021-05-13 16:54:55 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'HttpClient' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/ajax/favorites.php:33
+----------
+2021-05-14 11:01:50 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'HttpClient' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/ajax/favorites.php:33
+----------
+2021-05-14 11:01:52 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'HttpClient' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/ajax/favorites.php:33
+----------
+2021-05-14 12:36:57 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'HttpClient' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/ajax/favorites.php:33
+----------
+2021-05-14 12:36:59 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'HttpClient' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/ajax/favorites.php:33
+----------
+2021-05-17 16:41:20 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'HttpClient' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/ajax/favorites.php:33
+----------
+2021-05-17 16:41:48 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Call to a member function setHeader() on null (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/ajax/favorites.php:34
+----------
+2021-05-21 10:05:13 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [ParseError] 
+syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/menu/catalog_menu/template.php:25
+#0: CBitrixComponentTemplate->__IncludePHPTemplate(array, array, string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component_template.php:884
+#1: CBitrixComponentTemplate->IncludeTemplate(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:764
+#2: CBitrixComponent->showComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:712
+#3: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/menu/component.php:386
+#4: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#5: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:103
+#6: CBitrixComponent->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#7: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#8: CAllMain->IncludeComponent(string, string, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog/catalog_inner/section_vertical.php:98
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog/catalog_inner/section.php:99
+#10: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component_template.php:789
+#11: CBitrixComponentTemplate->__IncludePHPTemplate(array, array, string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component_template.php:884
+#12: CBitrixComponentTemplate->IncludeTemplate(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:764
+#13: CBitrixComponent->showComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:712
+#14: CBitrixComponent->includeComponentTemplate(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog/component.php:171
+#15: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#16: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#17: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#18: CAllMain->IncludeComponent(string, string, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/catalog/index.php:28
+#19: include_once(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/include/urlrewrite.php:159
+#20: include_once(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/urlrewrite.php:2
+----------
+2021-05-21 10:05:22 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [ParseError] 
+syntax error, unexpected end of file, expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/menu/catalog_menu/template.php:25
+#0: CBitrixComponentTemplate->__IncludePHPTemplate(array, array, string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component_template.php:884
+#1: CBitrixComponentTemplate->IncludeTemplate(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:764
+#2: CBitrixComponent->showComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:712
+#3: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/menu/component.php:386
+#4: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#5: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:103
+#6: CBitrixComponent->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#7: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#8: CAllMain->IncludeComponent(string, string, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog/catalog_inner/section_vertical.php:98
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog/catalog_inner/section.php:99
+#10: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component_template.php:789
+#11: CBitrixComponentTemplate->__IncludePHPTemplate(array, array, string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component_template.php:884
+#12: CBitrixComponentTemplate->IncludeTemplate(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:764
+#13: CBitrixComponent->showComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:712
+#14: CBitrixComponent->includeComponentTemplate(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog/component.php:171
+#15: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#16: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#17: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#18: CAllMain->IncludeComponent(string, string, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/catalog/index.php:28
+#19: include_once(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/include/urlrewrite.php:159
+#20: include_once(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/urlrewrite.php:2
+----------
+2021-05-21 12:57:56 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [ParseError] 
+syntax error, unexpected 'endforeach' (T_ENDFOREACH), expecting elseif (T_ELSEIF) or else (T_ELSE) or endif (T_ENDIF) (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/menu/catalog_menu/template.php:48
+#0: CBitrixComponentTemplate->__IncludePHPTemplate(array, array, string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component_template.php:884
+#1: CBitrixComponentTemplate->IncludeTemplate(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:764
+#2: CBitrixComponent->showComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:712
+#3: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/menu/component.php:386
+#4: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#5: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:103
+#6: CBitrixComponent->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#7: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#8: CAllMain->IncludeComponent(string, string, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog/catalog_inner/section_vertical.php:98
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog/catalog_inner/section.php:99
+#10: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component_template.php:789
+#11: CBitrixComponentTemplate->__IncludePHPTemplate(array, array, string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component_template.php:884
+#12: CBitrixComponentTemplate->IncludeTemplate(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:764
+#13: CBitrixComponent->showComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:712
+#14: CBitrixComponent->includeComponentTemplate(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog/component.php:171
+#15: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#16: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#17: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#18: CAllMain->IncludeComponent(string, string, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/catalog/index.php:28
+#19: include_once(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/include/urlrewrite.php:159
+#20: include_once(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/urlrewrite.php:2
+----------
+2021-05-24 15:09:16 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Call to a member function getConfig() on null (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/zoodpay.payment/handler/handler.php:475
+#0: Sale\Handlers\PaySystem\ZoodPayHandler->getTransactionDataModel(object)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/zoodpay.payment/handler/handler.php:181
+#1: Sale\Handlers\PaySystem\ZoodPayHandler->initiatePay(object, NULL)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/sale/lib/paysystem/service.php:80
+#2: Bitrix\Sale\PaySystem\Service->initiatePay(object, NULL, integer)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/sale.order.ajax/class.php:6172
+#3: SaleOrderAjax->showOrderAction()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/sale.order.ajax/class.php:6062
+#4: SaleOrderAjax->doAction(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/sale.order.ajax/class.php:6320
+#5: SaleOrderAjax->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#6: CBitrixComponent->includeComponent(string, array, boolean, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#7: CAllMain->IncludeComponent(string, string, array, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/personal/order/make/index.php:31
+----------
+2021-05-24 15:09:46 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Call to a member function getConfig() on null (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/zoodpay.payment/handler/handler.php:475
+#0: Sale\Handlers\PaySystem\ZoodPayHandler->getTransactionDataModel(object)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/zoodpay.payment/handler/handler.php:181
+#1: Sale\Handlers\PaySystem\ZoodPayHandler->initiatePay(object, NULL)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/sale/lib/paysystem/service.php:80
+#2: Bitrix\Sale\PaySystem\Service->initiatePay(object, NULL, integer)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/sale.order.ajax/class.php:6172
+#3: SaleOrderAjax->showOrderAction()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/sale.order.ajax/class.php:6062
+#4: SaleOrderAjax->doAction(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/sale.order.ajax/class.php:6320
+#5: SaleOrderAjax->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#6: CBitrixComponent->includeComponent(string, array, boolean, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#7: CAllMain->IncludeComponent(string, string, array, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/personal/order/make/index.php:31
+----------
+2021-05-24 15:31:08 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Call to a member function getConfig() on null (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/zoodpay.payment/handler/handler.php:475
+#0: Sale\Handlers\PaySystem\ZoodPayHandler->getTransactionDataModel(object)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/zoodpay.payment/handler/handler.php:181
+#1: Sale\Handlers\PaySystem\ZoodPayHandler->initiatePay(object, NULL)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/sale/lib/paysystem/service.php:80
+#2: Bitrix\Sale\PaySystem\Service->initiatePay(object, NULL, integer)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/sale.order.ajax/class.php:6172
+#3: SaleOrderAjax->showOrderAction()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/sale.order.ajax/class.php:6062
+#4: SaleOrderAjax->doAction(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/sale.order.ajax/class.php:6320
+#5: SaleOrderAjax->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#6: CBitrixComponent->includeComponent(string, array, boolean, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#7: CAllMain->IncludeComponent(string, string, array, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/personal/order/make/index.php:31
+----------
+2021-05-25 10:44:13 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'HttpClient' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/ajax/favorites.php:33
+----------
+2021-05-25 15:39:28 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Unsupported operand types (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:21
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-25 16:13:09 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CIBlockElement' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:22
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-25 16:15:47 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CIBlockElement' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:22
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-25 16:16:18 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CIBlockElement' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:22
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-25 16:19:37 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CIBlockElement' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:22
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-25 16:35:48 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CIBlockElement' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:25
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-25 16:36:40 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CIBlockElement' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:25
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-25 16:40:14 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CIBlockElement' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:25
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-25 16:50:31 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CIBlockElement' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:31
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-25 16:54:10 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CIBlockElement' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:31
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-25 16:57:37 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CIBlockElement' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:31
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 09:41:30 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Using $this when not in object context (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:21
+#0: require_once
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/autoloader.php:42
+#1: {closure}(string)
+	
+#2: spl_autoload_call(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#3: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#4: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#5: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#6: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#7: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#8: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#9: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#10: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#11: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#12: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#13: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#14: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#15: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 09:52:11 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Using $this when not in object context (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:21
+#0: require_once
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/autoloader.php:42
+#1: {closure}(string)
+	
+#2: spl_autoload_call(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#3: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#4: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#5: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#6: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#7: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#8: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#9: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#10: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#11: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#12: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#13: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#14: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#15: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 09:53:07 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Using $this when not in object context (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:21
+#0: require_once
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/autoloader.php:42
+#1: {closure}(string)
+	
+#2: spl_autoload_call(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#3: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#4: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#5: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#6: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#7: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#8: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#9: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#10: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#11: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#12: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#13: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#14: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#15: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 09:59:11 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Using $this when not in object context (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:21
+#0: require_once
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/autoloader.php:42
+#1: {closure}(string)
+	
+#2: spl_autoload_call(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#3: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#4: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#5: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#6: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#7: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#8: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#9: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#10: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#11: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#12: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#13: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#14: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#15: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 09:59:35 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Using $this when not in object context (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:21
+#0: require_once
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/autoloader.php:42
+#1: {closure}(string)
+	
+#2: spl_autoload_call(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#3: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#4: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#5: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#6: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#7: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#8: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#9: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#10: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#11: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#12: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#13: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#14: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#15: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 10:01:02 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Using $this when not in object context (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:21
+#0: require_once
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/autoloader.php:42
+#1: {closure}(string)
+	
+#2: spl_autoload_call(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#3: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#4: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#5: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#6: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#7: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#8: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#9: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#10: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#11: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#12: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#13: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#14: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#15: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 10:06:11 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Using $this when not in object context (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:21
+#0: require_once
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/autoloader.php:42
+#1: {closure}(string)
+	
+#2: spl_autoload_call(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#3: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#4: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#5: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#6: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#7: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#8: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#9: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#10: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#11: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#12: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#13: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#14: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#15: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 10:33:55 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CModule' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:31
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 10:34:34 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CModule' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:31
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 10:35:01 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CModule' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:31
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 10:43:49 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CModule' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:78
+#0: require_once
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/autoloader.php:42
+#1: {closure}(string)
+	
+#2: spl_autoload_call(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#3: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#4: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#5: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#6: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#7: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#8: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#9: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#10: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#11: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#12: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#13: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#14: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#15: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 10:44:01 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CModule' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:78
+#0: require_once
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/autoloader.php:42
+#1: {closure}(string)
+	
+#2: spl_autoload_call(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#3: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#4: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#5: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#6: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#7: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#8: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#9: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#10: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#11: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#12: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#13: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#14: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#15: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 10:48:14 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CModule' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:81
+#0: require_once
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/autoloader.php:42
+#1: {closure}(string)
+	
+#2: spl_autoload_call(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#3: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#4: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#5: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#6: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#7: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#8: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#9: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#10: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#11: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#12: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#13: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#14: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#15: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 10:48:59 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [ParseError] 
+syntax error, unexpected 'if' (T_IF), expecting function (T_FUNCTION) or const (T_CONST) (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:18
+#0: {closure}(string)
+	
+#1: spl_autoload_call(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#2: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#3: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#4: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#5: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#6: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#7: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#8: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#9: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#10: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#11: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#12: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#13: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#14: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 11:10:33 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CIBlockElement' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:34
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 11:24:45 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Call to a member function toArray() on int (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:35
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 11:32:18 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CIBlockElement' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:36
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 11:32:36 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CIBlockElement' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:36
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 14:57:56 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Call to a member function Fetch() on array (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:42
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 15:59:23 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [Error] 
+Class 'Rating1C\Darmart\Comments\CModule' not found (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:32
+#0: Rating1C\Darmart\Comments\CommentsEventHandler::OnCommentAdd(integer, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#1: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#2: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#3: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#4: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#5: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#6: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#7: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#8: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#9: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#10: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#11: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#13: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 16:28:54 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [ParseError] 
+syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:56
+#0: {closure}(string)
+	
+#1: spl_autoload_call(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#2: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#3: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#4: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#5: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#6: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#7: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#8: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#9: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#10: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#11: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#12: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#13: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#14: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 16:29:04 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [ParseError] 
+syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:56
+#0: {closure}(string)
+	
+#1: spl_autoload_call(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#2: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#3: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#4: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#5: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#6: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#7: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#8: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#9: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#10: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#11: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#12: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#13: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#14: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-26 16:29:30 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [ParseError] 
+syntax error, unexpected end of file, expecting function (T_FUNCTION) or const (T_CONST) (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/comments/commentseventhandler.php:56
+#0: {closure}(string)
+	
+#1: spl_autoload_call(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/module.php:465
+#2: ExecuteModuleEventEx(array, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/blog/mysql/blog_comment.php:77
+#3: CBlogComment::Add(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/blog.post.comment/class.php:520
+#4: CBlogPostCommentEdit->executeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:656
+#5: CBitrixComponent->includeComponent(string, array, object, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#6: CAllMain->IncludeComponent(string, string, array, object, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/component_epilog.php:53
+#7: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:1477
+#8: CBitrixComponent->includeComponentEpilog(array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:714
+#9: CBitrixComponent->includeComponentTemplate()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/component.php:520
+#10: include(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:605
+#11: CBitrixComponent->__includeComponent()
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/component.php:680
+#12: CBitrixComponent->includeComponent(string, array, NULL, boolean)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/modules/main/classes/general/main.php:1063
+#13: CAllMain->IncludeComponent(string, string, array, NULL, array)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/bitrix/components/bitrix/catalog.comments/templates/.default/ajax.php:46
+#14: require(string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/local/templates/darmart_official_d7/components/bitrix/catalog.comments/mod_comment/bitrix/blog.post.comment/adapt/ajax.php:1
+----------
+2021-05-27 09:31:28 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [TypeError] 
+Argument 1 passed to Rating1C\Darmart\Favorites\Favorite::isExists() must be of the type int, string given, called in /var/www/1c-rating/data/www/darmart.bihost2.kz/ajax/favorites.php on line 40 (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/favorites/favorite.php:72
+#0: Rating1C\Darmart\Favorites\Favorite->isExists(string, string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/ajax/favorites.php:40
+----------
+2021-05-27 09:31:29 - Host: darmart.bihost2.kz - UNCAUGHT_EXCEPTION - [TypeError] 
+Argument 1 passed to Rating1C\Darmart\Favorites\Favorite::isExists() must be of the type int, string given, called in /var/www/1c-rating/data/www/darmart.bihost2.kz/ajax/favorites.php on line 40 (0)
+/var/www/1c-rating/data/www/darmart.bihost2.kz/local/php_interface/lib/favorites/favorite.php:72
+#0: Rating1C\Darmart\Favorites\Favorite->isExists(string, string)
+	/var/www/1c-rating/data/www/darmart.bihost2.kz/ajax/favorites.php:40
+----------

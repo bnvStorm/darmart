@@ -5,11 +5,12 @@ $APPLICATION->SetTitle("Возврат товара");
 <div id="content" class="col-sm-9">
     <div class="card">
         <?$APPLICATION->IncludeComponent(
-	"bitrix:main.feedback", 
+	"darmart:main.feedback", 
 	"add_return", 
 	array(
 		"EMAIL_TO" => "sale@127.0.0.2",
 		"EVENT_MESSAGE_ID" => array(
+			0 => "7",
 		),
 		"OK_TEXT" => "Спасибо, ваше сообщение принято.",
 		"REQUIRED_FIELDS" => array(

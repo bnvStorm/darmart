@@ -161,8 +161,26 @@ if (!empty($arParams['LABEL_PROP_POSITION'])) {
 }
 
 $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_THEME'] : '';
-?>
 
+
+?>
+<?$this->SetViewTarget('microdata');?>
+    <!-- OpenGraph -->
+    <meta property="og:title" content="<?=$name ?>">
+    <meta property="og:description" content="<?=$arResult['PREVIEW_TEXT']?>">
+    <meta property="og:url" content="https://www.darmart.kz/<?=$arResult["DETAIL_PAGE_URL"]?>">
+    <meta property="og:image" content="<?=$arResult["DETAIL_PICTURE"]["SRC"] ?>">
+    <meta property="product:brand" content="Darmart">
+    <meta property="product:availability" content="<?= ($offer['CAN_BUY'] ? 'in stock' : 'out of stock') ?>">
+    <meta property="product:condition" content="new">
+    <meta property="product:price:amount" content="<?=$price["PRICE"]?>">
+    <meta property="product:price:currency" content="<?= $price['CURRENCY'] ?>">
+    <meta property="product:retailer_item_id" content="<?=$itemIds['ID'] ?>">
+    <meta property="product:item_group_id" content="<?= $arResult['CATEGORY_PATH'] ?>">
+    <meta property="product:category" content="Apparel &amp; Accessories &gt;"/>
+
+<?$this->EndViewTarget();?>
+<?// if ($USER->IsAdmin()) {echo '<pre>'; var_dump($arResult["DETAIL_PAGE_URL"]); echo '</pre>'; } ?>
     <div class="bx-catalog-element<?= $themeClass ?>" id="<?= $itemIds['ID'] ?>" itemscope
          itemtype="http://schema.org/Product">
         <div class="container-fluid">
@@ -189,7 +207,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                             endforeach;
                                         else:
                                         ?>
-                                        <p>2</p>
+
                                        <?
                                        endif;
                                        ?>
@@ -593,6 +611,11 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                                                     <?= $arParams['MESS_BTN_ADD_TO_BASKET'] ?>
                                                                 </a>
 
+                                                                <script type="text/javascript">
+                                                                    $("#<?= $itemIds['ADD_BASKET_LINK'] ?>").click(function() {
+                                                                        fbq('track', 'addToCart', {currency: "USD", value: <?=$price["PRICE"]?>});
+                                                                    });
+                                                                </script>
                                                             <?php endif; ?>
                                                             <?php if ($showBuyBtn): ?>
                                                                 <a class="btn main-btn <?= $buyButtonClassName ?>"
@@ -610,7 +633,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                                         </div>
 
                                                         <?php
-                                                        if ($USER->IsAuthorized()):
+//                                                        if ($USER->IsAuthorized()):
                                                             $inFaforites = in_array($arResult['ID'], $productsInFavoriteIds) !== false;
                                                             ?>
                                                             <button type="button"
@@ -621,7 +644,12 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
                                                                     data-original-title="В закладки">
                                                                 <span class="pe-7s-like"></span>
                                                             </button>
-                                                        <?php endif; ?>
+                                                            <script type="text/javascript">
+                                                                $("#favorites_list_<?= $arResult['ID'] ?>").click(function() {
+                                                                    fbq('track', 'AddToWishlist');
+                                                                });
+                                                            </script>
+                                                        <?php //endif; ?>
 
                                                         <? if ($arParams['DISPLAY_COMPARE']): ?>
                                                             <div class="btn-icon"
@@ -1643,6 +1671,7 @@ $themeClass = isset($arParams['TEMPLATE_THEME']) ? ' bx-' . $arParams['TEMPLATE_
 
     </div>
     </div>
+
     <script>
         BX.message({
             ECONOMY_INFO_MESSAGE: '<?=GetMessageJS('CT_BCE_CATALOG_ECONOMY_INFO2')?>',

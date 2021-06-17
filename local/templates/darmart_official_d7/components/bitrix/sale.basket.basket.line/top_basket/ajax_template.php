@@ -74,8 +74,13 @@ if ($arParams["SHOW_PRODUCTS"] == "Y" && ($arResult['NUM_PRODUCTS'] > 0 || !empt
             <p class="text-right">
                 <a class="btn pull-left" href="/personal/cart/">Открыть корзину</a>
                 <? if ($arParams["PATH_TO_ORDER"] && $arResult["CATEGORIES"]["READY"]):?>
-                    <a href="<?= $arParams["PATH_TO_ORDER"] ?>"
+                    <a id="top_basket" href="<?= $arParams["PATH_TO_ORDER"] ?>"
                        class="btn main-btn pull-right"><?= GetMessage("TSB1_2ORDER") ?></a>
+                    <script type="text/javascript">
+                        $("#top_basket").click(function() {
+                            fbq('track', 'InitiateCheckout');
+                        });
+                    </script>
                 <? endif ?>
             </p>
         </li>

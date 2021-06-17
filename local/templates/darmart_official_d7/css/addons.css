@@ -226,6 +226,9 @@ button, html input[type=button], input[type=reset], input[type=submit]{
 .bx_catalog-compare-list{
     display:none !important;
 }
+.bx-soa-pp-list,.bx-soa-section-content .bx-soa-pp-price,.bx-soa-pp-delivery-cost{
+    display:none;
+}
 @media (max-width: 480px) {
 
 
