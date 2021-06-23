@@ -180,5 +180,38 @@ if ($_REQUEST["action"] == "clear") {
         CSaleBasket::DeleteAll(CSaleBasket::GetBasketUserID());
     }
 }
+
+//class OrderEventHandlers
+//{
+//    public static function onSaleOrderCanceled(int $id, array $fields): bool
+//    {
+//        if ($fields['CANCELED'] === 'Y') {
+//            $GLOBALS['APPLICATION']->ThrowException('Нельзя отменять заказы.');
+//            return false;
+//        }
+//        return true;
+//    }
+//}
+//        \Bitrix\Main\Diag\Debug::dumpToFile($fields['CANCELED']);
+//\Bitrix\Main\EventManager::getInstance()->addEventHandlerCompatible('sale', 'OnBeforeOrderUpdate', ['OrderEventHandlers', 'onSaleOrderCanceled']);
+
+class OrderEventHandlers
+{
+    public static function onOrderCanceled($event)
+    {
+        $order = $event->getParameter('ENTITY');
+        if ($order->isCanceled()) {
+            $order->setField('CANCELED', 'N');
+            $event->addResult(
+                new Bitrix\Main\EventResult(
+                    Bitrix\Main\EventResult::SUCCESS,
+                    $order
+                )
+            );
+        }
+    }
+}
+
+Bitrix\Main\EventManager::getInstance()->addEventHandler('sale','OnSaleOrderBeforeSaved', [OrderEventHandlers::class, 'onOrderCanceled']);
 requireIfExists('autoloader.php');
 requireIfExists('events.php');
