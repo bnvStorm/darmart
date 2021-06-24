@@ -4,8 +4,8 @@ $APPLICATION->SetTitle("Регистрация");
 ?>
 
 <?php $APPLICATION->IncludeComponent(
-	"bitrix:main.register",
-	"personal_registration",
+	"bitrix:main.register", 
+	"personal_registration", 
 	array(
 		"AUTH" => "Y",
 		"REQUIRED_FIELDS" => array(
@@ -39,7 +39,7 @@ $APPLICATION->SetTitle("Регистрация");
 		"USE_BACKURL" => "N",
 		"COMPONENT_TEMPLATE" => "personal_registration",
 		"USER_CONSENT" => "Y",
-		"USER_CONSENT_ID" => "1",
+		"USER_CONSENT_ID" => "2",
 		"USER_CONSENT_IS_CHECKED" => "Y",
 		"USER_CONSENT_IS_LOADED" => "N"
 	),

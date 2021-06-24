@@ -180,38 +180,29 @@ if ($_REQUEST["action"] == "clear") {
         CSaleBasket::DeleteAll(CSaleBasket::GetBasketUserID());
     }
 }
+AddEventHandler("search", "BeforeIndex", array("SearchHandlers", "BeforeIndexHandler"));
 
-//class OrderEventHandlers
-//{
-//    public static function onSaleOrderCanceled(int $id, array $fields): bool
-//    {
-//        if ($fields['CANCELED'] === 'Y') {
-//            $GLOBALS['APPLICATION']->ThrowException('Нельзя отменять заказы.');
-//            return false;
-//        }
-//        return true;
-//    }
-//}
-//        \Bitrix\Main\Diag\Debug::dumpToFile($fields['CANCELED']);
-//\Bitrix\Main\EventManager::getInstance()->addEventHandlerCompatible('sale', 'OnBeforeOrderUpdate', ['OrderEventHandlers', 'onSaleOrderCanceled']);
-
-class OrderEventHandlers
+class SearchHandlers
 {
-    public static function onOrderCanceled($event)
+    function BeforeIndexHandler($arFields)
     {
-        $order = $event->getParameter('ENTITY');
-        if ($order->isCanceled()) {
-            $order->setField('CANCELED', 'N');
-            $event->addResult(
-                new Bitrix\Main\EventResult(
-                    Bitrix\Main\EventResult::SUCCESS,
-                    $order
-                )
-            );
+        if($arFields["MODULE_ID"] == "iblock")
+        {
+            if(array_key_exists("BODY", $arFields) && substr($arFields["ITEM_ID"], 0, 1) != "S") // Только для элементов
+            {
+                $arFields["BODY"] = "";
+            }
+
+            if (substr($arFields["ITEM_ID"], 0, 1) == "S") // Только для разделов
+            {
+                $arFields['TITLE'] = "";
+                $arFields["BODY"] = "";
+                $arFields['TAGS'] = "";
+            }
         }
+
+        return $arFields;
     }
 }
-
-Bitrix\Main\EventManager::getInstance()->addEventHandler('sale','OnSaleOrderBeforeSaved', [OrderEventHandlers::class, 'onOrderCanceled']);
 requireIfExists('autoloader.php');
 requireIfExists('events.php');
