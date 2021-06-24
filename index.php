@@ -7,30 +7,11 @@ $APPLICATION->SetTitle("DARMART Интернет-магазин бытовой �
 ?><div id="slideshow0" class="owl-carousel owl-loaded owl-drag" style="opacity: 1;">
 	<div class="owl-stage-outer">
 		<div class="owl-stage">
+<br>
 			 <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.compare.list",
-	"",
+	"bitrix:news.list",
+	"slider",
 	Array(
-		"ACTION_VARIABLE" => "action",
-		"AJAX_MODE" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"COMPARE_URL" => "/catalog/compare/",
-		"DETAIL_URL" => "",
-		"IBLOCK_ID" => "2",
-		"IBLOCK_TYPE" => "catalog",
-		"NAME" => "CATALOG_COMPARE_LIST",
-		"POSITION" => "top left",
-		"POSITION_FIXED" => "N",
-		"PRODUCT_ID_VARIABLE" => "id"
-	)
-);?><br>
-			 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"slider", 
-	array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
@@ -43,6 +24,7 @@ $APPLICATION->SetTitle("DARMART Интернет-магазин бытовой �
 		"CACHE_TIME" => "36000000",
 		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
+		"COMPONENT_TEMPLATE" => "slider",
 		"DETAIL_URL" => "",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
@@ -50,10 +32,7 @@ $APPLICATION->SetTitle("DARMART Интернет-магазин бытовой �
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"FIELD_CODE" => array(0=>"",1=>"",),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "6",
@@ -72,10 +51,7 @@ $APPLICATION->SetTitle("DARMART Интернет-магазин бытовой �
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "LINK",
-			1 => "",
-		),
+		"PROPERTY_CODE" => array(0=>"LINK",1=>"",),
 		"SET_BROWSER_TITLE" => "N",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "N",
@@ -87,10 +63,8 @@ $APPLICATION->SetTitle("DARMART Интернет-магазин бытовой �
 		"SORT_BY2" => "SORT",
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
-		"STRICT_SECTION_CHECK" => "N",
-		"COMPONENT_TEMPLATE" => "slider"
-	),
-	false
+		"STRICT_SECTION_CHECK" => "N"
+	)
 );?><br>
  <br>
 		</div>
@@ -109,12 +83,13 @@ $APPLICATION->SetTitle("DARMART Интернет-магазин бытовой �
     });
     </script>
 <div>
+	<br/>
 	<div class="banner-block-home">
 		<div class="row">
 			 <?$APPLICATION->IncludeComponent(
-	"bitrix:news.list", 
-	"banners", 
-	array(
+	"bitrix:news.list",
+	"banners",
+	Array(
 		"ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"ADD_SECTIONS_CHAIN" => "N",
 		"AJAX_MODE" => "N",
@@ -135,10 +110,7 @@ $APPLICATION->SetTitle("DARMART Интернет-магазин бытовой �
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
+		"FIELD_CODE" => array(0=>"",1=>"",),
 		"FILTER_NAME" => "",
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "9",
@@ -157,10 +129,7 @@ $APPLICATION->SetTitle("DARMART Интернет-магазин бытовой �
 		"PARENT_SECTION" => "",
 		"PARENT_SECTION_CODE" => "",
 		"PREVIEW_TRUNCATE_LEN" => "",
-		"PROPERTY_CODE" => array(
-			0 => "LINK",
-			1 => "",
-		),
+		"PROPERTY_CODE" => array(0=>"LINK",1=>"",),
 		"SET_BROWSER_TITLE" => "N",
 		"SET_LAST_MODIFIED" => "N",
 		"SET_META_DESCRIPTION" => "N",
@@ -173,16 +142,15 @@ $APPLICATION->SetTitle("DARMART Интернет-магазин бытовой �
 		"SORT_ORDER1" => "DESC",
 		"SORT_ORDER2" => "ASC",
 		"STRICT_SECTION_CHECK" => "N"
-	),
-	false
+	)
 );?>
 		</div>
 	</div>
 </div>
 <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.top", 
-	"topproducts", 
-	array(
+	"bitrix:catalog.top",
+	"topproducts",
+	Array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_PICT_PROP" => "-",
 		"ADD_PROPERTIES_TO_BASKET" => "Y",
@@ -211,11 +179,8 @@ $APPLICATION->SetTitle("DARMART Интернет-магазин бытовой �
 		"HIDE_NOT_AVAILABLE_OFFERS" => "Y",
 		"IBLOCK_ID" => "2",
 		"IBLOCK_TYPE" => "catalog",
-		"LABEL_PROP" => array(
-		),
-		"LABEL_PROP_MOBILE" => array(
-			0 => "NEWPRODUCT",
-		),
+		"LABEL_PROP" => array(),
+		"LABEL_PROP_MOBILE" => array(0=>"NEWPRODUCT",),
 		"LABEL_PROP_POSITION" => "top-left",
 		"LINE_ELEMENT_COUNT" => "3",
 		"MESS_BTN_ADD_TO_BASKET" => "В корзину",
@@ -223,20 +188,23 @@ $APPLICATION->SetTitle("DARMART Интернет-магазин бытовой �
 		"MESS_BTN_COMPARE" => "Сравнить",
 		"MESS_BTN_DETAIL" => "Подробнее",
 		"MESS_NOT_AVAILABLE" => "Нет в наличии",
+		"OFFERS_FIELD_CODE" => array(0=>"",1=>"",),
 		"OFFERS_LIMIT" => "5",
+		"OFFERS_SORT_FIELD" => "sort",
+		"OFFERS_SORT_FIELD2" => "id",
+		"OFFERS_SORT_ORDER" => "asc",
+		"OFFERS_SORT_ORDER2" => "desc",
 		"PARTIAL_PRODUCT_PROPERTIES" => "Y",
-		"PRICE_CODE" => array(
-			0 => "Типовое Розничное соглашение",
-		),
+		"PRICE_CODE" => array(0=>"Типовое Розничное соглашение",),
 		"PRICE_VAT_INCLUDE" => "Y",
 		"PRODUCT_BLOCKS_ORDER" => "price,props,sku,quantityLimit,quantity,buttons",
+		"PRODUCT_DISPLAY_MODE" => "N",
 		"PRODUCT_ID_VARIABLE" => "id",
 		"PRODUCT_PROPS_VARIABLE" => "prop",
 		"PRODUCT_QUANTITY_VARIABLE" => "quantity",
 		"PRODUCT_ROW_VARIANTS" => "[{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false},{'VARIANT':'2','BIG_DATA':false}]",
 		"PRODUCT_SUBSCRIPTION" => "Y",
-		"PROPERTY_CODE_MOBILE" => array(
-		),
+		"PROPERTY_CODE_MOBILE" => array(),
 		"ROTATE_TIMER" => "30",
 		"SECTION_URL" => "",
 		"SEF_MODE" => "Y",
@@ -254,18 +222,8 @@ $APPLICATION->SetTitle("DARMART Интернет-магазин бытовой �
 		"USE_ENHANCED_ECOMMERCE" => "N",
 		"USE_PRICE_COUNT" => "N",
 		"USE_PRODUCT_QUANTITY" => "N",
-		"VIEW_MODE" => "SECTION",
-		"OFFERS_SORT_FIELD" => "sort",
-		"OFFERS_SORT_ORDER" => "asc",
-		"OFFERS_SORT_FIELD2" => "id",
-		"OFFERS_SORT_ORDER2" => "desc",
-		"OFFERS_FIELD_CODE" => array(
-			0 => "",
-			1 => "",
-		),
-		"PRODUCT_DISPLAY_MODE" => "N"
-	),
-	false
+		"VIEW_MODE" => "SECTION"
+	)
 );?>
  <!--<div class="card">
 	<h3 class="section-title">Последние</h3>
@@ -349,9 +307,9 @@ $APPLICATION->SetTitle("DARMART Интернет-магазин бытовой �
 	<h3 class="section-title">Стена категорий</h3>
 	<div class="row">-->
 <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.section.list", 
-	"category_wall", 
-	array(
+	"bitrix:catalog.section.list",
+	"category_wall",
+	Array(
 		"ADD_SECTIONS_CHAIN" => "N",
 		"CACHE_FILTER" => "N",
 		"CACHE_GROUPS" => "N",
@@ -364,21 +322,13 @@ $APPLICATION->SetTitle("DARMART Интернет-магазин бытовой �
 		"IBLOCK_ID" => "2",
 		"IBLOCK_TYPE" => "catalog",
 		"SECTION_CODE" => "",
-		"SECTION_FIELDS" => array(
-			0 => "PICTURE",
-			1 => "DETAIL_PICTURE",
-			2 => "",
-		),
+		"SECTION_FIELDS" => array(0=>"PICTURE",1=>"DETAIL_PICTURE",2=>"",),
 		"SECTION_ID" => "",
 		"SECTION_URL" => "",
-		"SECTION_USER_FIELDS" => array(
-			0 => "",
-			1 => "",
-		),
+		"SECTION_USER_FIELDS" => array(0=>"",1=>"",),
 		"SHOW_PARENT_NAME" => "Y",
 		"TOP_DEPTH" => "2",
 		"VIEW_MODE" => "LINE"
-	),
-	false
+	)
 );?> <!--	</div>
 </div>--><? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>

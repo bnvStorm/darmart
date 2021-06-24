@@ -2,25 +2,27 @@
 define("HIDE_SIDEBAR", true);
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("");
-?><?$APPLICATION->IncludeComponent(
-	"bitrix:catalog.compare.list",
-	"",
-	Array(
-		"ACTION_VARIABLE" => "action",
-		"AJAX_MODE" => "N",
-		"AJAX_OPTION_ADDITIONAL" => "",
-		"AJAX_OPTION_HISTORY" => "N",
-		"AJAX_OPTION_JUMP" => "N",
-		"AJAX_OPTION_STYLE" => "Y",
-		"COMPARE_URL" => "/catalog/compare/",
-		"DETAIL_URL" => "",
-		"IBLOCK_ID" => "2",
-		"IBLOCK_TYPE" => "catalog",
-		"NAME" => "CATALOG_COMPARE_LIST",
-		"POSITION" => "top left",
-		"POSITION_FIXED" => "Y",
-		"PRODUCT_ID_VARIABLE" => "id"
-	)
+?>
+
+<?$APPLICATION->IncludeComponent(
+    "bitrix:catalog.compare.list",
+    "",
+    Array(
+        "ACTION_VARIABLE" => "action",
+        "AJAX_MODE" => "N",
+        "AJAX_OPTION_ADDITIONAL" => "",
+        "AJAX_OPTION_HISTORY" => "N",
+        "AJAX_OPTION_JUMP" => "N",
+        "AJAX_OPTION_STYLE" => "Y",
+        "COMPARE_URL" => "/catalog/compare/",
+        "DETAIL_URL" => "",
+        "IBLOCK_ID" => "2",
+        "IBLOCK_TYPE" => "catalog",
+        "NAME" => "CATALOG_COMPARE_LIST",
+        "POSITION" => "top left",
+        "POSITION_FIXED" => "Y",
+        "PRODUCT_ID_VARIABLE" => "id"
+    )
 );?><?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
 	"catalog_inner", 
@@ -50,8 +52,9 @@ $APPLICATION->SetTitle("");
 		"COMPARE_ELEMENT_SORT_ORDER" => "asc",
 		"COMPARE_FIELD_CODE" => array(
 			0 => "PREVIEW_PICTURE",
-			1 => "DETAIL_PICTURE",
-			2 => "",
+			1 => "DETAIL_TEXT",
+			2 => "DETAIL_PICTURE",
+			3 => "",
 		),
 		"COMPARE_NAME" => "CATALOG_COMPARE_LIST",
 		"COMPARE_OFFERS_FIELD_CODE" => array(
@@ -333,4 +336,5 @@ $APPLICATION->SetTitle("");
 		)
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
